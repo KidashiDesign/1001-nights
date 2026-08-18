@@ -1,0 +1,47 @@
+---
+/* Kopfleiste und Schublade. Beide zeigen dieselben vier Ziele — die Schublade
+   erscheint erst unter 900 px, das Stylesheet entscheidet das. */
+import { ui, contact, homeUrl, menuUrl, anchorUrl } from '../lib/site.js';
+import LangSwitch from './LangSwitch.astro';
+
+import type { LangCode } from '../lib/types';
+
+interface Props { code: LangCode; page: 'home' | 'menu'; }
+const { code, page } = Astro.props;
+
+const t = ui[code];
+const links = [
+  { href: menuUrl(code), label: t.nav.menu, current: page === 'menu' },
+  { href: anchorUrl(code, page, '#restaurant'), label: t.nav.restaurant, current: false },
+  { href: anchorUrl(code, page, '#experience'), label: t.nav.experience, current: false },
+  { href: anchorUrl(code, page, '#visit'), label: t.nav.visit, current: false }
+];
+---
+<header class="nav">
+  <div class="wrap nav-inner">
+    <a class="nav-brand" href={homeUrl(code)} aria-label={t.nav.home}>
+      <span class="mark">1001 Nights</span>
+      <span class="sub">{t.brandSub}</span>
+    </a>
+    <nav class="nav-links" aria-label={t.nav.main}>
+      {links.map(l => (
+        <a class:list={['nav-link', { 'is-current': l.current }]} href={l.href} aria-current={l.current ? 'page' : undefined}>{l.label}</a>
+      ))}
+    </nav>
+    <div class="nav-actions">
+      <LangSwitch code={code} page={page} variant="nav" />
+      <a class="btn btn-primary" href={`tel:${contact.phoneHref}`}>{t.nav.reserve}</a>
+      <button class="burger" type="button" aria-label={t.nav.openMenu} aria-expanded="false" aria-controls="drawer">
+        <span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<div class="nav-drawer" id="drawer">
+  <div class="wrap">
+    {links.map(l => <a href={l.href}>{l.label}</a>)}
+    <a class="btn btn-primary" href={`tel:${contact.phoneHref}`}>{t.nav.reserveLong}</a>
+    <LangSwitch code={code} page={page} variant="drawer" />
+  </div>
+</div>

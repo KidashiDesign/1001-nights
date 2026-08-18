@@ -1,0 +1,35 @@
+---
+/* Startseite, viermal — Englisch am Wurzelverzeichnis, die anderen drei in
+   ihrem eigenen Ordner. Der Rest-Parameter [...lang] bleibt für Englisch leer,
+   daraus wird /index.html statt /en/index.html. */
+import { LANGS } from '../../lib/site.js';
+import type { LangCode } from '../../lib/types';
+import Base from '../../layouts/Base.astro';
+import Hero from '../../components/home/Hero.astro';
+import Marquee from '../../components/home/Marquee.astro';
+import Story from '../../components/home/Story.astro';
+import Signature from '../../components/home/Signature.astro';
+import Quote from '../../components/home/Quote.astro';
+import Gallery from '../../components/home/Gallery.astro';
+import Events from '../../components/home/Events.astro';
+import Visit from '../../components/home/Visit.astro';
+
+export function getStaticPaths() {
+  return LANGS.map(L => ({
+    params: { lang: L.path ? L.path.replace(/\/$/, '') : undefined },
+    props: { code: L.code as LangCode }
+  }));
+}
+
+const { code } = Astro.props;
+---
+<Base code={code} page="home">
+  <Hero code={code} />
+  <Marquee code={code} />
+  <Story code={code} />
+  <Signature code={code} />
+  <Quote code={code} />
+  <Gallery code={code} />
+  <Events code={code} />
+  <Visit code={code} />
+</Base>

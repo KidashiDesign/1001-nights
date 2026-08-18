@@ -1,0 +1,39 @@
+---
+/* Sprachumschalter — springt immer auf dieselbe Seite in der anderen Sprache.
+
+   Im Kopf ein <details>-Aufklapper: er funktioniert ohne JavaScript. In der
+   Schublade die flache Liste, dort ist Platz.
+
+   Die Bezeichnungen nennen im Stylesheet zuerst Systemschriften — sonst zöge
+   jede Seite 63 KB Georgisch nach, nur um ein Wort zu setzen. */
+import { LANGS, ui, lang, pageUrl } from '../lib/site.js';
+import Icon from './Icon.astro';
+
+import type { LangCode } from '../lib/types';
+
+interface Props { code: LangCode; page: 'home' | 'menu'; variant: 'nav' | 'drawer'; }
+const { code, page, variant } = Astro.props;
+
+const L = lang(code);
+const t = ui[code];
+const others = LANGS.filter(o => o.code !== code);
+---
+{variant === 'drawer' ? (
+  <div class="lang-switch lang-switch-drawer" role="group" aria-label={t.langLabel}>
+    <span class="lang-opt is-current" aria-current="true" lang={L.htmlLang}>{L.label}</span>
+    {others.map(o => (
+      <a class="lang-opt" href={pageUrl(o.code, page)} lang={o.htmlLang} hreflang={o.htmlLang}>{o.label}</a>
+    ))}
+  </div>
+) : (
+  <details class="lang-switch lang-switch-nav" data-lang-switch>
+    <summary aria-label={t.langLabel}>
+      <Icon name="globe" /><span class="lang-current" lang={L.htmlLang}>{L.label}</span><span class="lang-caret" aria-hidden="true"></span>
+    </summary>
+    <div class="lang-menu">
+      {others.map(o => (
+        <a class="lang-opt" href={pageUrl(o.code, page)} lang={o.htmlLang} hreflang={o.htmlLang}>{o.label}</a>
+      ))}
+    </div>
+  </details>
+)}

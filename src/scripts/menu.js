@@ -1,14 +1,16 @@
 /* ══════════════════════════════════════════════════════════════════════════
    1001 Nights — Speisekarte, Bedienung
    ──────────────────────────────────────────────────────────────────────────
-   Das Markup der Karte steht fertig im HTML (erzeugt von tools/build-menu.mjs
-   aus js/menu-data.js). Diese Datei fügt nur die Bedienung hinzu und liest
-   ausschließlich aus dem DOM — die Gerichtedaten müssen dafür nicht in den
+   Das Markup der Karte steht fertig im HTML — Astro rendert es beim Bauen aus
+   src/data/menu.js. Diese Datei fügt nur die Bedienung hinzu und liest
+   ausschließlich aus dem DOM; die Gerichtedaten müssen dafür nicht in den
    Browser geladen werden.
 
    Funktionen: Volltextsuche, Diät-Filter (UND-Verknüpfung), Scrollspy für
    die Kategorie-Chips, Zurücksetzen.
    ═════════════════════════════════════════════════════════════════════════ */
+import { norm } from '../lib/normalize.js';
+
 (function () {
   'use strict';
 
@@ -17,17 +19,6 @@
 
   var cats = [].slice.call(root.querySelectorAll('[data-cat]'));
   if (!cats.length) return;
-
-  /* Muss zeichengleich zu norm() in tools/build.mjs sein */
-  function norm(s) {
-    return String(s || '').toLowerCase()
-      .replace(/\u00e4/g, 'ae').replace(/\u00f6/g, 'oe').replace(/\u00fc/g, 'ue').replace(/\u00df/g, 'ss')
-      .replace(/[\u064a\u0649]/g, '\u06cc')       /* arabisches Ya -> persisches Ya */
-      .replace(/\u0643/g, '\u06a9')               /* arabisches Kaf -> persisches Kaf */
-      .replace(/[\u064b-\u0652\u0670]/g, '')     /* arabische Vokalzeichen entfernen */
-      .replace(/\u200c/g, ' ')                    /* ZWNJ als Wortgrenze */
-      .normalize('NFD').replace(/[\u0300-\u036f]/g, '');
-  }
 
   var chips      = document.getElementById('menu-chips');
   var filters    = document.getElementById('menu-filters');

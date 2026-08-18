@@ -1,0 +1,64 @@
+---
+/* Eine Gerichtekarte — auf der Startseite in der Reihe, auf der Speisekarte im
+   Raster. Der Suchindex (`data-search`) wird hier beim Bauen erzeugt; der
+   Browser bekommt dadurch nie die Gerichtedaten, nur fertiges Markup. */
+import { ui, tagLabels, currency, media, fill } from '../lib/site.js';
+import { norm } from '../lib/normalize.js';
+
+import type { LangCode, TagKey, Category, Dish } from '../lib/types';
+
+interface Props { code: LangCode; item: Dish; cat: Category; sizes: string; }
+const { code, item, cat, sizes } = Astro.props;
+
+const t = ui[code];
+const name = item.name[code];
+const desc = item.desc[code];
+
+/* Zweite Zeile: auf lateinischen Seiten der persische Name, auf der
+   persischen Seite die internationale Schreibweise. */
+const sub = code === 'fa' ? item.name.en : item.name.fa;
+const subDir = code === 'fa' ? 'ltr' : 'rtl';
+const subLang = code === 'fa' ? 'en' : 'fa';
+
+/* Die englische Schreibweise und die englischen Suchbegriffe landen in jeder
+   Sprachfassung mit im Index — wer auf der georgischen Karte „kebab“ tippt,
+   findet die Spieße trotzdem. */
+const haystack = norm([
+  name, sub, desc, item.kw?.[code], item.name.en, item.kw?.en, cat.name[code], cat.short[code]
+].join(' '));
+
+/* Dass hier nur bekannte Kennzeichen stehen, prüft src/lib/validate.js beim Bauen. */
+const tags = (item.tags || []) as TagKey[];
+---
+<article
+  class="dish" id={item.id} data-dish
+  data-tags={tags.join(' ')} data-search={haystack} data-reveal="up">
+  <button
+    class="dish-figure" type="button"
+    data-lightbox={media('md', item.img)}
+    data-lightbox-title={name}
+    data-lightbox-caption={desc}
+    aria-label={fill(t.menuPage.zoom, { name })}>
+    <img
+      src={media('sm', item.img)}
+      srcset={`${media('sm', item.img)} 480w, ${media('md', item.img)} 900w`}
+      sizes={sizes}
+      alt={`${name} — 1001 Nights, Tbilisi`}
+      loading="lazy" decoding="async" />
+    {tags.length > 0 && (
+      <span class="dish-tags">
+        {tags.map(k => <span class:list={['tag', tagLabels[k].cls]}>{tagLabels[k][code]}</span>)}
+      </span>
+    )}
+  </button>
+  <div class="dish-body">
+    <div class="dish-title-row">
+      <h3 class="dish-name">{name}</h3>
+      {item.price != null && (
+        <span class="dish-price tnum" dir="ltr">{item.price} <small>{currency}</small></span>
+      )}
+    </div>
+    {sub && <p class="dish-sub" lang={subLang} dir={subDir}>{sub}</p>}
+    <p class="dish-desc">{desc}</p>
+  </div>
+</article>

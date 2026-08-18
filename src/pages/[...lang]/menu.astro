@@ -1,0 +1,106 @@
+---
+/* Die Speisekarte, viermal. Sie steht fertig im HTML — der Browser lädt zur
+   Laufzeit weder die Gerichtedaten noch einen Renderer, nur die Bedienung
+   (Suche, Filter, Scrollspy) in src/scripts/menu.js. */
+import {
+  LANGS, ui, contact, categories, tagLabels, filterTags,
+  homeUrl, fill, CAT_COUNT, DISH_COUNT, ANY_PRICE
+} from '../../lib/site.js';
+import type { LangCode } from '../../lib/types';
+import Base from '../../layouts/Base.astro';
+import Dish from '../../components/Dish.astro';
+import Icon from '../../components/Icon.astro';
+
+export function getStaticPaths() {
+  return LANGS.map(L => ({
+    params: { lang: L.path ? L.path.replace(/\/$/, '') : undefined },
+    props: { code: L.code as LangCode }
+  }));
+}
+
+const { code } = Astro.props;
+const t = ui[code];
+const CARD = '(max-width: 380px) 92vw, (max-width: 640px) 46vw, (max-width: 1000px) 31vw, 270px';
+---
+<Base code={code} page="menu">
+
+  <section class="menu-hero">
+    <div class="wrap">
+      <p class="menu-kicker" data-enter="fade">{t.menuPage.kicker}</p>
+      <h1 data-enter="up" data-delay="90">{t.menuPage.title}</h1>
+      <p class="lead text-muted" style="max-width:60ch" data-enter="up" data-delay="200">
+        {fill(t.menuPage.lead, { c: CAT_COUNT, n: DISH_COUNT })}
+      </p>
+      <p id="price-notice" class="price-notice text-muted" data-enter="fade" data-delay="300" hidden={ANY_PRICE}>
+        {t.menuPage.priceNotice}
+      </p>
+    </div>
+  </section>
+
+  <div class="menu-bar">
+    <div class="wrap menu-bar-inner">
+      <nav class="chips" id="menu-chips" aria-label={t.menuPage.catNav}>
+        {categories.map((c, i) => (
+          <a class:list={['chip', { 'is-active': i === 0 }]} href={`#cat-${c.id}`} data-chip={c.id}>{c.short[code]}</a>
+        ))}
+      </nav>
+      <div class="menu-search">
+        <label class="visually-hidden" for="menu-search-input">{t.menuPage.searchLabel}</label>
+        <Icon name="search" />
+        <input id="menu-search-input" type="search" placeholder={t.menuPage.searchPlaceholder} autocomplete="off" />
+      </div>
+    </div>
+  </div>
+
+  <div class="wrap">
+    <div class="menu-filters" id="menu-filters">
+      <span class="label">{t.menuPage.filterLabel}</span>
+      {filterTags.map(k => (
+        <button class="chip filter-toggle" type="button" data-filter={k} aria-pressed="false">{tagLabels[k][code]}</button>
+      ))}
+    </div>
+  </div>
+
+  <div class="wrap">
+    <div id="menu-root">
+      {categories.map(c => (
+        <section class="menu-cat" id={`cat-${c.id}`} data-cat aria-labelledby={`h-${c.id}`}>
+          <header class="menu-cat-head" data-reveal="up">
+            <div>
+              <span class="num tnum">{c.num}</span>
+              <h2 id={`h-${c.id}`}>{c.name[code]}</h2>
+              <p class="text-muted">{c.intro[code]}</p>
+            </div>
+            <span class="cat-script text-muted">{c.script[code]}</span>
+          </header>
+          <div class="rule-ornament"><i></i></div>
+          <div class="dish-grid" data-stagger="70">
+            {c.items.map(item => <Dish code={code} item={item} cat={c} sizes={CARD} />)}
+          </div>
+        </section>
+      ))}
+
+      <div class="no-results" id="no-results" hidden>
+        <p>{t.menuPage.noResultsTitle}</p>
+        <p class="text-muted">{t.menuPage.noResultsSub}</p>
+        <button class="btn btn-secondary" type="button" id="reset-all">{t.menuPage.reset}</button>
+      </div>
+    </div>
+  </div>
+
+  <section class="section on-dark" style="margin-top:clamp(56px,9vw,110px)">
+    <div class="wrap wrap-narrow" style="text-align:center">
+      <h6 data-reveal="up">{t.menuPage.outroKicker}</h6>
+      <h2 class="display" data-reveal="up" data-delay="80">{t.menuPage.outroTitle}</h2>
+      <p class="text-muted" data-reveal="up" data-delay="140">{t.menuPage.outroText}</p>
+      <div class="hero-actions" style="justify-content:center" data-reveal="up" data-delay="200">
+        <a class="btn btn-primary" href={`tel:${contact.phoneHref}`}>{t.menuPage.ctaReserve}</a>
+        <a class="btn btn-secondary" href={`${homeUrl(code)}#visit`}>{t.menuPage.ctaVisit}</a>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    import '../../scripts/menu.js';
+  </script>
+</Base>

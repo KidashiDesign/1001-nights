@@ -1,0 +1,42 @@
+---
+/* Titelbild, Wortmarke, zwei Wege weiter. Die Einstiegs-Staffel läuft über
+   [data-enter] mit gestaffelten data-delay-Werten. */
+import { ui, contact, menuUrl, media } from '../../lib/site.js';
+import Icon from '../Icon.astro';
+
+import type { LangCode } from '../../lib/types';
+
+interface Props { code: LangCode; }
+const { code } = Astro.props;
+const t = ui[code];
+const hero = 'Persian_stews.webp';
+---
+<section class="hero">
+  <div class="hero-media">
+    <img
+      src={media('sm', hero)}
+      srcset={`${media('sm', hero)} 480w, ${media('md', hero)} 900w, ${media('', hero)} 1280w`}
+      sizes="100vw" alt={t.gallery.title} fetchpriority="high" decoding="async" />
+  </div>
+  <div class="hero-veil"></div>
+
+  <div class="wrap">
+    <p class="hero-kicker" data-enter="fade" data-delay="0">{t.hero.kicker}</p>
+    <h1 class="hero-title" data-enter="up" data-delay="120">
+      <span class="wordmark">1001 Nights</span>
+      <em>{t.hero.tagline}</em>
+    </h1>
+    <p class="hero-sub" data-enter="up" data-delay="260">{t.hero.sub}</p>
+    <div class="hero-actions" data-enter="up" data-delay="380">
+      <a class="btn btn-primary" href={menuUrl(code)}>{t.hero.ctaMenu}</a>
+      <a class="btn btn-secondary" href={`tel:${contact.phoneHref}`}>{t.hero.ctaReserve}</a>
+    </div>
+    <div class="hero-facts" data-enter="fade" data-delay="520">
+      <span><Icon name="pin" /> {t.hero.fact1}</span>
+      <span><Icon name="clock" /> {t.hero.fact2}</span>
+      <span><Icon name="house" /> {t.hero.fact3}</span>
+    </div>
+  </div>
+
+  <span class="scroll-cue" aria-hidden="true"></span>
+</section>

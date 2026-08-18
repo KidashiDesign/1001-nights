@@ -1,0 +1,42 @@
+---
+/* Das Haus — Text links, Foto rechts, darunter drei Zahlen, die beim
+   Erscheinen hochzählen. */
+import { ui, contact, media, DISH_COUNT } from '../../lib/site.js';
+import Icon from '../Icon.astro';
+
+import type { LangCode } from '../../lib/types';
+
+interface Props { code: LangCode; }
+const { code } = Astro.props;
+const t = ui[code];
+---
+<section class="section" id="restaurant">
+  <div class="wrap split">
+    <div class="split-content">
+      <h6 data-reveal="up">{t.story.kicker}</h6>
+      <h2 data-reveal="up" data-delay="80">{t.story.titleA}<br />{t.story.titleB}</h2>
+      <p class="lead justify" data-reveal="up" data-delay="160">{t.story.lead}</p>
+      <p class="justify text-muted" data-reveal="up" data-delay="220">{t.story.body}</p>
+
+      <div class="stat-row" data-reveal="up" data-delay="280">
+        <div class="stat"><b class="tnum"><span data-count={contact.yearsInTbilisi}>0</span>+</b><span class="stat-label">{t.story.stat1}</span></div>
+        <div class="stat"><b class="tnum"><span data-count={DISH_COUNT}>0</span></b><span class="stat-label">{t.story.stat2}</span></div>
+        <div class="stat"><b class="tnum"><span data-count={contact.hoursForMahiche}>0</span></b><span class="stat-label">{t.story.stat3}</span></div>
+      </div>
+
+      <p style="margin-top:var(--space-6)" data-reveal="up" data-delay="340">
+        <a class="link-underline" href="#visit">{t.story.link} <Icon name="arrow" /></a>
+      </p>
+    </div>
+
+    <div class="split-media" data-reveal="right" data-shrink>
+      <figure class="plate plate-4x5">
+        <img
+          src={media('sm', 'Front_Shop.webp')}
+          srcset={`${media('sm', 'Front_Shop.webp')} 480w, ${media('md', 'Front_Shop.webp')} 900w`}
+          sizes="(max-width: 820px) 92vw, 480px" alt={t.gallery.c4} loading="lazy" decoding="async" />
+      </figure>
+      <div class="split-badge"><span>{t.story.badgeSince}</span><b class="tnum">{contact.since}</b><span>{t.story.badgeCity}</span></div>
+    </div>
+  </div>
+</section>

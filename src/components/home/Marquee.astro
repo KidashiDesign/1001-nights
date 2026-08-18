@@ -1,0 +1,20 @@
+---
+/* Laufband — reine CSS-Animation, pausiert beim Überfahren. Die Wortgruppe
+   steht zweimal da, damit der Umlauf ohne Sprung schließt. */
+import { ui } from '../../lib/site.js';
+
+import type { LangCode } from '../../lib/types';
+
+interface Props { code: LangCode; }
+const { code } = Astro.props;
+const words: string[] = ui[code].marquee;
+---
+<div class="marquee" aria-hidden="true">
+  <div class="marquee-track">
+    {[0, 1].map(() => (
+      <div class="marquee-group">
+        {words.map(w => (<><span>{w}</span><i></i></>))}
+      </div>
+    ))}
+  </div>
+</div>
