@@ -18,10 +18,14 @@
   var cats = [].slice.call(root.querySelectorAll('[data-cat]'));
   if (!cats.length) return;
 
-  /* Muss zeichengleich zu norm() in tools/build-menu.mjs sein */
+  /* Muss zeichengleich zu norm() in tools/build.mjs sein */
   function norm(s) {
     return String(s || '').toLowerCase()
-      .replace(/ä/g, 'ae').replace(/ö/g, 'oe').replace(/ü/g, 'ue').replace(/ß/g, 'ss')
+      .replace(/\u00e4/g, 'ae').replace(/\u00f6/g, 'oe').replace(/\u00fc/g, 'ue').replace(/\u00df/g, 'ss')
+      .replace(/[\u064a\u0649]/g, '\u06cc')       /* arabisches Ya -> persisches Ya */
+      .replace(/\u0643/g, '\u06a9')               /* arabisches Kaf -> persisches Kaf */
+      .replace(/[\u064b-\u0652\u0670]/g, '')     /* arabische Vokalzeichen entfernen */
+      .replace(/\u200c/g, ' ')                    /* ZWNJ als Wortgrenze */
       .normalize('NFD').replace(/[\u0300-\u036f]/g, '');
   }
 

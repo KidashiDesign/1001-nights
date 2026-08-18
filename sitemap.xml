@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>https://1001nights.ge/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://1001nights.ge/"/>
+    <xhtml:link rel="alternate" hreflang="fa" href="https://1001nights.ge/fa/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://1001nights.ge/ru/"/>
+    <xhtml:link rel="alternate" hreflang="ka" href="https://1001nights.ge/ka/"/>
+  </url>
+  <url>
+    <loc>https://1001nights.ge/menu.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://1001nights.ge/menu.html"/>
+    <xhtml:link rel="alternate" hreflang="fa" href="https://1001nights.ge/fa/menu.html"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://1001nights.ge/ru/menu.html"/>
+    <xhtml:link rel="alternate" hreflang="ka" href="https://1001nights.ge/ka/menu.html"/>
+  </url>
+  <url>
+    <loc>https://1001nights.ge/fa/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://1001nights.ge/"/>
+    <xhtml:link rel="alternate" hreflang="fa" href="https://1001nights.ge/fa/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://1001nights.ge/ru/"/>
+    <xhtml:link rel="alternate" hreflang="ka" href="https://1001nights.ge/ka/"/>
+  </url>
+  <url>
+    <loc>https://1001nights.ge/fa/menu.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://1001nights.ge/menu.html"/>
+    <xhtml:link rel="alternate" hreflang="fa" href="https://1001nights.ge/fa/menu.html"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://1001nights.ge/ru/menu.html"/>
+    <xhtml:link rel="alternate" hreflang="ka" href="https://1001nights.ge/ka/menu.html"/>
+  </url>
+  <url>
+    <loc>https://1001nights.ge/ru/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://1001nights.ge/"/>
+    <xhtml:link rel="alternate" hreflang="fa" href="https://1001nights.ge/fa/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://1001nights.ge/ru/"/>
+    <xhtml:link rel="alternate" hreflang="ka" href="https://1001nights.ge/ka/"/>
+  </url>
+  <url>
+    <loc>https://1001nights.ge/ru/menu.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://1001nights.ge/menu.html"/>
+    <xhtml:link rel="alternate" hreflang="fa" href="https://1001nights.ge/fa/menu.html"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://1001nights.ge/ru/menu.html"/>
+    <xhtml:link rel="alternate" hreflang="ka" href="https://1001nights.ge/ka/menu.html"/>
+  </url>
+  <url>
+    <loc>https://1001nights.ge/ka/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://1001nights.ge/"/>
+    <xhtml:link rel="alternate" hreflang="fa" href="https://1001nights.ge/fa/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://1001nights.ge/ru/"/>
+    <xhtml:link rel="alternate" hreflang="ka" href="https://1001nights.ge/ka/"/>
+  </url>
+  <url>
+    <loc>https://1001nights.ge/ka/menu.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://1001nights.ge/menu.html"/>
+    <xhtml:link rel="alternate" hreflang="fa" href="https://1001nights.ge/fa/menu.html"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://1001nights.ge/ru/menu.html"/>
+    <xhtml:link rel="alternate" hreflang="ka" href="https://1001nights.ge/ka/menu.html"/>
+  </url>
+</urlset>

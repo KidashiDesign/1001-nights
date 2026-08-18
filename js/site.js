@@ -197,3 +197,18 @@
 
   window.NIGHTS = { openLightbox: openLightbox, reduced: reduced };
 })();
+
+/* ── Sprachumschalter: außerhalb klicken oder Escape schließt ihn ─────── */
+(function () {
+  'use strict';
+  var boxes = document.querySelectorAll('[data-lang-switch]');
+  if (!boxes.length) return;
+  document.addEventListener('click', function (e) {
+    boxes.forEach(function (d) { if (!d.contains(e.target)) d.open = false; });
+  });
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape') boxes.forEach(function (d) {
+      if (d.open) { d.open = false; d.querySelector('summary').focus(); }
+    });
+  });
+})();
