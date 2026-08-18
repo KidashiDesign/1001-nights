@@ -142,13 +142,17 @@
   var lb = null, lastFocus = null;
 
   function buildLightbox() {
+    /* Die Beschriftung steht in der Seitensprache am <body>; sie kommt aus
+       ui[…].lightbox.close. */
+    var closeLabel = document.body.dataset.lightboxClose || 'Close';
+
     lb = document.createElement('div');
     lb.className = 'lightbox';
     lb.setAttribute('role', 'dialog');
     lb.setAttribute('aria-modal', 'true');
     lb.hidden = false;
     lb.innerHTML =
-      '<button class="lightbox-close" type="button" aria-label="Schließen">' +
+      '<button class="lightbox-close" type="button" aria-label="' + closeLabel + '">' +
       '<svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.5">' +
       '<path d="M18 6 6 18M6 6l12 12"/></svg></button>' +
       '<figure class="lightbox-fig"><img alt=""><figcaption class="lightbox-cap">' +
@@ -188,11 +192,6 @@
     if (!trigger) return;
     e.preventDefault();
     openLightbox(trigger.dataset.lightbox, trigger.dataset.lightboxTitle, trigger.dataset.lightboxCaption);
-  });
-
-  /* ── 7. Jahreszahl im Footer ─────────────────────────────────────────── */
-  document.querySelectorAll('[data-year]').forEach(function (el) {
-    el.textContent = new Date().getFullYear();
   });
 
   window.NIGHTS = { openLightbox: openLightbox, reduced: reduced };

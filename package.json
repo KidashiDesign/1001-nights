@@ -1,0 +1,22 @@
+{
+  "name": "1001-nights",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Website des persischen Restaurants 1001 Nights, Tiflis — Astro, vier Sprachen.",
+  "license": "MIT",
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "check": "astro check"
+  },
+  "dependencies": {
+    "astro": "^7.2.3"
+  },
+  "devDependencies": {
+    "@astrojs/check": "^0.9.10",
+    "typescript": "^6.0.3"
+  }
+}

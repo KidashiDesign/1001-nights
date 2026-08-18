@@ -1,0 +1,32 @@
+---
+/* Vier Gerichte zum Anfangen — dieselbe Karte wie auf der Speisekarte, nur
+   in einer Reihe. Welche vier, steht in `signature` in src/data/menu.js. */
+import { ui, signatureDishes, menuUrl, fill, DISH_COUNT } from '../../lib/site.js';
+import Dish from '../Dish.astro';
+
+import type { LangCode } from '../../lib/types';
+
+interface Props { code: LangCode; }
+const { code } = Astro.props;
+const t = ui[code];
+const SIZES = '(max-width: 640px) 72vw, (max-width: 1000px) 44vw, 262px';
+---
+<section class="section" style="background:var(--color-surface)">
+  <div class="wrap">
+    <div class="section-head" data-reveal="up">
+      <h6>{t.signature.kicker}</h6>
+      <h2>{t.signature.title}</h2>
+      <p class="text-muted">{t.signature.sub}</p>
+    </div>
+
+    <div class="rail" data-stagger="90">
+      {signatureDishes.map(({ item, cat }) => <Dish code={code} item={item} cat={cat} sizes={SIZES} />)}
+    </div>
+
+    <div class="rule-ornament"><i></i></div>
+
+    <p style="text-align:center" data-reveal="up">
+      <a class="btn btn-primary" href={menuUrl(code)}>{fill(t.signature.cta, { n: DISH_COUNT })}</a>
+    </p>
+  </div>
+</section>

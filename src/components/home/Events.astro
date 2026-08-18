@@ -1,0 +1,44 @@
+---
+/* Zwei Abende im Haus. Die beiden Karten fahren von den Seiten herein. */
+import { ui, contact, media } from '../../lib/site.js';
+import Icon from '../Icon.astro';
+
+import type { LangCode } from '../../lib/types';
+
+interface Props { code: LangCode; }
+const { code } = Astro.props;
+const t = ui[code];
+
+const events = [
+  { file: 'Post2_Live_Concert.webp', date: t.events.e1date, title: t.events.e1title, text: t.events.e1text, from: 'left' },
+  { file: 'Post1_Jashn_CharshanbeSouri.webp', date: t.events.e2date, title: t.events.e2title, text: t.events.e2text, from: 'right' }
+];
+---
+<section class="section on-dark" id="experience">
+  <div class="wrap">
+    <div class="section-head" data-reveal="up">
+      <h6>{t.events.kicker}</h6>
+      <h2>{t.events.title}</h2>
+      <p class="text-muted">{t.events.sub}</p>
+    </div>
+
+    <div class="event-grid" data-stagger="120">
+      {events.map(e => (
+        <article class="event" data-reveal={e.from} data-shrink>
+          <figure class="plate plate-4x5">
+            <img
+              src={media('sm', e.file)}
+              srcset={`${media('sm', e.file)} 480w, ${media('md', e.file)} 900w`}
+              sizes="(max-width: 560px) 240px, 168px" alt={e.title} loading="lazy" decoding="async" />
+          </figure>
+          <div>
+            <h6>{e.date}</h6>
+            <h3>{e.title}</h3>
+            <p class="text-muted">{e.text}</p>
+            <a class="link-underline" href={`tel:${contact.phoneHref}`}>{t.events.cta} <Icon name="arrow" /></a>
+          </div>
+        </article>
+      ))}
+    </div>
+  </div>
+</section>

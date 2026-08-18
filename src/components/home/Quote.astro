@@ -1,0 +1,19 @@
+---
+/* Zitatband auf dunkler Fläche. `.line-mask > span` fährt zeilenweise auf. */
+import { ui, media } from '../../lib/site.js';
+
+import type { LangCode } from '../../lib/types';
+
+interface Props { code: LangCode; }
+const { code } = Astro.props;
+const t = ui[code];
+---
+<section class="on-ink quote-band">
+  <div class="quote-media">
+    <img src={media('', '1001_Shab_Cover.webp')} alt="" sizes="100vw" loading="lazy" decoding="async" />
+  </div>
+  <div class="wrap wrap-narrow section quote-inner">
+    <div class="line-mask quote-text"><span>{t.quote.text}</span></div>
+    <p class="quote-source text-muted" data-reveal="fade" data-delay="500">{t.quote.source}</p>
+  </div>
+</section>

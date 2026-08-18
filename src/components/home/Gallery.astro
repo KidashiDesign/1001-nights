@@ -1,0 +1,44 @@
+---
+/* Sechs Bilder im Passepartout, zwei davon hochkant. Jedes öffnet die
+   Lightbox — deshalb sind es <button> und keine <img> mit onclick. */
+import { ui, media } from '../../lib/site.js';
+
+import type { LangCode } from '../../lib/types';
+
+interface Props { code: LangCode; }
+const { code } = Astro.props;
+const t = ui[code];
+
+const shots = [
+  { file: 'Shishlik.webp', title: 'Shishlik', caption: t.gallery.c1, cls: 'tall' },
+  { file: 'Tea_and_baklava.webp', title: t.menuPage.title, caption: t.gallery.c2, cls: '' },
+  { file: 'Kashk-e_Bademjan.webp', title: 'Kashk-e Bademjān', caption: t.gallery.c3, cls: '' },
+  { file: 'Where_the_vibe_meets_the_flavor.webp', title: t.visit.street, caption: t.gallery.c4, cls: '' },
+  { file: 'seafood.webp', title: t.gallery.c5, caption: t.gallery.c5, cls: '' },
+  { file: 'Dorado_Fish.webp', title: t.gallery.c6, caption: t.gallery.c6, cls: 'tall' }
+];
+---
+<section class="section" id="gallery">
+  <div class="wrap">
+    <div class="section-head" data-reveal="up">
+      <h6>{t.gallery.kicker}</h6>
+      <h2>{t.gallery.title}</h2>
+    </div>
+    <div class="gallery" data-stagger="80">
+      {shots.map(s => (
+        <button
+          type="button" class={s.cls || undefined} data-reveal="up" data-shrink
+          data-lightbox={media('md', s.file)}
+          data-lightbox-title={s.title}
+          data-lightbox-caption={s.caption}>
+          <span class="plate">
+            <img
+              src={media('sm', s.file)}
+              srcset={`${media('sm', s.file)} 480w, ${media('md', s.file)} 900w`}
+              sizes="(max-width: 860px) 46vw, 280px" alt={s.caption} loading="lazy" decoding="async" />
+          </span>
+        </button>
+      ))}
+    </div>
+  </div>
+</section>
