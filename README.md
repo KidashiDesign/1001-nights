@@ -1,73 +1,97 @@
 # 1001 Nights — Website
 
 Website für das persische Restaurant **1001 Nights**, Kote Apkhazi 9, Tiflis.
-Statisches HTML/CSS/JS, kein Framework, kein Build-Zwang — nur ein kleines
-Node-Skript, das die Speisekarte vorab rendert.
+Statisches HTML/CSS/JS in vier Sprachen, kein Framework — nur ein kleines
+Node-Skript, das aus den Inhalten alle Seiten erzeugt.
+
+## Sprachen
+
+| Sprache | Pfad | Richtung |
+| --- | --- | --- |
+| English (Standard) | `/` | ltr |
+| فارسی | `/fa/` | **rtl** |
+| Русский | `/ru/` | ltr |
+| ქართული | `/ka/` | ltr |
+
+Jede Sprache hat eine Startseite und eine Speisekarte — acht Seiten insgesamt,
+alle statisch, alle mit `hreflang` untereinander verknüpft, dazu `sitemap.xml`.
+Der Sprachumschalter im Kopf springt immer auf dieselbe Seite in der anderen
+Sprache. Er ist ein `<details>`-Aufklapper und funktioniert ohne JavaScript.
+
+## Aufbau
 
 ```
-index.html          Startseite (Hero, Haus, Signature-Gerichte, Galerie, Erlebnis, Besuch)
-speisekarte.html    Speisekarte — der Schwerpunkt der Seite
-css/style.css       Design-System-Tokens + alle Komponenten
+content/ui.js       Oberflächen- und Seitentexte, ein Block je Sprache
+content/menu.js     alle Gerichte, in allen vier Sprachen
+tools/build.mjs     erzeugt daraus die acht HTML-Seiten und sitemap.xml
+
+index.html          erzeugt — nicht von Hand bearbeiten
+menu.html           erzeugt
+fa/ ru/ ka/         erzeugt
+sitemap.xml         erzeugt
+
+css/style.css       Design-System-Tokens und alle Komponenten
 css/fonts.css       selbst gehostete Schriften (@font-face)
-fonts/              woff2-Dateien (Italiana, Cormorant Garamond, Lora, Noto Naskh Arabic)
+fonts/              woff2: Italiana, Cormorant Garamond, Lora,
+                    Noto Serif Georgian, Vazirmatn, Noto Naskh Arabic
 js/site.js          Navigation, Scroll-Animationen, Lightbox, Zähler
-js/menu.js          Suche, Filter, Scrollspy der Speisekarte (liest nur aus dem DOM)
-js/menu-data.js     Datenquelle der Speisekarte — hier wird gepflegt
-tools/build-menu.mjs  rendert menu-data.js in die HTML-Seiten
+js/menu.js          Suche, Filter, Scrollspy — liest ausschließlich aus dem DOM
 media/              Originalfotos (1280 px) + media/md (900 px) + media/sm (480 px)
 ```
 
-Zum Ansehen genügt ein beliebiger Webserver im Projektordner, z. B.
+**Die HTML-Dateien sind erzeugt.** Änderungen gehören in `content/`, danach:
+
+```bash
+node tools/build.mjs
+```
+
+Zum Ansehen genügt ein Webserver im Projektordner:
 `python3 -m http.server 8000`.
 
 ---
 
 ## Speisekarte pflegen
 
-Alle Gerichte stehen in **`js/menu-data.js`**. Nach jeder Änderung:
-
-```bash
-node tools/build-menu.mjs
-```
-
-Das Skript schreibt das fertige Markup zwischen die `<!-- build:… -->`-Marken in
-`speisekarte.html` und `index.html` und aktualisiert die Gerichte- und
-Kategoriezahlen im Fließtext. Alles zwischen den Marken ist generiert — dort
-nicht von Hand editieren.
-
-Ein Gericht sieht so aus:
+Alle Gerichte stehen in **`content/menu.js`**, jedes mit Name, Beschreibung
+und Suchbegriffen in allen vier Sprachen:
 
 ```js
-{ id: 'kabab-barg', name: 'Kabāb-e Barg', fa: 'کباب برگ',
-  desc: 'Rinderfilet in dünnen Blättern …',
-  img: 'Kabab_Barg.webp', price: 32, tags: ['chef', 'gf'],
-  keywords: 'kebab kebap rind filet grill' }
+{
+  id: 'kabab-barg', img: 'Kabab_Barg.webp', price: null, tags: ['chef', 'gf'],
+  name: { en: 'Kabāb-e Barg', fa: 'کباب برگ', ru: 'Кебаб Барг', ka: 'ქაბაბ ბარგი' },
+  desc: { en: '…', fa: '…', ru: '…', ka: '…' },
+  kw:   { en: 'kebab kebap beef grill', fa: '…', ru: '…', ka: '…' }
+}
 ```
 
 | Feld | Bedeutung |
 | --- | --- |
-| `id` | Anker in der URL, muss eindeutig sein |
-| `name` / `fa` | Anzeigename und persische Schreibweise |
-| `desc` | ein bis zwei Sätze |
+| `id` | Anker in der URL, sprachunabhängig, muss eindeutig sein |
 | `img` | Dateiname in `media/` — muss auch in `media/sm/` und `media/md/` liegen |
 | `price` | Zahl in GEL, oder `null` |
-| `tags` | `veg`, `vegan`, `gf`, `spicy`, `chef` |
-| `keywords` | zusätzliche Suchbegriffe, nicht sichtbar (z. B. „kebap" für „Kabāb") |
+| `tags` | `veg`, `vegan`, `gf`, `spicy`, `chef` — Beschriftungen in `tagLabels` |
+| `name`, `desc` | je Sprache, alle vier Pflicht |
+| `kw` | zusätzliche Suchbegriffe, nie sichtbar (z. B. „kebap" für „Kabāb") |
+
+Der Generator bricht ab, wenn eine Sprache fehlt. Die englische Schreibweise
+und die englischen Suchbegriffe landen zusätzlich im Suchindex **jeder**
+Sprachfassung — wer auf der georgischen Karte „kebab" tippt, findet die
+Spieße trotzdem.
 
 ### Preise
 
-**Die `price`-Felder stehen aktuell auf `null`.** Die Quelle
+**Alle `price`-Felder stehen auf `null`.** Die Quelle
 (oddmenu.com/p/1001-nights) war aus der Build-Umgebung nicht erreichbar, und
 erfundene Preise gehören nicht auf die Seite eines echten Restaurants.
-Karten ohne Preis rendern sauber weiter — es fehlt nur die Zahl, und über der
-Karte steht ein entsprechender Hinweis.
+Karten ohne Preis rendern sauber weiter; über der Karte steht ein Hinweis in
+der jeweiligen Sprache.
 
-Sobald die Zahlen eingetragen und `node tools/build-menu.mjs` gelaufen ist,
-verschwindet der Hinweis automatisch.
+Sobald die Zahlen eingetragen sind und `node tools/build.mjs` gelaufen ist,
+verschwindet der Hinweis auf allen acht Seiten automatisch.
 
 ### Neue Fotos
 
-Bilder nach `media/` legen und die beiden kleineren Größen erzeugen:
+Bilder nach `media/` legen und die zwei kleineren Größen erzeugen:
 
 ```bash
 python3 - <<'PY'
@@ -96,14 +120,45 @@ Marken-Tokens aus `1001 Nights - Styleguide.dc.html`:
 | Akzent (Oliv) | `#6E7A3A` |
 | Akzent 2 (Gold) | `#C7A94A` |
 | Zweite dunkle Fläche (Petrol) | `#3A4E4A` |
-| Display / Überschrift / Text | Italiana / Cormorant Garamond / Lora |
 
 Die Regeln des Systems werden durchgehalten: Farbe erscheint als Kontur,
 nicht als Fläche; Buttons sind umrandet statt gefüllt; Haarlinien tragen die
 Struktur; jedes Foto sitzt in einem Passepartout (`.plate`); Schatten bleiben
-ein Flüstern. Alle Werte kommen aus den `--color-*` / `--space-*` /
-`--radius-*` / `--shadow-*` Variablen am Kopf von `css/style.css` — dort wird
-umgestellt, nicht in den Komponenten.
+ein Flüstern. Alle Werte kommen aus den Variablen am Kopf von
+`css/style.css` — dort wird umgestellt, nicht in den Komponenten.
+
+### Schrift je Schriftsystem
+
+Italiana kann nur Latein. Jede Sprache bekommt deshalb ein Display, das ihre
+Zeichen wirklich hat — gesetzt über `:root:lang(…)`:
+
+| Sprache | Display | Überschrift | Fließtext |
+| --- | --- | --- | --- |
+| en | Italiana | Cormorant Garamond | Lora |
+| ru | Cormorant Garamond | Cormorant Garamond | Lora |
+| ka | Noto Serif Georgian | Noto Serif Georgian | Noto Serif Georgian |
+| fa | Vazirmatn | Vazirmatn | Vazirmatn |
+
+Die Wortmarke „1001 Nights" bleibt überall in Italiana und lateinisch — das
+Schild vor der Tür und die Seite sollen dasselbe sagen. Im persischen Satz
+ist sie zusätzlich mit `unicode-bidi: isolate` gegen die Bidi-Umsortierung
+geschützt, sonst würde daraus „Nights 1001".
+
+### Laufweite
+
+Versalsperrung ist eine lateinische Geste. Arabische Schrift **verbindet**
+ihre Buchstaben — jede Sperrung reißt die Verbindungen auf. Alle
+Kapitälchen-Stellen lesen deshalb aus `--track-wide` / `--track-kicker` /
+`--track-caps`, und auf der persischen Fassung stehen diese Token auf `0`.
+
+### Rechts nach links
+
+Die persische Fassung läuft mit `dir="rtl"`. Kanten sind durchgehend logisch
+gesetzt (`inset-inline-start`, `padding-inline`, `text-align: start`), sodass
+das Layout ohne Sonderregeln spiegelt. Ausdrücklich gedreht werden nur:
+Pfeil-Icons (`.dir-flip`), die Unterstrich-Wischer, der Farbverlauf über dem
+Hero, die Abblendkante der Chip-Leiste und das Burger-Kreuz. Telefonnummer,
+E-Mail, Uhrzeiten und Preise stehen in `dir="ltr"`-Inseln.
 
 ## Bewegung
 
@@ -130,20 +185,31 @@ sofort. Ohne JavaScript sind ebenfalls alle Inhalte sichtbar (`.no-js`).
 * Bilder in drei Größen mit `srcset`/`sizes`; alles außer dem Hero ist `lazy`.
 * Der Hero wird mit `imagesrcset` vorgeladen, damit auf dem Handy nicht die
   Desktop-Fassung gezogen wird.
-* Schriften liegen selbst gehostet neben dem HTML — kein Drittanbieter-Request,
-  kein zusätzlicher DNS-Handshake. Die drei Kernschnitte werden vorgeladen.
+* Schriften liegen selbst gehostet daneben — kein Drittanbieter-Request. Über
+  `unicode-range` lädt jede Sprachfassung nur ihre eigenen Schnitte; die
+  Bezeichnungen im Sprachumschalter nennen zuerst Systemschriften, damit
+  keine Seite 63 KB Georgisch nachlädt, nur um ein Wort zu setzen.
 * Die Speisekarte steht fertig im HTML; der Browser lädt zur Laufzeit weder
   die Gerichtedaten noch einen Renderer (≈ 14 KB JavaScript insgesamt).
 * Lange Kategorielisten nutzen `content-visibility: auto`.
 
-Gemessen lokal (Chromium, ungezippt): First Contentful Paint 76–130 ms,
-Startseite ≈ 740 KB / Speisekarte ≈ 800 KB beim ersten Aufruf. **Auf dem Server
-gzip oder brotli aktivieren** — HTML und CSS schrumpfen damit auf rund ein
-Fünftel.
+**Auf dem Server gzip oder brotli aktivieren** — HTML und CSS schrumpfen
+damit auf rund ein Fünftel.
 
 ## Barrierefreiheit
 
-Sichtbarer Fokusring (`:focus-visible`, 2 px Akzent), `aria-expanded` am
-Burger-Menü, `aria-pressed` an den Filtern, `aria-current` in der Navigation,
-Escape schließt die Lightbox und gibt den Fokus zurück, alle Fotos haben
-Alternativtexte, persische Namen sind mit `lang="fa" dir="rtl"` ausgezeichnet.
+Sprunglink zum Inhalt, sichtbarer Fokusring (`:focus-visible`, 2 px Akzent),
+`aria-expanded` am Burger-Menü, `aria-pressed` an den Filtern, `aria-current`
+in Navigation und Sprachumschalter, Escape schließt Lightbox und
+Sprachaufklapper und gibt den Fokus zurück, alle Fotos haben Alternativtexte
+in der Seitensprache, fremdsprachige Einschübe sind mit `lang` und `dir`
+ausgezeichnet.
+
+## Noch zu prüfen
+
+* **Übersetzungen** sollten von Muttersprachlern gegengelesen werden —
+  besonders die georgische und die persische Fassung.
+* **Öffnungszeiten und E-Mail** sind angenommen, nicht bestätigt.
+  Adresse und Telefonnummer stammen vom eigenen Nowruz-Plakat des Hauses.
+* **Domain**: `SITE` am Kopf von `tools/build.mjs` steht auf
+  `https://1001nights.ge` und speist canonical, hreflang und sitemap.
