@@ -1,0 +1,656 @@
+<!DOCTYPE html>
+<html lang="de" class="no-js">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Speisekarte — 1001 Nights, Persisches Restaurant in Tiflis</title>
+<meta name="description" content="Die Speisekarte des 1001 Nights in Tiflis: Vorspeisen, Kebab vom Holzkohlegrill, Khoresht, Reisgerichte, Fisch und persische Süßspeisen — mit Foto zu jedem Gericht.">
+<meta name="theme-color" content="#F9F8ED">
+<link rel="canonical" href="https://1001nights.ge/speisekarte.html">
+
+<meta property="og:type" content="website">
+<meta property="og:title" content="Speisekarte — 1001 Nights, Tiflis">
+<meta property="og:description" content="Kebab, Khoresht, Safranreis und Süßes. Jedes Gericht mit Foto.">
+<meta property="og:image" content="media/1001_Shab_Cover.webp">
+<meta property="og:locale" content="de_DE">
+
+<link rel="icon" href="media/sm/Logo.webp" type="image/webp">
+
+<link rel="preload" as="font" type="font/woff2" href="fonts/italiana-400-latin.woff2" crossorigin>
+<link rel="preload" as="font" type="font/woff2" href="fonts/cormorant-garamond-400-latin.woff2" crossorigin>
+<link rel="preload" as="font" type="font/woff2" href="fonts/lora-400-latin.woff2" crossorigin>
+<link rel="stylesheet" href="css/fonts.css">
+<link rel="stylesheet" href="css/style.css">
+
+</head>
+<body>
+
+<!-- ══ Navigation ══════════════════════════════════════════════════════ -->
+<header class="nav">
+  <div class="wrap nav-inner">
+    <a class="nav-brand" href="index.html" aria-label="1001 Nights — Startseite">
+      <span class="mark">1001 Nights</span>
+      <span class="sub">Restaurant</span>
+    </a>
+    <nav class="nav-links" aria-label="Hauptnavigation">
+      <a class="nav-link is-current" href="speisekarte.html" aria-current="page">Speisekarte</a>
+      <a class="nav-link" href="index.html#restaurant">Restaurant</a>
+      <a class="nav-link" href="index.html#erlebnis">Erlebnis</a>
+      <a class="nav-link" href="index.html#besuch">Besuch</a>
+    </nav>
+    <div class="nav-actions">
+      <a class="btn btn-primary" href="tel:+995585891100">Reservieren</a>
+      <button class="burger" type="button" aria-label="Menü öffnen" aria-expanded="false" aria-controls="drawer">
+        <span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<div class="nav-drawer" id="drawer">
+  <div class="wrap">
+    <a href="speisekarte.html">Speisekarte</a>
+    <a href="index.html#restaurant">Restaurant</a>
+    <a href="index.html#erlebnis">Erlebnis</a>
+    <a href="index.html#besuch">Besuch</a>
+    <a class="btn btn-primary" href="tel:+995585891100">Tisch reservieren</a>
+  </div>
+</div>
+
+<main>
+
+<!-- ══ Kopf ═══════════════════════════════════════════════════════════ -->
+<section class="menu-hero">
+  <div class="wrap">
+    <p data-enter="fade" style="font-family:var(--font-heading);font-size:12px;letter-spacing:.28em;text-transform:uppercase;color:var(--color-accent-700);margin:0 0 var(--space-3)">
+      1001 Nights &middot; Tiflis
+    </p>
+    <h1 data-enter="up" data-delay="90">Speisekarte</h1>
+    <p class="lead text-muted" style="max-width:60ch" data-enter="up" data-delay="200">
+      <span data-cat-count>6</span> Kapitel, <span data-dish-count>27</span> Gerichte. Alles wird frisch zubereitet &mdash;
+      Kebab kommt vom Holzkohlegrill, Khoresht steht seit dem Morgen auf der Flamme.
+      Zu jedem Gericht finden Sie das Foto aus unserer Küche.
+    </p>
+    <p id="price-notice" class="text-muted" data-enter="fade" data-delay="300"
+       style="font-size:13px;margin-top:var(--space-4);padding-left:var(--space-3);border-left:2px solid var(--color-accent-2-600)">
+      Die Preise werden gerade eingepflegt. Aktuelle Preise nennen wir Ihnen gern am Telefon.
+    </p>
+  </div>
+</section>
+
+<!-- ══ Sticky-Leiste: Kategorien + Suche ══════════════════════════════ -->
+<div class="menu-bar">
+  <div class="wrap menu-bar-inner">
+    <nav class="chips" id="menu-chips" aria-label="Kategorien der Speisekarte">
+      <!-- build:chips -->
+      <a class="chip is-active" href="#cat-vorspeisen" data-chip="vorspeisen">Vorspeisen</a>
+      <a class="chip" href="#cat-kabab" data-chip="kabab">Kabāb</a>
+      <a class="chip" href="#cat-khoresht" data-chip="khoresht">Khoresht</a>
+      <a class="chip" href="#cat-reis" data-chip="reis">Reis</a>
+      <a class="chip" href="#cat-fisch" data-chip="fisch">Fisch</a>
+      <a class="chip" href="#cat-suesses" data-chip="suesses">Süßes &amp; Tee</a>
+      <!-- /build -->
+    </nav>
+    <div class="menu-search">
+      <label class="visually-hidden" for="menu-search-input">Gericht suchen</label>
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+        <circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/>
+      </svg>
+      <input id="menu-search-input" type="search" placeholder="Gericht suchen…" autocomplete="off">
+    </div>
+  </div>
+</div>
+
+<!-- ══ Diät-Filter ════════════════════════════════════════════════════ -->
+<div class="wrap">
+  <div class="menu-filters" id="menu-filters">
+      <!-- build:filters -->
+      <span class="label">Filtern</span>
+      <button class="chip filter-toggle" type="button" data-filter="veg" aria-pressed="false">Vegetarisch</button>
+      <button class="chip filter-toggle" type="button" data-filter="vegan" aria-pressed="false">Vegan</button>
+      <button class="chip filter-toggle" type="button" data-filter="gf" aria-pressed="false">Glutenfrei</button>
+      <button class="chip filter-toggle" type="button" data-filter="spicy" aria-pressed="false">Scharf</button>
+      <button class="chip filter-toggle" type="button" data-filter="chef" aria-pressed="false">Chef-Empfehlung</button>
+      <!-- /build -->
+  </div>
+</div>
+
+<!-- ══ Die Karte ══════════════════════════════════════════════════════ -->
+<div class="wrap">
+  <div id="menu-root">
+      <!-- build:menu -->
+
+      <section class="menu-cat" id="cat-vorspeisen" data-cat aria-labelledby="h-vorspeisen">
+        <header class="menu-cat-head" data-reveal="up">
+          <div>
+            <span class="num tnum">01</span>
+            <h2 id="h-vorspeisen">Vorspeisen &amp; Salate</h2>
+            <p class="text-muted">Der persische Tisch beginnt breit: kleine Schalen, viel Kräutergrün, Brot aus dem Steinofen. Zum Teilen gedacht.</p>
+          </div>
+          <span class="cat-fa text-muted">Pišġazā</span>
+        </header>
+        <div class="rule-ornament"><i></i></div>
+        <div class="dish-grid" data-stagger="70">
+        <article class="dish" id="kashk-e-bademjan" data-dish data-tags="veg chef" data-search="kashk-e bademjan کشک بادمجان ueber offener flamme gebratene auberginen, cremig zerstossen, mit fermentierter molke, minzoel, knoblauch und geroesteten zwiebeln. aubergine auberginen dip vorspeise mezze molke kashk bademjan vorspeisen &amp; salate vorspeisen" data-reveal="up">
+          <button class="dish-figure" type="button" data-lightbox="media/md/Kashk-e_Bademjan.webp" data-lightbox-title="Kashk-e Bademjān" data-lightbox-caption="Über offener Flamme gebratene Auberginen, cremig zerstoßen, mit fermentierter Molke, Minzöl, Knoblauch und gerösteten Zwiebeln." aria-label="Foto von Kashk-e Bademjān vergrößern">
+            <img src="media/sm/Kashk-e_Bademjan.webp" srcset="media/sm/Kashk-e_Bademjan.webp 480w, media/md/Kashk-e_Bademjan.webp 900w" sizes="(max-width: 380px) 92vw, (max-width: 640px) 46vw, (max-width: 1000px) 31vw, 270px" alt="Kashk-e Bademjān — 1001 Nights, Tiflis" loading="lazy" decoding="async">
+            <span class="dish-tags"><span class="tag tag-accent">Vegetarisch</span><span class="tag tag-accent-2">Chef-Empfehlung</span></span>
+          </button>
+          <div class="dish-body">
+            <div class="dish-title-row">
+              <h3 class="dish-name">Kashk-e Bademjān</h3>
+              
+            </div>
+            <p class="dish-fa" lang="fa" dir="rtl">کشک بادمجان</p>
+            <p class="dish-desc">Über offener Flamme gebratene Auberginen, cremig zerstoßen, mit fermentierter Molke, Minzöl, Knoblauch und gerösteten Zwiebeln.</p>
+          </div>
+        </article>
+        <article class="dish" id="bademjan-rolls" data-dish data-tags="veg" data-search="auberginenroellchen mit walnuss رول بادمجان duenn geschnittene auberginen, gerollt um eine creme aus walnuss und knoblauch, mit granatapfelkernen und kraeutern. aubergine auberginen walnuss roellchen rolls granatapfel vorspeise mezze vorspeisen &amp; salate vorspeisen" data-reveal="up">
+          <button class="dish-figure" type="button" data-lightbox="media/md/Eggplant_Rolls_with_Nuts.webp" data-lightbox-title="Auberginenröllchen mit Walnuss" data-lightbox-caption="Dünn geschnittene Auberginen, gerollt um eine Creme aus Walnuss und Knoblauch, mit Granatapfelkernen und Kräutern." aria-label="Foto von Auberginenröllchen mit Walnuss vergrößern">
+            <img src="media/sm/Eggplant_Rolls_with_Nuts.webp" srcset="media/sm/Eggplant_Rolls_with_Nuts.webp 480w, media/md/Eggplant_Rolls_with_Nuts.webp 900w" sizes="(max-width: 380px) 92vw, (max-width: 640px) 46vw, (max-width: 1000px) 31vw, 270px" alt="Auberginenröllchen mit Walnuss — 1001 Nights, Tiflis" loading="lazy" decoding="async">
+            <span class="dish-tags"><span class="tag tag-accent">Vegetarisch</span></span>
+          </button>
+          <div class="dish-body">
+            <div class="dish-title-row">
+              <h3 class="dish-name">Auberginenröllchen mit Walnuss</h3>
+              
+            </div>
+            <p class="dish-fa" lang="fa" dir="rtl">رول بادمجان</p>
+            <p class="dish-desc">Dünn geschnittene Auberginen, gerollt um eine Creme aus Walnuss und Knoblauch, mit Granatapfelkernen und Kräutern.</p>
+          </div>
+        </article>
+        <article class="dish" id="ash-e-adas" data-dish data-tags="vegan" data-search="linsensuppe آش عدس saemige rote linsen mit kurkuma, kreuzkuemmel und einem grosszuegigen spritzer zitrone. warm serviert, mit fladenbrot. suppe linsen linsensuppe ash adas warm vegan vorspeisen &amp; salate vorspeisen" data-reveal="up">
+          <button class="dish-figure" type="button" data-lightbox="media/md/Lentil_Soup.webp" data-lightbox-title="Linsensuppe" data-lightbox-caption="Sämige rote Linsen mit Kurkuma, Kreuzkümmel und einem großzügigen Spritzer Zitrone. Warm serviert, mit Fladenbrot." aria-label="Foto von Linsensuppe vergrößern">
+            <img src="media/sm/Lentil_Soup.webp" srcset="media/sm/Lentil_Soup.webp 480w, media/md/Lentil_Soup.webp 900w" sizes="(max-width: 380px) 92vw, (max-width: 640px) 46vw, (max-width: 1000px) 31vw, 270px" alt="Linsensuppe — 1001 Nights, Tiflis" loading="lazy" decoding="async">
+            <span class="dish-tags"><span class="tag tag-accent">Vegan</span></span>
+          </button>
+          <div class="dish-body">
+            <div class="dish-title-row">
+              <h3 class="dish-name">Linsensuppe</h3>
+              
+            </div>
+            <p class="dish-fa" lang="fa" dir="rtl">آش عدس</p>
+            <p class="dish-desc">Sämige rote Linsen mit Kurkuma, Kreuzkümmel und einem großzügigen Spritzer Zitrone. Warm serviert, mit Fladenbrot.</p>
+          </div>
+        </article>
+        <article class="dish" id="shirazi" data-dish data-tags="vegan gf" data-search="salad-e shirazi سالاد شیرازی gurke, tomate und zwiebel fein gewuerfelt, angemacht mit limettensaft, olivenoel und getrockneter minze. salat salad gurke tomate shirazi frisch vorspeisen &amp; salate vorspeisen" data-reveal="up">
+          <button class="dish-figure" type="button" data-lightbox="media/md/Shirazi_Salad.webp" data-lightbox-title="Salād-e Shirāzi" data-lightbox-caption="Gurke, Tomate und Zwiebel fein gewürfelt, angemacht mit Limettensaft, Olivenöl und getrockneter Minze." aria-label="Foto von Salād-e Shirāzi vergrößern">
+            <img src="media/sm/Shirazi_Salad.webp" srcset="media/sm/Shirazi_Salad.webp 480w, media/md/Shirazi_Salad.webp 900w" sizes="(max-width: 380px) 92vw, (max-width: 640px) 46vw, (max-width: 1000px) 31vw, 270px" alt="Salād-e Shirāzi — 1001 Nights, Tiflis" loading="lazy" decoding="async">
+            <span class="dish-tags"><span class="tag tag-accent">Vegan</span><span class="tag tag-neutral">Glutenfrei</span></span>
+          </button>
+          <div class="dish-body">
+            <div class="dish-title-row">
+              <h3 class="dish-name">Salād-e Shirāzi</h3>
+              
+            </div>
+            <p class="dish-fa" lang="fa" dir="rtl">سالاد شیرازی</p>
+            <p class="dish-desc">Gurke, Tomate und Zwiebel fein gewürfelt, angemacht mit Limettensaft, Olivenöl und getrockneter Minze.</p>
+          </div>
+        </article>
+        <article class="dish" id="fattoush" data-dish data-tags="veg" data-search="fattoush فتوش knackiger levante-salat mit sumach, granatapfelsirup und geroestetem fladenbrot. salat salad fattoush sumach brot levante vorspeisen &amp; salate vorspeisen" data-reveal="up">
+          <button class="dish-figure" type="button" data-lightbox="media/md/Fattoush_Salad.webp" data-lightbox-title="Fattoush" data-lightbox-caption="Knackiger Levante-Salat mit Sumach, Granatapfelsirup und geröstetem Fladenbrot." aria-label="Foto von Fattoush vergrößern">
+            <img src="media/sm/Fattoush_Salad.webp" srcset="media/sm/Fattoush_Salad.webp 480w, media/md/Fattoush_Salad.webp 900w" sizes="(max-width: 380px) 92vw, (max-width: 640px) 46vw, (max-width: 1000px) 31vw, 270px" alt="Fattoush — 1001 Nights, Tiflis" loading="lazy" decoding="async">
+            <span class="dish-tags"><span class="tag tag-accent">Vegetarisch</span></span>
+          </button>
+          <div class="dish-body">
+            <div class="dish-title-row">
+              <h3 class="dish-name">Fattoush</h3>
+              
+            </div>
+            <p class="dish-fa" lang="fa" dir="rtl">فتوش</p>
+            <p class="dish-desc">Knackiger Levante-Salat mit Sumach, Granatapfelsirup und geröstetem Fladenbrot.</p>
+          </div>
+        </article>
+        <article class="dish" id="greek-salad" data-dish data-tags="veg gf" data-search="griechischer salat  tomate, gurke, paprika und oliven mit feta, oregano und kaltgepresstem olivenoel. salat salad feta oliven griechisch greek vorspeisen &amp; salate vorspeisen" data-reveal="up">
+          <button class="dish-figure" type="button" data-lightbox="media/md/Greek_salad.webp" data-lightbox-title="Griechischer Salat" data-lightbox-caption="Tomate, Gurke, Paprika und Oliven mit Feta, Oregano und kaltgepresstem Olivenöl." aria-label="Foto von Griechischer Salat vergrößern">
+            <img src="media/sm/Greek_salad.webp" srcset="media/sm/Greek_salad.webp 480w, media/md/Greek_salad.webp 900w" sizes="(max-width: 380px) 92vw, (max-width: 640px) 46vw, (max-width: 1000px) 31vw, 270px" alt="Griechischer Salat — 1001 Nights, Tiflis" loading="lazy" decoding="async">
+            <span class="dish-tags"><span class="tag tag-accent">Vegetarisch</span><span class="tag tag-neutral">Glutenfrei</span></span>
+          </button>
+          <div class="dish-body">
+            <div class="dish-title-row">
+              <h3 class="dish-name">Griechischer Salat</h3>
+              
+            </div>
+            <p class="dish-desc">Tomate, Gurke, Paprika und Oliven mit Feta, Oregano und kaltgepresstem Olivenöl.</p>
+          </div>
+        </article>
+        </div>
+      </section>
+
+      <section class="menu-cat" id="cat-kabab" data-cat aria-labelledby="h-kabab">
+        <header class="menu-cat-head" data-reveal="up">
+          <div>
+            <span class="num tnum">02</span>
+            <h2 id="h-kabab">Vom Holzkohlegrill</h2>
+            <p class="text-muted">Alles über glühender Holzkohle, ohne Zwischenschritt. Jeder Spieß kommt mit safraniertem Reis oder Fladenbrot, gegrillter Tomate, Basilikum und Sumach.</p>
+          </div>
+          <span class="cat-fa text-muted">Kabāb</span>
+        </header>
+        <div class="rule-ornament"><i></i></div>
+        <div class="dish-grid" data-stagger="70">
+        <article class="dish" id="kabab-barg" data-dish data-tags="chef gf" data-search="kabab-e barg کباب برگ rinderfilet in duennen blaettern, ueber nacht in zwiebelsaft und safran mariniert, mit safranbutter bestrichen. kebab kebap kabab barg rind rindfleisch filet grill spiess steak vom holzkohlegrill kabab" data-reveal="up">
+          <button class="dish-figure" type="button" data-lightbox="media/md/Kabab_Barg.webp" data-lightbox-title="Kabāb-e Barg" data-lightbox-caption="Rinderfilet in dünnen Blättern, über Nacht in Zwiebelsaft und Safran mariniert, mit Safranbutter bestrichen." aria-label="Foto von Kabāb-e Barg vergrößern">
+            <img src="media/sm/Kabab_Barg.webp" srcset="media/sm/Kabab_Barg.webp 480w, media/md/Kabab_Barg.webp 900w" sizes="(max-width: 380px) 92vw, (max-width: 640px) 46vw, (max-width: 1000px) 31vw, 270px" alt="Kabāb-e Barg — 1001 Nights, Tiflis" loading="lazy" decoding="async">
+            <span class="dish-tags"><span class="tag tag-accent-2">Chef-Empfehlung</span><span class="tag tag-neutral">Glutenfrei</span></span>
+          </button>
+          <div class="dish-body">
+            <div class="dish-title-row">
+              <h3 class="dish-name">Kabāb-e Barg</h3>
+              
+            </div>
+            <p class="dish-fa" lang="fa" dir="rtl">کباب برگ</p>
+            <p class="dish-desc">Rinderfilet in dünnen Blättern, über Nacht in Zwiebelsaft und Safran mariniert, mit Safranbutter bestrichen.</p>
+          </div>
+        </article>
+        <article class="dish" id="kabab-soltani" data-dish data-tags="chef" data-search="kabab-e soltani کباب سلطانی der sultan unter den spiessen: ein barg und ein koobideh nebeneinander, auf einem bett aus safranreis. kebab kebap kabab soltani sultani barg koobideh kombination grill platte vom holzkohlegrill kabab" data-reveal="up">
+          <button class="dish-figure" type="button" data-lightbox="media/md/Barg_Kebab.webp" data-lightbox-title="Kabāb-e Soltāni" data-lightbox-caption="Der Sultan unter den Spießen: ein Barg und ein Koobideh nebeneinander, auf einem Bett aus Safranreis." aria-label="Foto von Kabāb-e Soltāni vergrößern">
+            <img src="media/sm/Barg_Kebab.webp" srcset="media/sm/Barg_Kebab.webp 480w, media/md/Barg_Kebab.webp 900w" sizes="(max-width: 380px) 92vw, (max-width: 640px) 46vw, (max-width: 1000px) 31vw, 270px" alt="Kabāb-e Soltāni — 1001 Nights, Tiflis" loading="lazy" decoding="async">
+            <span class="dish-tags"><span class="tag tag-accent-2">Chef-Empfehlung</span></span>
+          </button>
+          <div class="dish-body">
+            <div class="dish-title-row">
+              <h3 class="dish-name">Kabāb-e Soltāni</h3>
+              
+            </div>
+            <p class="dish-fa" lang="fa" dir="rtl">کباب سلطانی</p>
+            <p class="dish-desc">Der Sultan unter den Spießen: ein Barg und ein Koobideh nebeneinander, auf einem Bett aus Safranreis.</p>
+          </div>
+        </article>
+        <article class="dish" id="koobideh" data-dish data-tags="" data-search="kabab-e koobideh (lula) کباب کوبیده zweimal gewolftes lamm und rind mit zwiebel und sumach, von hand an den flachen spiess gedrueckt. kebab kebap kabab koobideh kubideh lula luleh hack lamm rind grill spiess vom holzkohlegrill kabab" data-reveal="up">
+          <button class="dish-figure" type="button" data-lightbox="media/md/Lula_Kebab.webp" data-lightbox-title="Kabāb-e Koobideh (Lula)" data-lightbox-caption="Zweimal gewolftes Lamm und Rind mit Zwiebel und Sumach, von Hand an den flachen Spieß gedrückt." aria-label="Foto von Kabāb-e Koobideh (Lula) vergrößern">
+            <img src="media/sm/Lula_Kebab.webp" srcset="media/sm/Lula_Kebab.webp 480w, media/md/Lula_Kebab.webp 900w" sizes="(max-width: 380px) 92vw, (max-width: 640px) 46vw, (max-width: 1000px) 31vw, 270px" alt="Kabāb-e Koobideh (Lula) — 1001 Nights, Tiflis" loading="lazy" decoding="async">
+            
+          </button>
+          <div class="dish-body">
+            <div class="dish-title-row">
+              <h3 class="dish-name">Kabāb-e Koobideh (Lula)</h3>
+              
+            </div>
+            <p class="dish-fa" lang="fa" dir="rtl">کباب کوبیده</p>
+            <p class="dish-desc">Zweimal gewolftes Lamm und Rind mit Zwiebel und Sumach, von Hand an den flachen Spieß gedrückt.</p>
+          </div>
+        </article>
+        <article class="dish" id="bakhtiari" data-dish data-tags="" data-search="kabab-e bakhtiari کباب بختیاری der spiess der bergnomaden: safranmariniertes haehnchen und filetstuecke im wechsel aufgesteckt. kebab kebap kabab bakhtiari huhn haehnchen chicken filet gemischt grill spiess vom holzkohlegrill kabab" data-reveal="up">
+          <button class="dish-figure" type="button" data-lightbox="media/md/Bakhtiari_Kebab.webp" data-lightbox-title="Kabāb-e Bakhtiāri" data-lightbox-caption="Der Spieß der Bergnomaden: safranmariniertes Hähnchen und Filetstücke im Wechsel aufgesteckt." aria-label="Foto von Kabāb-e Bakhtiāri vergrößern">
+            <img src="media/sm/Bakhtiari_Kebab.webp" srcset="media/sm/Bakhtiari_Kebab.webp 480w, media/md/Bakhtiari_Kebab.webp 900w" sizes="(max-width: 380px) 92vw, (max-width: 640px) 46vw, (max-width: 1000px) 31vw, 270px" alt="Kabāb-e Bakhtiāri — 1001 Nights, Tiflis" loading="lazy" decoding="async">
+            
+          </button>
+          <div class="dish-body">
+            <div class="dish-title-row">
+              <h3 class="dish-name">Kabāb-e Bakhtiāri</h3>
+              
+            </div>
+            <p class="dish-fa" lang="fa" dir="rtl">کباب بختیاری</p>
+            <p class="dish-desc">Der Spieß der Bergnomaden: safranmariniertes Hähnchen und Filetstücke im Wechsel aufgesteckt.</p>
+          </div>
+        </article>
+        <article class="dish" id="shishlik" data-dish data-tags="chef gf" data-search="shishlik شیشلیک lammkoteletts nach shandiz-art, vierundzwanzig stunden mariniert und auf den punkt gegrillt. kebab kebap shishlik shashlik lamm kotelett chops grill vom holzkohlegrill kabab" data-reveal="up">
+          <button class="dish-figure" type="button" data-lightbox="media/md/Shishlik.webp" data-lightbox-title="Shishlik" data-lightbox-caption="Lammkoteletts nach Shandiz-Art, vierundzwanzig Stunden mariniert und auf den Punkt gegrillt." aria-label="Foto von Shishlik vergrößern">
+            <img src="media/sm/Shishlik.webp" srcset="media/sm/Shishlik.webp 480w, media/md/Shishlik.webp 900w" sizes="(max-width: 380px) 92vw, (max-width: 640px) 46vw, (max-width: 1000px) 31vw, 270px" alt="Shishlik — 1001 Nights, Tiflis" loading="lazy" decoding="async">
+            <span class="dish-tags"><span class="tag tag-accent-2">Chef-Empfehlung</span><span class="tag tag-neutral">Glutenfrei</span></span>
+          </button>
+          <div class="dish-body">
+            <div class="dish-title-row">
+              <h3 class="dish-name">Shishlik</h3>
+              
+            </div>
+            <p class="dish-fa" lang="fa" dir="rtl">شیشلیک</p>
+            <p class="dish-desc">Lammkoteletts nach Shandiz-Art, vierundzwanzig Stunden mariniert und auf den Punkt gegrillt.</p>
+          </div>
+        </article>
+        <article class="dish" id="kabab-fillet" data-dish data-tags="gf" data-search="kabab-e filet کباب فیله reine filetwuerfel am spiess — nur salz, safran und butter, sonst nichts. kebab kebap kabab filet fillet rind grill spiess vom holzkohlegrill kabab" data-reveal="up">
+          <button class="dish-figure" type="button" data-lightbox="media/md/Fillet_Kebab.webp" data-lightbox-title="Kabāb-e Filet" data-lightbox-caption="Reine Filetwürfel am Spieß — nur Salz, Safran und Butter, sonst nichts." aria-label="Foto von Kabāb-e Filet vergrößern">
+            <img src="media/sm/Fillet_Kebab.webp" srcset="media/sm/Fillet_Kebab.webp 480w, media/md/Fillet_Kebab.webp 900w" sizes="(max-width: 380px) 92vw, (max-width: 640px) 46vw, (max-width: 1000px) 31vw, 270px" alt="Kabāb-e Filet — 1001 Nights, Tiflis" loading="lazy" decoding="async">
+            <span class="dish-tags"><span class="tag tag-neutral">Glutenfrei</span></span>
+          </button>
+          <div class="dish-body">
+            <div class="dish-title-row">
+              <h3 class="dish-name">Kabāb-e Filet</h3>
+              
+            </div>
+            <p class="dish-fa" lang="fa" dir="rtl">کباب فیله</p>
+            <p class="dish-desc">Reine Filetwürfel am Spieß — nur Salz, Safran und Butter, sonst nichts.</p>
+          </div>
+        </article>
+        <article class="dish" id="joojeh-ba-ostokhan" data-dish data-tags="gf" data-search="joojeh kabab am knochen جوجه با استخوان haehnchen am knochen, mariniert in safran, joghurt und limette — aussen knusprig, innen saftig. kebab kebap joojeh jooje huhn haehnchen chicken safran grill spiess vom holzkohlegrill kabab" data-reveal="up">
+          <button class="dish-figure" type="button" data-lightbox="media/md/Chicken_Kebab_with_bones.webp" data-lightbox-title="Joojeh Kabāb am Knochen" data-lightbox-caption="Hähnchen am Knochen, mariniert in Safran, Joghurt und Limette — außen knusprig, innen saftig." aria-label="Foto von Joojeh Kabāb am Knochen vergrößern">
+            <img src="media/sm/Chicken_Kebab_with_bones.webp" srcset="media/sm/Chicken_Kebab_with_bones.webp 480w, media/md/Chicken_Kebab_with_bones.webp 900w" sizes="(max-width: 380px) 92vw, (max-width: 640px) 46vw, (max-width: 1000px) 31vw, 270px" alt="Joojeh Kabāb am Knochen — 1001 Nights, Tiflis" loading="lazy" decoding="async">
+            <span class="dish-tags"><span class="tag tag-neutral">Glutenfrei</span></span>
+          </button>
+          <div class="dish-body">
+            <div class="dish-title-row">
+              <h3 class="dish-name">Joojeh Kabāb am Knochen</h3>
+              
+            </div>
+            <p class="dish-fa" lang="fa" dir="rtl">جوجه با استخوان</p>
+            <p class="dish-desc">Hähnchen am Knochen, mariniert in Safran, Joghurt und Limette — außen knusprig, innen saftig.</p>
+          </div>
+        </article>
+        <article class="dish" id="halbes-haehnchen" data-dish data-tags="" data-search="halbes haehnchen vom grill  langsam ueber der glut gegart, mit safranreis, grillgemuese und knoblauchsauce. huhn haehnchen chicken halbes grill gegrillt vom holzkohlegrill kabab" data-reveal="up">
+          <button class="dish-figure" type="button" data-lightbox="media/md/Chicken_with_bones.webp" data-lightbox-title="Halbes Hähnchen vom Grill" data-lightbox-caption="Langsam über der Glut gegart, mit Safranreis, Grillgemüse und Knoblauchsauce." aria-label="Foto von Halbes Hähnchen vom Grill vergrößern">
+            <img src="media/sm/Chicken_with_bones.webp" srcset="media/sm/Chicken_with_bones.webp 480w, media/md/Chicken_with_bones.webp 900w" sizes="(max-width: 380px) 92vw, (max-width: 640px) 46vw, (max-width: 1000px) 31vw, 270px" alt="Halbes Hähnchen vom Grill — 1001 Nights, Tiflis" loading="lazy" decoding="async">
+            
+          </button>
+          <div class="dish-body">
+            <div class="dish-title-row">
+              <h3 class="dish-name">Halbes Hähnchen vom Grill</h3>
+              
+            </div>
+            <p class="dish-desc">Langsam über der Glut gegart, mit Safranreis, Grillgemüse und Knoblauchsauce.</p>
+          </div>
+        </article>
+        </div>
+      </section>
+
+      <section class="menu-cat" id="cat-khoresht" data-cat aria-labelledby="h-khoresht">
+        <header class="menu-cat-head" data-reveal="up">
+          <div>
+            <span class="num tnum">03</span>
+            <h2 id="h-khoresht">Khoresht — Persische Eintöpfe</h2>
+            <p class="text-muted">Stundenlang auf kleiner Flamme. Jeder Khoresht wird mit Chelo serviert — gedämpftem Langkornreis mit goldener Tahdig-Kruste.</p>
+          </div>
+          <span class="cat-fa text-muted">Khoresht</span>
+        </header>
+        <div class="rule-ornament"><i></i></div>
+        <div class="dish-grid" data-stagger="70">
+        <article class="dish" id="ghormeh-sabzi" data-dish data-tags="chef" data-search="ghormeh sabzi قورمه‌سبزی das nationalgericht: sieben kraeuter, kidneybohnen und lammwuerfel, gesaeuert mit getrockneter limette. khoresht eintopf stew ghormeh ghorme sabzi kraeuter bohnen lamm reis khoresht — persische eintoepfe khoresht" data-reveal="up">
+          <button class="dish-figure" type="button" data-lightbox="media/md/Ghorme_Sabzi_Stew.webp" data-lightbox-title="Ghormeh Sabzi" data-lightbox-caption="Das Nationalgericht: sieben Kräuter, Kidneybohnen und Lammwürfel, gesäuert mit getrockneter Limette." aria-label="Foto von Ghormeh Sabzi vergrößern">
+            <img src="media/sm/Ghorme_Sabzi_Stew.webp" srcset="media/sm/Ghorme_Sabzi_Stew.webp 480w, media/md/Ghorme_Sabzi_Stew.webp 900w" sizes="(max-width: 380px) 92vw, (max-width: 640px) 46vw, (max-width: 1000px) 31vw, 270px" alt="Ghormeh Sabzi — 1001 Nights, Tiflis" loading="lazy" decoding="async">
+            <span class="dish-tags"><span class="tag tag-accent-2">Chef-Empfehlung</span></span>
+          </button>
+          <div class="dish-body">
+            <div class="dish-title-row">
+              <h3 class="dish-name">Ghormeh Sabzi</h3>
+              
+            </div>
+            <p class="dish-fa" lang="fa" dir="rtl">قورمه‌سبزی</p>
+            <p class="dish-desc">Das Nationalgericht: sieben Kräuter, Kidneybohnen und Lammwürfel, gesäuert mit getrockneter Limette.</p>
+          </div>
+        </article>
+        <article class="dish" id="gheimeh" data-dish data-tags="" data-search="gheimeh قیمه gelbe spalterbsen und lamm in tomate und limu omani, gekroent mit frittiertem kartoffelstroh. khoresht eintopf stew gheimeh qeymeh spalterbsen lamm tomate reis khoresht — persische eintoepfe khoresht" data-reveal="up">
+          <button class="dish-figure" type="button" data-lightbox="media/md/Gheimeh_Stew.webp" data-lightbox-title="Gheimeh" data-lightbox-caption="Gelbe Spalterbsen und Lamm in Tomate und Limu Omani, gekrönt mit frittiertem Kartoffelstroh." aria-label="Foto von Gheimeh vergrößern">
+            <img src="media/sm/Gheimeh_Stew.webp" srcset="media/sm/Gheimeh_Stew.webp 480w, media/md/Gheimeh_Stew.webp 900w" sizes="(max-width: 380px) 92vw, (max-width: 640px) 46vw, (max-width: 1000px) 31vw, 270px" alt="Gheimeh — 1001 Nights, Tiflis" loading="lazy" decoding="async">
+            
+          </button>
+          <div class="dish-body">
+            <div class="dish-title-row">
+              <h3 class="dish-name">Gheimeh</h3>
+              
+            </div>
+            <p class="dish-fa" lang="fa" dir="rtl">قیمه</p>
+            <p class="dish-desc">Gelbe Spalterbsen und Lamm in Tomate und Limu Omani, gekrönt mit frittiertem Kartoffelstroh.</p>
+          </div>
+        </article>
+        <article class="dish" id="mahiche" data-dish data-tags="chef gf" data-search="mahiche ماهیچه lammhaxe, vier stunden in safran und zwiebel geschmort, bis sie vom knochen gleitet. khoresht eintopf stew mahiche lammhaxe lamm haxe geschmort reis khoresht — persische eintoepfe khoresht" data-reveal="up">
+          <button class="dish-figure" type="button" data-lightbox="media/md/Mahiche.webp" data-lightbox-title="Māhiche" data-lightbox-caption="Lammhaxe, vier Stunden in Safran und Zwiebel geschmort, bis sie vom Knochen gleitet." aria-label="Foto von Māhiche vergrößern">
+            <img src="media/sm/Mahiche.webp" srcset="media/sm/Mahiche.webp 480w, media/md/Mahiche.webp 900w" sizes="(max-width: 380px) 92vw, (max-width: 640px) 46vw, (max-width: 1000px) 31vw, 270px" alt="Māhiche — 1001 Nights, Tiflis" loading="lazy" decoding="async">
+            <span class="dish-tags"><span class="tag tag-accent-2">Chef-Empfehlung</span><span class="tag tag-neutral">Glutenfrei</span></span>
+          </button>
+          <div class="dish-body">
+            <div class="dish-title-row">
+              <h3 class="dish-name">Māhiche</h3>
+              
+            </div>
+            <p class="dish-fa" lang="fa" dir="rtl">ماهیچه</p>
+            <p class="dish-desc">Lammhaxe, vier Stunden in Safran und Zwiebel geschmort, bis sie vom Knochen gleitet.</p>
+          </div>
+        </article>
+        <article class="dish" id="khoresht-auswahl" data-dish data-tags="" data-search="khoresht-auswahl fuer zwei  drei eintoepfe nach tagesangebot, dazu reis, brot und die beilagen des hauses. fuer zwei personen. khoresht eintopf stew auswahl platte teilen zwei probierteller khoresht — persische eintoepfe khoresht" data-reveal="up">
+          <button class="dish-figure" type="button" data-lightbox="media/md/Persian_stews.webp" data-lightbox-title="Khoresht-Auswahl für zwei" data-lightbox-caption="Drei Eintöpfe nach Tagesangebot, dazu Reis, Brot und die Beilagen des Hauses. Für zwei Personen." aria-label="Foto von Khoresht-Auswahl für zwei vergrößern">
+            <img src="media/sm/Persian_stews.webp" srcset="media/sm/Persian_stews.webp 480w, media/md/Persian_stews.webp 900w" sizes="(max-width: 380px) 92vw, (max-width: 640px) 46vw, (max-width: 1000px) 31vw, 270px" alt="Khoresht-Auswahl für zwei — 1001 Nights, Tiflis" loading="lazy" decoding="async">
+            
+          </button>
+          <div class="dish-body">
+            <div class="dish-title-row">
+              <h3 class="dish-name">Khoresht-Auswahl für zwei</h3>
+              
+            </div>
+            <p class="dish-desc">Drei Eintöpfe nach Tagesangebot, dazu Reis, Brot und die Beilagen des Hauses. Für zwei Personen.</p>
+          </div>
+        </article>
+        </div>
+      </section>
+
+      <section class="menu-cat" id="cat-reis" data-cat aria-labelledby="h-reis">
+        <header class="menu-cat-head" data-reveal="up">
+          <div>
+            <span class="num tnum">04</span>
+            <h2 id="h-reis">Reis &amp; Festtagsgerichte</h2>
+            <p class="text-muted">Reis ist in dieser Küche kein Beiwerk. Er wird gewaschen, eingeweicht, kurz gekocht und dann gedämpft — bis jedes Korn einzeln steht.</p>
+          </div>
+          <span class="cat-fa text-muted">Polo</span>
+        </header>
+        <div class="rule-ornament"><i></i></div>
+        <div class="dish-grid" data-stagger="70">
+        <article class="dish" id="biryani-chicken" data-dish data-tags="" data-search="biryani mit haehnchen بریانی geschichteter gewuerzreis mit safran, kardamom und zimt, mit mariniertem haehnchen im topf fertig gedaempft. reis polo biryani beryani huhn haehnchen chicken safran reis &amp; festtagsgerichte reis" data-reveal="up">
+          <button class="dish-figure" type="button" data-lightbox="media/md/Biryani_Chicken.webp" data-lightbox-title="Biryāni mit Hähnchen" data-lightbox-caption="Geschichteter Gewürzreis mit Safran, Kardamom und Zimt, mit mariniertem Hähnchen im Topf fertig gedämpft." aria-label="Foto von Biryāni mit Hähnchen vergrößern">
+            <img src="media/sm/Biryani_Chicken.webp" srcset="media/sm/Biryani_Chicken.webp 480w, media/md/Biryani_Chicken.webp 900w" sizes="(max-width: 380px) 92vw, (max-width: 640px) 46vw, (max-width: 1000px) 31vw, 270px" alt="Biryāni mit Hähnchen — 1001 Nights, Tiflis" loading="lazy" decoding="async">
+            
+          </button>
+          <div class="dish-body">
+            <div class="dish-title-row">
+              <h3 class="dish-name">Biryāni mit Hähnchen</h3>
+              
+            </div>
+            <p class="dish-fa" lang="fa" dir="rtl">بریانی</p>
+            <p class="dish-desc">Geschichteter Gewürzreis mit Safran, Kardamom und Zimt, mit mariniertem Hähnchen im Topf fertig gedämpft.</p>
+          </div>
+        </article>
+        <article class="dish" id="chicken-mazbi" data-dish data-tags="spicy" data-search="mazbi-haehnchen مظبي ueber holz gegartes haehnchen auf gewuerztem reis, nach art der arabischen halbinsel — mit tomatensauce und sumach. reis mazbi madfoon huhn haehnchen chicken arabisch ofen reis &amp; festtagsgerichte reis" data-reveal="up">
+          <button class="dish-figure" type="button" data-lightbox="media/md/Chicken_Mazbi.webp" data-lightbox-title="Mazbi-Hähnchen" data-lightbox-caption="Über Holz gegartes Hähnchen auf gewürztem Reis, nach Art der arabischen Halbinsel — mit Tomatensauce und Sumach." aria-label="Foto von Mazbi-Hähnchen vergrößern">
+            <img src="media/sm/Chicken_Mazbi.webp" srcset="media/sm/Chicken_Mazbi.webp 480w, media/md/Chicken_Mazbi.webp 900w" sizes="(max-width: 380px) 92vw, (max-width: 640px) 46vw, (max-width: 1000px) 31vw, 270px" alt="Mazbi-Hähnchen — 1001 Nights, Tiflis" loading="lazy" decoding="async">
+            <span class="dish-tags"><span class="tag tag-outline">Scharf</span></span>
+          </button>
+          <div class="dish-body">
+            <div class="dish-title-row">
+              <h3 class="dish-name">Mazbi-Hähnchen</h3>
+              
+            </div>
+            <p class="dish-fa" lang="fa" dir="rtl">مظبي</p>
+            <p class="dish-desc">Über Holz gegartes Hähnchen auf gewürztem Reis, nach Art der arabischen Halbinsel — mit Tomatensauce und Sumach.</p>
+          </div>
+        </article>
+        <article class="dish" id="majboos" data-dish data-tags="" data-search="machboos مجبوس langkornreis mit baharat, loomi und geschmortem fleisch — der klassiker der golfregion, fuer den tisch gedacht. reis machboos majboos kabsa baharat golf fleisch reis &amp; festtagsgerichte reis" data-reveal="up">
+          <button class="dish-figure" type="button" data-lightbox="media/md/Majboos.webp" data-lightbox-title="Machboos" data-lightbox-caption="Langkornreis mit Baharat, Loomi und geschmortem Fleisch — der Klassiker der Golfregion, für den Tisch gedacht." aria-label="Foto von Machboos vergrößern">
+            <img src="media/sm/Majboos.webp" srcset="media/sm/Majboos.webp 480w, media/md/Majboos.webp 900w" sizes="(max-width: 380px) 92vw, (max-width: 640px) 46vw, (max-width: 1000px) 31vw, 270px" alt="Machboos — 1001 Nights, Tiflis" loading="lazy" decoding="async">
+            
+          </button>
+          <div class="dish-body">
+            <div class="dish-title-row">
+              <h3 class="dish-name">Machboos</h3>
+              
+            </div>
+            <p class="dish-fa" lang="fa" dir="rtl">مجبوس</p>
+            <p class="dish-desc">Langkornreis mit Baharat, Loomi und geschmortem Fleisch — der Klassiker der Golfregion, für den Tisch gedacht.</p>
+          </div>
+        </article>
+        </div>
+      </section>
+
+      <section class="menu-cat" id="cat-fisch" data-cat aria-labelledby="h-fisch">
+        <header class="menu-cat-head" data-reveal="up">
+          <div>
+            <span class="num tnum">05</span>
+            <h2 id="h-fisch">Fisch &amp; Meeresfrüchte</h2>
+            <p class="text-muted">Vom Kaspischen Meer bis zum Persischen Golf — Fisch kommt hier ganz auf den Teller, mit Zitrone und Kräutern.</p>
+          </div>
+          <span class="cat-fa text-muted">Māhi</span>
+        </header>
+        <div class="rule-ornament"><i></i></div>
+        <div class="dish-grid" data-stagger="70">
+        <article class="dish" id="dorado" data-dish data-tags="chef gf" data-search="dorade vom grill ماهی ganze dorade ueber holzkohle, gefuellt mit kraeutern und knoblauch, mit gegrillter zitrone und safranreis. fisch fish dorade dorado seafood grill zitrone fisch &amp; meeresfruechte fisch" data-reveal="up">
+          <button class="dish-figure" type="button" data-lightbox="media/md/Dorado_Fish.webp" data-lightbox-title="Dorade vom Grill" data-lightbox-caption="Ganze Dorade über Holzkohle, gefüllt mit Kräutern und Knoblauch, mit gegrillter Zitrone und Safranreis." aria-label="Foto von Dorade vom Grill vergrößern">
+            <img src="media/sm/Dorado_Fish.webp" srcset="media/sm/Dorado_Fish.webp 480w, media/md/Dorado_Fish.webp 900w" sizes="(max-width: 380px) 92vw, (max-width: 640px) 46vw, (max-width: 1000px) 31vw, 270px" alt="Dorade vom Grill — 1001 Nights, Tiflis" loading="lazy" decoding="async">
+            <span class="dish-tags"><span class="tag tag-accent-2">Chef-Empfehlung</span><span class="tag tag-neutral">Glutenfrei</span></span>
+          </button>
+          <div class="dish-body">
+            <div class="dish-title-row">
+              <h3 class="dish-name">Dorade vom Grill</h3>
+              
+            </div>
+            <p class="dish-fa" lang="fa" dir="rtl">ماهی</p>
+            <p class="dish-desc">Ganze Dorade über Holzkohle, gefüllt mit Kräutern und Knoblauch, mit gegrillter Zitrone und Safranreis.</p>
+          </div>
+        </article>
+        <article class="dish" id="seafood-platte" data-dish data-tags="" data-search="meeresfruechte-platte  garnelen, tintenfisch und fisch des tages, mit zitrone, kraeuteroel und geroestetem brot. zum teilen. fisch fish seafood meeresfruechte garnelen shrimps tintenfisch calamari platte teilen fisch &amp; meeresfruechte fisch" data-reveal="up">
+          <button class="dish-figure" type="button" data-lightbox="media/md/seafood.webp" data-lightbox-title="Meeresfrüchte-Platte" data-lightbox-caption="Garnelen, Tintenfisch und Fisch des Tages, mit Zitrone, Kräuteröl und geröstetem Brot. Zum Teilen." aria-label="Foto von Meeresfrüchte-Platte vergrößern">
+            <img src="media/sm/seafood.webp" srcset="media/sm/seafood.webp 480w, media/md/seafood.webp 900w" sizes="(max-width: 380px) 92vw, (max-width: 640px) 46vw, (max-width: 1000px) 31vw, 270px" alt="Meeresfrüchte-Platte — 1001 Nights, Tiflis" loading="lazy" decoding="async">
+            
+          </button>
+          <div class="dish-body">
+            <div class="dish-title-row">
+              <h3 class="dish-name">Meeresfrüchte-Platte</h3>
+              
+            </div>
+            <p class="dish-desc">Garnelen, Tintenfisch und Fisch des Tages, mit Zitrone, Kräuteröl und geröstetem Brot. Zum Teilen.</p>
+          </div>
+        </article>
+        </div>
+      </section>
+
+      <section class="menu-cat" id="cat-suesses" data-cat aria-labelledby="h-suesses">
+        <header class="menu-cat-head" data-reveal="up">
+          <div>
+            <span class="num tnum">06</span>
+            <h2 id="h-suesses">Süßes &amp; Tee</h2>
+            <p class="text-muted">Der Abend endet, wie er beginnen sollte: mit schwarzem Tee aus dem Samowar und etwas Süßem dazu.</p>
+          </div>
+          <span class="cat-fa text-muted">Shirini o Chāy</span>
+        </header>
+        <div class="rule-ornament"><i></i></div>
+        <div class="dish-grid" data-stagger="70">
+        <article class="dish" id="tee-baklava" data-dish data-tags="veg chef" data-search="tee &amp; baklava چای و باقلوا schwarzer tee aus dem samowar, dazu baklava mit pistazie und rosenwasser. tee tea chai baklava dessert suess pistazie samowar suesses &amp; tee suesses &amp; tee" data-reveal="up">
+          <button class="dish-figure" type="button" data-lightbox="media/md/Tea_and_baklava.webp" data-lightbox-title="Tee &amp; Baklava" data-lightbox-caption="Schwarzer Tee aus dem Samowar, dazu Baklava mit Pistazie und Rosenwasser." aria-label="Foto von Tee &amp; Baklava vergrößern">
+            <img src="media/sm/Tea_and_baklava.webp" srcset="media/sm/Tea_and_baklava.webp 480w, media/md/Tea_and_baklava.webp 900w" sizes="(max-width: 380px) 92vw, (max-width: 640px) 46vw, (max-width: 1000px) 31vw, 270px" alt="Tee &amp; Baklava — 1001 Nights, Tiflis" loading="lazy" decoding="async">
+            <span class="dish-tags"><span class="tag tag-accent">Vegetarisch</span><span class="tag tag-accent-2">Chef-Empfehlung</span></span>
+          </button>
+          <div class="dish-body">
+            <div class="dish-title-row">
+              <h3 class="dish-name">Tee &amp; Baklava</h3>
+              
+            </div>
+            <p class="dish-fa" lang="fa" dir="rtl">چای و باقلوا</p>
+            <p class="dish-desc">Schwarzer Tee aus dem Samowar, dazu Baklava mit Pistazie und Rosenwasser.</p>
+          </div>
+        </article>
+        <article class="dish" id="baklava-teller" data-dish data-tags="veg" data-search="baklava-teller باقلوا drei sorten baklava — pistazie, walnuss und honig — mit safranzucker bestaeubt. baklava dessert suess pistazie walnuss honig teller suesses &amp; tee suesses &amp; tee" data-reveal="up">
+          <button class="dish-figure" type="button" data-lightbox="media/md/Tea__Baklava.webp" data-lightbox-title="Baklava-Teller" data-lightbox-caption="Drei Sorten Baklava — Pistazie, Walnuss und Honig — mit Safranzucker bestäubt." aria-label="Foto von Baklava-Teller vergrößern">
+            <img src="media/sm/Tea__Baklava.webp" srcset="media/sm/Tea__Baklava.webp 480w, media/md/Tea__Baklava.webp 900w" sizes="(max-width: 380px) 92vw, (max-width: 640px) 46vw, (max-width: 1000px) 31vw, 270px" alt="Baklava-Teller — 1001 Nights, Tiflis" loading="lazy" decoding="async">
+            <span class="dish-tags"><span class="tag tag-accent">Vegetarisch</span></span>
+          </button>
+          <div class="dish-body">
+            <div class="dish-title-row">
+              <h3 class="dish-name">Baklava-Teller</h3>
+              
+            </div>
+            <p class="dish-fa" lang="fa" dir="rtl">باقلوا</p>
+            <p class="dish-desc">Drei Sorten Baklava — Pistazie, Walnuss und Honig — mit Safranzucker bestäubt.</p>
+          </div>
+        </article>
+        <article class="dish" id="dessert-des-tages" data-dish data-tags="veg" data-search="dessert des tages  was die kueche heute gemacht hat: faloodeh, shole zard oder safran-eis. fragen sie uns. dessert suess nachtisch faloodeh shole zard eis suesses &amp; tee suesses &amp; tee" data-reveal="up">
+          <button class="dish-figure" type="button" data-lightbox="media/md/Desert.webp" data-lightbox-title="Dessert des Tages" data-lightbox-caption="Was die Küche heute gemacht hat: Faloodeh, Shole Zard oder Safran-Eis. Fragen Sie uns." aria-label="Foto von Dessert des Tages vergrößern">
+            <img src="media/sm/Desert.webp" srcset="media/sm/Desert.webp 480w, media/md/Desert.webp 900w" sizes="(max-width: 380px) 92vw, (max-width: 640px) 46vw, (max-width: 1000px) 31vw, 270px" alt="Dessert des Tages — 1001 Nights, Tiflis" loading="lazy" decoding="async">
+            <span class="dish-tags"><span class="tag tag-accent">Vegetarisch</span></span>
+          </button>
+          <div class="dish-body">
+            <div class="dish-title-row">
+              <h3 class="dish-name">Dessert des Tages</h3>
+              
+            </div>
+            <p class="dish-desc">Was die Küche heute gemacht hat: Faloodeh, Shole Zard oder Safran-Eis. Fragen Sie uns.</p>
+          </div>
+        </article>
+        <article class="dish" id="sharbat" data-dish data-tags="vegan gf" data-search="beeren-sharbat شربت hausgemachter sirup aus roten beeren, eisgekuehlt aufgegossen, mit minze und limette. getraenk drink sharbat sirup beeren limonade kalt minze suesses &amp; tee suesses &amp; tee" data-reveal="up">
+          <button class="dish-figure" type="button" data-lightbox="media/md/RedBerry.webp" data-lightbox-title="Beeren-Sharbat" data-lightbox-caption="Hausgemachter Sirup aus roten Beeren, eisgekühlt aufgegossen, mit Minze und Limette." aria-label="Foto von Beeren-Sharbat vergrößern">
+            <img src="media/sm/RedBerry.webp" srcset="media/sm/RedBerry.webp 480w, media/md/RedBerry.webp 900w" sizes="(max-width: 380px) 92vw, (max-width: 640px) 46vw, (max-width: 1000px) 31vw, 270px" alt="Beeren-Sharbat — 1001 Nights, Tiflis" loading="lazy" decoding="async">
+            <span class="dish-tags"><span class="tag tag-accent">Vegan</span><span class="tag tag-neutral">Glutenfrei</span></span>
+          </button>
+          <div class="dish-body">
+            <div class="dish-title-row">
+              <h3 class="dish-name">Beeren-Sharbat</h3>
+              
+            </div>
+            <p class="dish-fa" lang="fa" dir="rtl">شربت</p>
+            <p class="dish-desc">Hausgemachter Sirup aus roten Beeren, eisgekühlt aufgegossen, mit Minze und Limette.</p>
+          </div>
+        </article>
+        </div>
+      </section>
+
+      <div class="no-results" id="no-results" hidden>
+        <p>Kein Gericht gefunden.</p>
+        <p class="text-muted">Andere Schreibweise versuchen — oder alle Filter zurücksetzen.</p>
+        <button class="btn btn-secondary" type="button" id="reset-all">Filter zurücksetzen</button>
+      </div>
+      <!-- /build -->
+  </div>
+</div>
+
+<!-- ══ Abschluss ══════════════════════════════════════════════════════ -->
+<section class="section on-dark" style="margin-top:clamp(56px,9vw,110px)">
+  <div class="wrap wrap-narrow" style="text-align:center">
+    <h6 data-reveal="up">Guten Appetit</h6>
+    <h2 data-reveal="up" data-delay="80" style="font-family:var(--font-display);font-weight:400">Nooshe jan</h2>
+    <p class="text-muted" data-reveal="up" data-delay="140">
+      Allergien, Unverträglichkeiten oder ein Wunsch für die Tafel? Sagen Sie uns Bescheid,
+      die Küche richtet sich danach.
+    </p>
+    <div class="hero-actions" style="justify-content:center" data-reveal="up" data-delay="200">
+      <a class="btn btn-primary" href="tel:+995585891100">Tisch reservieren</a>
+      <a class="btn btn-secondary" href="index.html#besuch">Anfahrt &amp; Zeiten</a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ══ Footer ═════════════════════════════════════════════════════════ -->
+<footer class="footer on-ink">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <span class="mark">1001 Nights</span>
+        <p class="text-muted">
+          Persisches Restaurant in der Altstadt von Tiflis. Halal. Täglich geöffnet.
+        </p>
+      </div>
+      <div>
+        <h6>Seiten</h6>
+        <ul>
+          <li><a href="speisekarte.html">Speisekarte</a></li>
+          <li><a href="index.html#restaurant">Restaurant</a></li>
+          <li><a href="index.html#erlebnis">Erlebnis</a></li>
+          <li><a href="index.html#galerie">Galerie</a></li>
+        </ul>
+      </div>
+      <div>
+        <h6>Besuch</h6>
+        <ul>
+          <li><a href="index.html#besuch">Öffnungszeiten</a></li>
+          <li><a href="https://www.google.com/maps/search/?api=1&query=1001+Nights+Restaurant+Kote+Apkhazi+9+Tbilisi" target="_blank" rel="noopener">Anfahrt</a></li>
+          <li><a href="tel:+995585891100">Reservierung</a></li>
+        </ul>
+      </div>
+      <div>
+        <h6>Kontakt</h6>
+        <ul>
+          <li><a href="tel:+995585891100">+995 585 89 11 00</a></li>
+          <li><a href="mailto:info@1001nights.ge">info@1001nights.ge</a></li>
+          <li>Kote Apkhazi St. 9, Tiflis</li>
+        </ul>
+      </div>
+    </div>
+
+    <p class="footer-ghost" aria-hidden="true">1001</p>
+
+    <div class="footer-bottom">
+      <span class="text-muted">&copy; <span data-year>2026</span> 1001 Nights Restaurant, Tiflis</span>
+      <span class="text-muted">Gestaltung nach dem Styleguide &bdquo;Classical&ldquo;</span>
+    </div>
+  </div>
+</footer>
+
+<script src="js/site.js" defer></script>
+<script src="js/menu.js" defer></script>
+</body>
+</html>
