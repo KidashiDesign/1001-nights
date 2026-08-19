@@ -1,7 +1,7 @@
 ---
-/* Kopfleiste und Schublade. Beide zeigen dieselben vier Ziele — die Schublade
-   erscheint erst unter 900 px, das Stylesheet entscheidet das. */
-import { ui, contact, homeUrl, menuUrl, anchorUrl } from '../lib/site.js';
+/* Kopfleiste und Schublade. Beide zeigen dieselben zwei Ziele (Home, Menü) —
+   die Schublade erscheint erst unter 900 px, das Stylesheet entscheidet das. */
+import { ui, contact, homeUrl, menuUrl } from '../lib/site.js';
 import LangSwitch from './LangSwitch.astro';
 
 import type { LangCode } from '../lib/types';
@@ -11,16 +11,8 @@ const { code, page } = Astro.props;
 
 const t = ui[code];
 
-// "Home" bündelt die drei Home-Anker (Restaurant, Experience, Visit) in einem
-// Dropdown vor Menü. Die Schublade zeigt dieselben Ziele weiterhin flach.
-const homeLinks = [
-  { href: anchorUrl(code, page, '#restaurant'), label: t.nav.restaurant },
-  { href: anchorUrl(code, page, '#experience'), label: t.nav.experience },
-  { href: anchorUrl(code, page, '#visit'), label: t.nav.visit }
-];
-const flatLinks = [
+const links = [
   { href: homeUrl(code), label: t.nav.homeLabel, current: page === 'home' },
-  ...homeLinks,
   { href: menuUrl(code), label: t.nav.menu, current: page === 'menu' }
 ];
 ---
@@ -31,13 +23,9 @@ const flatLinks = [
       <span class="sub">{t.brandSub}</span>
     </a>
     <nav class="nav-links" aria-label={t.nav.main}>
-      <div class="nav-item has-dropdown">
-        <a class:list={['nav-link', { 'is-current': page === 'home' }]} href={homeUrl(code)} aria-current={page === 'home' ? 'page' : undefined}>{t.nav.homeLabel}</a>
-        <div class="nav-dropdown">
-          {homeLinks.map(l => <a class="nav-dropdown-link" href={l.href}>{l.label}</a>)}
-        </div>
-      </div>
-      <a class:list={['nav-link', { 'is-current': page === 'menu' }]} href={menuUrl(code)} aria-current={page === 'menu' ? 'page' : undefined}>{t.nav.menu}</a>
+      {links.map(l => (
+        <a class:list={['nav-link', { 'is-current': l.current }]} href={l.href} aria-current={l.current ? 'page' : undefined}>{l.label}</a>
+      ))}
     </nav>
     <div class="nav-actions">
       <LangSwitch code={code} page={page} variant="nav" />
@@ -51,7 +39,7 @@ const flatLinks = [
 
 <div class="nav-drawer" id="drawer">
   <div class="wrap">
-    {flatLinks.map(l => <a href={l.href}>{l.label}</a>)}
+    {links.map(l => <a href={l.href}>{l.label}</a>)}
     <a class="btn btn-primary" href={`tel:${contact.phoneHref}`}>{t.nav.reserveLong}</a>
     <LangSwitch code={code} page={page} variant="drawer" />
   </div>
