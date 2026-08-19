@@ -32,7 +32,7 @@ const ui = {
       menuDesc: 'The menu of 1001 Nights in Tbilisi: starters, charcoal kebab, Persian stews, rice dishes, fish and sweets — every dish with a photo.'
     },
 
-    nav: { menu: 'Menu', restaurant: 'Restaurant', experience: 'Experience', visit: 'Visit',
+    nav: { menu: 'Menu', restaurant: 'Restaurant', experience: 'Experience', visit: 'Visit', homeLabel: 'Home',
            reserve: 'Reserve', reserveLong: 'Book a table', openMenu: 'Open menu', main: 'Main navigation', home: '1001 Nights — home' },
 
     hero: {
@@ -138,7 +138,7 @@ const ui = {
       menuDesc: 'منوی رستوران هزار و یک شب تفلیس: پیش‌غذا، کباب، خورش، پلو، ماهی و شیرینی — با عکس هر غذا.'
     },
 
-    nav: { menu: 'منو', restaurant: 'رستوران', experience: 'برنامه‌ها', visit: 'نشانی',
+    nav: { menu: 'منو', restaurant: 'رستوران', experience: 'برنامه‌ها', visit: 'نشانی', homeLabel: 'خانه',
            reserve: 'رزرو', reserveLong: 'رزرو میز', openMenu: 'باز کردن منو', main: 'ناوبری اصلی', home: 'هزار و یک شب — صفحه اصلی' },
 
     hero: {
@@ -244,7 +244,7 @@ const ui = {
       menuDesc: 'Меню ресторана 1001 Nights в Тбилиси: закуски, кебаб на углях, персидские рагу, блюда из риса, рыба и сладости — каждое блюдо с фотографией.'
     },
 
-    nav: { menu: 'Меню', restaurant: 'Ресторан', experience: 'События', visit: 'Как найти',
+    nav: { menu: 'Меню', restaurant: 'Ресторан', experience: 'События', visit: 'Как найти', homeLabel: 'Главная',
            reserve: 'Бронь', reserveLong: 'Забронировать стол', openMenu: 'Открыть меню', main: 'Основная навигация', home: '1001 Nights — главная' },
 
     hero: {
@@ -350,7 +350,7 @@ const ui = {
       menuDesc: 'რესტორან 1001 Nights-ის მენიუ თბილისში: წასახემსებელი, ნახშირზე შემწვარი ქაბაბი, სპარსული ხორეშთი, ბრინჯის კერძები, თევზი და ტკბილეული — ყოველი კერძი ფოტოთი.'
     },
 
-    nav: { menu: 'მენიუ', restaurant: 'რესტორანი', experience: 'ღონისძიებები', visit: 'მისამართი',
+    nav: { menu: 'მენიუ', restaurant: 'რესტორანი', experience: 'ღონისძიებები', visit: 'მისამართი', homeLabel: 'მთავარი',
            reserve: 'დაჯავშნა', reserveLong: 'მაგიდის დაჯავშნა', openMenu: 'მენიუს გახსნა', main: 'მთავარი ნავიგაცია', home: '1001 Nights — მთავარი' },
 
     hero: {
