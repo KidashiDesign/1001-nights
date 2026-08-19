@@ -93,6 +93,12 @@ const ui = {
       ctaReserve: 'Book a table', ctaMenu: 'Menu'
     },
 
+    instagram: {
+      kicker: '06 — Follow us', title: 'Fresh from the kitchen, on Instagram',
+      sub: 'New plates, evenings and behind-the-scenes moments — posted as they happen.',
+      cta: 'Follow @1001nights.ge'
+    },
+
     footer: {
       tagline: 'Persian restaurant in the old town of Tbilisi. Halal. Open every day.',
       pages: 'Pages', visit: 'Visit', contact: 'Contact',
@@ -191,6 +197,12 @@ const ui = {
       street: 'خیابان کوته آپخازی ۹', city: '۰۱۰۵ تفلیس، گرجستان',
       row1: 'دوشنبه – پنجشنبه', row2: 'جمعه – شنبه', row3: 'یکشنبه',
       ctaReserve: 'رزرو میز', ctaMenu: 'منو'
+    },
+
+    instagram: {
+      kicker: '۰۶ — دنبال‌مان کنید', title: 'تازه‌ترین‌ها، در اینستاگرام',
+      sub: 'تازه‌ترین غذاها، شب‌ها و لحظه‌های پشت صحنه — همان لحظه که اتفاق می‌افتند.',
+      cta: 'دنبال کردن @1001nights.ge'
     },
 
     footer: {
@@ -293,6 +305,12 @@ const ui = {
       ctaReserve: 'Забронировать стол', ctaMenu: 'Меню'
     },
 
+    instagram: {
+      kicker: '06 — Мы в Instagram', title: 'Свежее прямо с кухни — в Instagram',
+      sub: 'Новые блюда, вечера и закулисные моменты — как только это происходит.',
+      cta: 'Подписаться @1001nights.ge'
+    },
+
     footer: {
       tagline: 'Персидский ресторан в старом Тбилиси. Халяль. Открыто каждый день.',
       pages: 'Страницы', visit: 'Как найти', contact: 'Контакты',
@@ -393,6 +411,12 @@ const ui = {
       ctaReserve: 'მაგიდის დაჯავშნა', ctaMenu: 'მენიუ'
     },
 
+    instagram: {
+      kicker: '06 — გამოგვყევით', title: 'სამზარეულოდან — პირდაპირ Instagram-ში',
+      sub: 'უახლესი კერძები, საღამოები და კულისებს მიღმა მომენტები — მაშინვე, როცა ხდება.',
+      cta: 'გამოგვყევით @1001nights.ge'
+    },
+
     footer: {
       tagline: 'სპარსული რესტორანი თბილისის ძველ ქალაქში. ჰალალი. ღიაა ყოველდღე.',
       pages: 'გვერდები', visit: 'მისამართი', contact: 'კონტაქტი',
@@ -427,6 +451,7 @@ const contact = {
   phoneText: '+995 585 89 11 00',
   email: 'info@1001nights.ge',
   mapUrl: 'https://www.google.com/maps/search/?api=1&query=1001+Nights+Restaurant+Kote+Apkhazi+9+Tbilisi',
+  instagramUrl: 'https://www.instagram.com/1001nights.ge/',
   hours: { row1: '11:00 – 23:00', row2: '11:00 – 24:00', row3: '11:00 – 23:00' },
   since: '2012',
   yearsInTbilisi: 13,

@@ -592,6 +592,13 @@ section { position: relative; }
 .hours tr:last-child th, .hours tr:last-child td { border-bottom: 0; }
 
 /* ══════════════════════════════════════════════════════════════════════
+   Instagram-Band (über dem Footer, auf derselben dunklen Fläche)
+   ═════════════════════════════════════════════════════════════════════ */
+.instagram-band { padding-bottom: 0; }
+.instagram-band [data-elfsight-app-lazy] { min-height: 200px; }
+.instagram-cta { margin-top: var(--space-8); }
+
+/* ══════════════════════════════════════════════════════════════════════
    Footer
    ═════════════════════════════════════════════════════════════════════ */
 .footer { padding-block: clamp(48px, 7vw, 88px) var(--space-8); }

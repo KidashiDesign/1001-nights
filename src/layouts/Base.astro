@@ -8,6 +8,7 @@
    ═════════════════════════════════════════════════════════════════════════ */
 import { LANGS, ui, contact, lang, pageUrl, media } from '../lib/site.js';
 import Nav from '../components/Nav.astro';
+import InstagramFeed from '../components/InstagramFeed.astro';
 import Footer from '../components/Footer.astro';
 
 import '../styles/fonts.css';
@@ -118,6 +119,7 @@ const restaurantLd = {
     <slot />
   </main>
 
+  <InstagramFeed code={code} />
   <Footer code={code} page={page} />
 
   <script>
