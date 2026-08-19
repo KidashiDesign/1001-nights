@@ -453,7 +453,7 @@ const contact = {
   mapUrl: 'https://www.google.com/maps/search/?api=1&query=1001+Nights+Restaurant+Kote+Apkhazi+9+Tbilisi',
   instagramUrl: 'https://www.instagram.com/1001nights.ge/',
   hours: { row1: '11:00 – 23:00', row2: '11:00 – 24:00', row3: '11:00 – 23:00' },
-  since: '2012',
+  since: '2014',
   yearsInTbilisi: 13,
   hoursForMahiche: 4
 };

@@ -407,7 +407,7 @@ section { position: relative; }
 .split-media { position: relative; }
 .split-media .plate { max-width: 480px; }
 .split-badge {
-  position: absolute; inset-inline-end: -14px; bottom: -18px; z-index: 2;
+  position: absolute; inset-inline-end: -14px; bottom: -18px; z-index: 10;
   width: 122px; height: 122px; border-radius: 50%;
   border: 1px solid var(--color-accent-2-600); background: var(--color-bg);
   display: grid; place-content: center; text-align: center;
