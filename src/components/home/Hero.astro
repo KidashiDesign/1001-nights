@@ -10,13 +10,22 @@ interface Props { code: LangCode; }
 const { code } = Astro.props;
 const t = ui[code];
 const hero = '1001_Shab_Cover.webp';
+const heroVideo = 'hero-animation-1001-nights.mp4';
 ---
 <section class="hero">
   <div class="hero-media">
-    <img
-      src={media('sm', hero)}
-      srcset={`${media('sm', hero)} 480w, ${media('md', hero)} 900w, ${media('', hero)} 1280w`}
-      sizes="100vw" alt={t.gallery.title} fetchpriority="high" decoding="async" />
+    <video
+      muted loop playsinline
+      preload="auto"
+      poster={media('sm', hero)}
+      aria-hidden="true"
+      data-hero-video>
+      <source src={media('', heroVideo)} type="video/mp4" />
+      <img
+        src={media('sm', hero)}
+        srcset={`${media('sm', hero)} 480w, ${media('md', hero)} 900w, ${media('', hero)} 1280w`}
+        sizes="100vw" alt={t.gallery.title} fetchpriority="high" decoding="async" />
+    </video>
   </div>
   <div class="hero-veil"></div>
 
