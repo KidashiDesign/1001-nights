@@ -90,7 +90,7 @@ html { -webkit-text-size-adjust: 100%; scroll-behavior: smooth; }
 }
 /* Die Wortmarke bleibt überall lateinisch gesetzt — das Schild draußen und
    die Seite sollen dasselbe sagen. */
-.wordmark, .nav-brand .mark, .footer-brand .mark, .footer-ghost {
+.wordmark, .nav-brand .mark, .footer-brand .mark {
   font-family: "Italiana", "Cormorant Garamond", Georgia, serif;
   font-weight: 400;
   /* "1001 Nights" ist ein lateinischer Name mit führender Zahl. In einem
@@ -614,10 +614,6 @@ section { position: relative; }
 .footer-bottom { display: flex; flex-wrap: wrap; gap: var(--space-4); justify-content: space-between;
   align-items: center; margin-top: var(--space-12); padding-top: var(--space-4);
   border-top: 1px solid var(--color-divider); font-size: 13px; }
-.footer-ghost { font-family: var(--font-display); line-height: .8;
-  font-size: clamp(64px, 18vw, 210px); letter-spacing: .04em;
-  color: color-mix(in srgb, var(--color-accent-2) 13%, transparent);
-  margin: var(--space-12) 0 0; text-align: center; user-select: none; }
 @media (max-width: 860px) { .footer-grid { grid-template-columns: 1fr 1fr; } }
 @media (max-width: 520px) { .footer-grid { grid-template-columns: 1fr; } }
 
@@ -756,8 +752,7 @@ section { position: relative; }
 :root:lang(fa) * { letter-spacing: 0 !important; }
 :root:lang(fa) .wordmark,
 :root:lang(fa) .nav-brand .mark,
-:root:lang(fa) .footer-brand .mark,
-:root:lang(fa) .footer-ghost { letter-spacing: .03em !important; }
+:root:lang(fa) .footer-brand .mark { letter-spacing: .03em !important; }
 
 /* Persisch und Georgisch brauchen etwas mehr Zeilenluft als Lora */
 :root:lang(fa) body, :root:lang(ka) body { line-height: 1.85; }
