@@ -1,0 +1,140 @@
+---
+/* Über uns, viermal — Aufbau wie menu.astro: Kopf, dann Abschnitte, die dem
+   Baukasten der Startseite folgen (split, Karten-Raster, Zitatband). */
+import { LANGS, ui, contact, media, DISH_COUNT, menuUrl } from '../../lib/site.js';
+import type { LangCode } from '../../lib/types';
+import Base from '../../layouts/Base.astro';
+
+export function getStaticPaths() {
+  return LANGS.map(L => ({
+    params: { lang: L.path ? L.path.replace(/\/$/, '') : undefined },
+    props: { code: L.code as LangCode }
+  }));
+}
+
+const { code } = Astro.props;
+const t = ui[code];
+const a = t.about;
+---
+<Base code={code} page="about">
+
+  <section class="menu-hero">
+    <div class="wrap">
+      <p class="menu-kicker" data-enter="fade">{a.hero.kicker}</p>
+      <h1 data-enter="up" data-delay="90">{a.hero.title}</h1>
+      <p class="lead text-muted" style="max-width:60ch" data-enter="up" data-delay="200">
+        {a.hero.lead}
+      </p>
+    </div>
+  </section>
+
+  <section class="section" id="about-story">
+    <div class="wrap split">
+      <div class="split-content">
+        <h6 data-reveal="up">{a.story.kicker}</h6>
+        <h2 data-reveal="up" data-delay="80">{a.story.titleA}<br />{a.story.titleB}</h2>
+        <p class="lead justify" data-reveal="up" data-delay="160">{a.story.lead}</p>
+        <p class="justify text-muted" data-reveal="up" data-delay="220">{a.story.body}</p>
+        <p class="justify text-muted" data-reveal="up" data-delay="260">{a.story.extra}</p>
+
+        <div class="stat-row" data-reveal="up" data-delay="320">
+          <div class="stat"><b class="tnum"><span data-count={contact.yearsInTbilisi}>0</span>+</b><span class="stat-label">{a.story.stat1}</span></div>
+          <div class="stat"><b class="tnum"><span data-count={DISH_COUNT}>0</span></b><span class="stat-label">{a.story.stat2}</span></div>
+          <div class="stat"><b class="tnum"><span data-count={contact.hoursForMahiche}>0</span></b><span class="stat-label">{a.story.stat3}</span></div>
+        </div>
+      </div>
+
+      <div class="split-media" data-reveal="right" data-shrink>
+        <figure class="plate plate-4x5">
+          <img
+            src={media('sm', 'Front_Shop.webp')}
+            srcset={`${media('sm', 'Front_Shop.webp')} 480w, ${media('md', 'Front_Shop.webp')} 900w`}
+            sizes="(max-width: 820px) 92vw, 480px" alt={a.story.titleA + ' ' + a.story.titleB} loading="lazy" decoding="async" />
+        </figure>
+        <div class="split-badge"><span>{a.story.badgeSince}</span><b class="tnum">{contact.since}</b><span>{a.story.badgeCity}</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="values">
+    <div class="wrap">
+      <div class="section-head" data-reveal="up">
+        <h6>{a.values.kicker}</h6>
+        <h2>{a.values.title}</h2>
+        <p class="text-muted">{a.values.sub}</p>
+      </div>
+
+      <div class="info-grid" data-stagger="90">
+        <div class="card" data-reveal="up">
+          <h6>01</h6>
+          <h3 class="card-title">{a.values.v1title}</h3>
+          <p class="card-body">{a.values.v1text}</p>
+        </div>
+        <div class="card" data-reveal="up">
+          <h6>02</h6>
+          <h3 class="card-title">{a.values.v2title}</h3>
+          <p class="card-body">{a.values.v2text}</p>
+        </div>
+        <div class="card" data-reveal="up">
+          <h6>03</h6>
+          <h3 class="card-title">{a.values.v3title}</h3>
+          <p class="card-body">{a.values.v3text}</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="on-ink quote-band">
+    <div class="quote-media">
+      <img
+        src={media('sm', 'Persian_stews.webp')}
+        srcset={`${media('sm', 'Persian_stews.webp')} 480w, ${media('md', 'Persian_stews.webp')} 900w, ${media('', 'Persian_stews.webp')} 1280w`}
+        sizes="100vw" alt="" loading="lazy" decoding="async" />
+    </div>
+    <div class="wrap wrap-narrow section quote-inner">
+      <div class="line-mask quote-text"><span>{a.quote.text}</span></div>
+      <p class="quote-source text-muted" data-reveal="fade" data-delay="500">{a.quote.source}</p>
+    </div>
+  </section>
+
+  <section class="section on-dark" id="team">
+    <div class="wrap">
+      <div class="section-head" data-reveal="up">
+        <h6>{a.team.kicker}</h6>
+        <h2>{a.team.title}</h2>
+        <p class="text-muted">{a.team.sub}</p>
+      </div>
+
+      <div class="info-grid" data-stagger="90">
+        <div class="card" data-reveal="up">
+          <h6>01</h6>
+          <h3 class="card-title">{a.team.r1title}</h3>
+          <p class="card-body">{a.team.r1text}</p>
+        </div>
+        <div class="card" data-reveal="up">
+          <h6>02</h6>
+          <h3 class="card-title">{a.team.r2title}</h3>
+          <p class="card-body">{a.team.r2text}</p>
+        </div>
+        <div class="card" data-reveal="up">
+          <h6>03</h6>
+          <h3 class="card-title">{a.team.r3title}</h3>
+          <p class="card-body">{a.team.r3text}</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" style="text-align:center">
+    <div class="wrap wrap-narrow">
+      <h6 data-reveal="up">{a.cta.kicker}</h6>
+      <h2 class="display" data-reveal="up" data-delay="80">{a.cta.title}</h2>
+      <p class="text-muted" data-reveal="up" data-delay="140">{a.cta.text}</p>
+      <div class="hero-actions" style="justify-content:center" data-reveal="up" data-delay="200">
+        <a class="btn btn-primary" href={`tel:${contact.phoneHref}`}>{a.cta.ctaReserve}</a>
+        <a class="btn btn-secondary" href={menuUrl(code)}>{a.cta.ctaMenu}</a>
+      </div>
+    </div>
+  </section>
+
+</Base>

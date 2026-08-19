@@ -29,10 +29,12 @@ const ui = {
       homeTitle: '1001 Nights — Persian Restaurant in Tbilisi',
       homeDesc: 'Persian cooking in the old town of Tbilisi: kebab over charcoal, khoresht from the pot, saffron rice and tea from the samovar. Kote Apkhazi 9.',
       menuTitle: 'Menu — 1001 Nights, Persian Restaurant in Tbilisi',
-      menuDesc: 'The menu of 1001 Nights in Tbilisi: starters, charcoal kebab, Persian stews, rice dishes, fish and sweets — every dish with a photo.'
+      menuDesc: 'The menu of 1001 Nights in Tbilisi: starters, charcoal kebab, Persian stews, rice dishes, fish and sweets — every dish with a photo.',
+      aboutTitle: 'About us — 1001 Nights, Persian Restaurant in Tbilisi',
+      aboutDesc: 'The story, the kitchen and what we hold to at 1001 Nights: Persian hospitality in the old town of Tbilisi, since 2012.'
     },
 
-    nav: { menu: 'Menu', restaurant: 'Restaurant', experience: 'Experience', visit: 'Visit', homeLabel: 'Home',
+    nav: { menu: 'Menu', restaurant: 'Restaurant', experience: 'Experience', visit: 'Visit', homeLabel: 'Home', about: 'About',
            reserve: 'Reserve', reserveLong: 'Book a table', openMenu: 'Open menu', main: 'Main navigation', home: '1001 Nights — home' },
 
     hero: {
@@ -62,6 +64,49 @@ const ui = {
     },
 
     quote: { text: 'Tell me what you eat, and I will tell you where you come from.', source: 'Persian saying' },
+
+    about: {
+      hero: {
+        kicker: 'About us',
+        title: 'A house that keeps its own time',
+        lead: 'Kote Apkhazi 9 has smelled of charcoal and saffron since 2012. This is the story of the kitchen behind it — where it came from, what it believes, and who keeps the fire going.'
+      },
+      story: {
+        kicker: '01 — Where it started',
+        titleA: 'From Isfahan', titleB: 'to the old town',
+        lead: 'The recipes travelled before we did: a grandmother’s khoresht, a father’s way with a skewer, a whole family’s sense of when the rice is ready and when it isn’t. 1001 Nights opened in 2012 on one idea — cook the way we were taught, and let Tbilisi in.',
+        body: 'The city gave something back. Georgian bread came out of the clay oven and onto our tables; a Levantine touch of sumac found its way into a Persian stew; the old town’s slow evenings taught us to stop rushing the tea. None of it changed what the kitchen believes — that a dish needs time more than it needs anything else.',
+        extra: 'Ten years on, the grill still glows from midday and the pots still simmer from morning. The room fills the way it always has: family first, then friends, then whoever is walking past and follows the smell inside.',
+        stat1: 'Years in Tbilisi', stat2: 'Dishes on the menu', stat3: 'Hours for one Māhiche',
+        badgeSince: 'Since', badgeCity: 'Tbilisi'
+      },
+      values: {
+        kicker: '02 — What we hold to',
+        title: 'Three things that don’t change',
+        sub: 'Trends come and go through the old town. These three don’t move.',
+        v1title: 'Nothing rushed',
+        v1text: 'Khoresht stays on a low flame from morning. Kebab comes off the charcoal only when it is ready — not when the ticket says so.',
+        v2title: 'One spice at a time',
+        v2text: 'Saffron, sumac, dried lime, rose water — each has its moment. Our cooking makes room for one voice, not a crowd of them.',
+        v3title: 'The table is family',
+        v3text: 'However far you have come from, you sit down here the way you would at home — and you leave with more food than you ordered.'
+      },
+      team: {
+        kicker: '03 — Who cooks for you',
+        title: 'Not one chef — three generations',
+        sub: 'The kitchen has always been a family matter. These are the hands behind it.',
+        r1title: 'The grill', r1text: 'Charcoal glowing from midday, turned by hand, never left alone.',
+        r2title: 'The pots', r2text: 'Khoresht and Ghormeh Sabzi, on a flame low enough to forget — until the smell reminds you.',
+        r3title: 'The room', r3text: 'Whoever seats you tonight has most likely fed your neighbours too.'
+      },
+      quote: { text: 'The guest is a gift from God.', source: 'Persian proverb — the rule of this house' },
+      cta: {
+        kicker: 'Come see for yourself',
+        title: 'The best explanation is a table',
+        text: 'Descriptions only go so far. Come taste the saffron yourself — we’ll keep a table warm for you.',
+        ctaReserve: 'Book a table', ctaMenu: 'See the menu'
+      }
+    },
 
     gallery: {
       kicker: '03 — At the table', title: 'What it looks like here',
@@ -135,10 +180,12 @@ const ui = {
       homeTitle: 'هزار و یک شب — رستوران ایرانی در تفلیس',
       homeDesc: 'آشپزی ایرانی در بافت قدیم تفلیس: کباب روی زغال، خورش، چلو زعفرانی و چای سماور. کوته آپخازی ۹.',
       menuTitle: 'منو — رستوران ایرانی هزار و یک شب، تفلیس',
-      menuDesc: 'منوی رستوران هزار و یک شب تفلیس: پیش‌غذا، کباب، خورش، پلو، ماهی و شیرینی — با عکس هر غذا.'
+      menuDesc: 'منوی رستوران هزار و یک شب تفلیس: پیش‌غذا، کباب، خورش، پلو، ماهی و شیرینی — با عکس هر غذا.',
+      aboutTitle: 'درباره ما — رستوران ایرانی هزار و یک شب، تفلیس',
+      aboutDesc: 'داستان، آشپزخانه و آنچه در هزار و یک شب به آن پایبندیم: مهمان‌نوازی ایرانی در بافت قدیم تفلیس، از سال ۲۰۱۲.'
     },
 
-    nav: { menu: 'منو', restaurant: 'رستوران', experience: 'برنامه‌ها', visit: 'نشانی', homeLabel: 'خانه',
+    nav: { menu: 'منو', restaurant: 'رستوران', experience: 'برنامه‌ها', visit: 'نشانی', homeLabel: 'خانه', about: 'درباره ما',
            reserve: 'رزرو', reserveLong: 'رزرو میز', openMenu: 'باز کردن منو', main: 'ناوبری اصلی', home: 'هزار و یک شب — صفحه اصلی' },
 
     hero: {
@@ -168,6 +215,49 @@ const ui = {
     },
 
     quote: { text: 'بگو چه می‌خوری تا بگویم اهل کجایی.', source: 'ضرب‌المثل ایرانی' },
+
+    about: {
+      hero: {
+        kicker: 'درباره ما',
+        title: 'خانه‌ای با ساعت خودش',
+        lead: 'کوته آپخازی ۹ از سال ۲۰۱۲ بوی زغال و زعفران می‌دهد. این داستان آشپزخانه‌ای است که پشت آن است — از کجا آمد، به چه پایبند است، و چه کسی آتشش را روشن نگه می‌دارد.'
+      },
+      story: {
+        kicker: '۰۱ — از کجا شروع شد',
+        titleA: 'از اصفهان', titleB: 'تا بافت قدیم',
+        lead: 'دستورها پیش از ما به راه افتادند: خورش مادربزرگی، دست پدری روی سیخ، و حس یک خانواده از اینکه برنج کی آماده است و کی نه. هزار و یک شب در سال ۲۰۱۲ با یک فکر باز شد — همان‌طور بپزیم که یادمان داده‌اند، و بگذاریم تفلیس هم وارد شود.',
+        body: 'شهر هم چیزی به ما داد. نان گرجی از تنور به سفره‌مان رسید؛ رد پای سماق شام در خورشی ایرانی نشست؛ شب‌های آرام بافت قدیم یادمان داد چای را عجله نکنیم. هیچ‌کدام باور آشپزخانه را عوض نکرد: یک غذا از هر چیزی بیشتر به وقت نیاز دارد.',
+        extra: 'ده سال گذشته، منقل هنوز از ظهر گر می‌گیرد و دیگ‌ها هنوز از صبح روی شعله‌اند. سالن همان‌طور پر می‌شود که همیشه بوده: اول خانواده، بعد دوستان، بعد هر کسی که از جلوی در رد می‌شود و بوی غذا او را داخل می‌کشد.',
+        stat1: 'سال در تفلیس', stat2: 'غذا در منو', stat3: 'ساعت برای یک ماهیچه',
+        badgeSince: 'از سال', badgeCity: 'تفلیس'
+      },
+      values: {
+        kicker: '۰۲ — به چه پایبندیم',
+        title: 'سه چیزی که عوض نمی‌شود',
+        sub: 'مد در بافت قدیم می‌آید و می‌رود. این سه تا جایشان را عوض نمی‌کنند.',
+        v1title: 'هیچ‌چیز با عجله نه',
+        v1text: 'خورش از صبح روی شعله ملایم می‌ماند. کباب فقط وقتی از روی زغال برداشته می‌شود که آماده باشد — نه وقتی سفارش عجله دارد.',
+        v2title: 'یک ادویه در هر زمان',
+        v2text: 'زعفران، سماق، لیمو عمانی، گلاب — هرکدام نوبت خودش را دارد. آشپزی ما جا برای یک صدا باز می‌کند، نه ازدحامی از صداها.',
+        v3title: 'سفره یعنی خانواده',
+        v3text: 'از هر جا آمده باشید، همین‌جا مثل خانه خودتان می‌نشینید — و بیشتر از آنچه سفارش داده‌اید، با خودتان می‌برید.'
+      },
+      team: {
+        kicker: '۰۳ — چه کسی برایتان می‌پزد',
+        title: 'یک آشپز نه — سه نسل',
+        sub: 'آشپزخانه همیشه کار خانواده بوده. این‌ها دست‌هایی هستند که پشت آنند.',
+        r1title: 'منقل', r1text: 'زغالی که از ظهر گر می‌گیرد، با دست چرخانده می‌شود و هرگز تنها نمی‌ماند.',
+        r2title: 'دیگ‌ها', r2text: 'خورش و قورمه‌سبزی، روی شعله‌ای آن‌قدر ملایم که فراموشش می‌کنید — تا بویش یادتان بیاورد.',
+        r3title: 'سالن', r3text: 'هرکس امشب شما را بنشاند، به احتمال زیاد همسایه‌تان را هم غذا داده.'
+      },
+      quote: { text: 'مهمان، هدیه خداست.', source: 'ضرب‌المثل ایرانی — قانون این خانه' },
+      cta: {
+        kicker: 'بیایید خودتان ببینید',
+        title: 'بهترین توضیح، یک میز است',
+        text: 'توضیح تا جایی پیش می‌رود. بیایید خودتان طعم زعفران را بچشید — یک میز برایتان گرم نگه می‌داریم.',
+        ctaReserve: 'رزرو میز', ctaMenu: 'دیدن منو'
+      }
+    },
 
     gallery: {
       kicker: '۰۳ — سر سفره', title: 'اینجا این شکلی است',
@@ -241,10 +331,12 @@ const ui = {
       homeTitle: '1001 Nights — персидский ресторан в Тбилиси',
       homeDesc: 'Персидская кухня в старом Тбилиси: кебаб на углях, хорешт из казана, шафрановый рис и чай из самовара. Коте Апхази 9.',
       menuTitle: 'Меню — 1001 Nights, персидский ресторан в Тбилиси',
-      menuDesc: 'Меню ресторана 1001 Nights в Тбилиси: закуски, кебаб на углях, персидские рагу, блюда из риса, рыба и сладости — каждое блюдо с фотографией.'
+      menuDesc: 'Меню ресторана 1001 Nights в Тбилиси: закуски, кебаб на углях, персидские рагу, блюда из риса, рыба и сладости — каждое блюдо с фотографией.',
+      aboutTitle: 'О нас — 1001 Nights, персидский ресторан в Тбилиси',
+      aboutDesc: 'История, кухня и то, чему мы верны в 1001 Nights: персидское гостеприимство в старом Тбилиси, с 2012 года.'
     },
 
-    nav: { menu: 'Меню', restaurant: 'Ресторан', experience: 'События', visit: 'Как найти', homeLabel: 'Главная',
+    nav: { menu: 'Меню', restaurant: 'Ресторан', experience: 'События', visit: 'Как найти', homeLabel: 'Главная', about: 'О нас',
            reserve: 'Бронь', reserveLong: 'Забронировать стол', openMenu: 'Открыть меню', main: 'Основная навигация', home: '1001 Nights — главная' },
 
     hero: {
@@ -274,6 +366,49 @@ const ui = {
     },
 
     quote: { text: 'Скажи мне, что ты ешь, и я скажу, откуда ты родом.', source: 'Персидская пословица' },
+
+    about: {
+      hero: {
+        kicker: 'О нас',
+        title: 'Дом, который живёт по своим часам',
+        lead: 'На Коте Апхази 9 с 2012 года пахнет углями и шафраном. Это история кухни за этим запахом — откуда она пришла, во что верит и кто поддерживает огонь.'
+      },
+      story: {
+        kicker: '01 — С чего всё началось',
+        titleA: 'Из Исфахана', titleB: 'в старый город',
+        lead: 'Рецепты приехали раньше нас: хорешт бабушки, отцовская рука на шампуре, семейное чутьё — когда рис готов, а когда ещё нет. 1001 Nights открылся в 2012 году с одной идеей: готовить так, как учили нас, и впустить в это Тбилиси.',
+        body: 'Город тоже кое-что дал взамен. Грузинский хлеб из тонэ лёг на наш стол; левантийский сумах нашёл дорогу в персидское рагу; неспешные вечера старого города научили нас не торопить чай. Ничего из этого не изменило главного убеждения кухни — блюду нужно время больше, чем что-либо ещё.',
+        extra: 'Спустя десять лет мангал всё так же разгорается с полудня, а казаны всё так же кипят с утра. Зал наполняется как и всегда: сначала семья, потом друзья, потом каждый, кто идёт мимо и не может пройти мимо запаха.',
+        stat1: 'Лет в Тбилиси', stat2: 'Блюд в меню', stat3: 'Часа на одно махиче',
+        badgeSince: 'С', badgeCity: 'Тбилиси'
+      },
+      values: {
+        kicker: '02 — Чему мы верны',
+        title: 'Три вещи, которые не меняются',
+        sub: 'Мода в старом городе приходит и уходит. Эти три — нет.',
+        v1title: 'Никакой спешки',
+        v1text: 'Хорешт стоит на малом огне с самого утра. Кебаб снимают с углей только тогда, когда он готов — а не когда торопит заказ.',
+        v2title: 'Одна специя за раз',
+        v2text: 'Шафран, сумах, сушёный лайм, розовая вода — у каждой свой момент. Наша кухня оставляет место одному голосу, а не хору.',
+        v3title: 'Стол — это семья',
+        v3text: 'Откуда бы вы ни приехали, здесь вы садитесь как дома — и уходите с большим, чем заказали.'
+      },
+      team: {
+        kicker: '03 — Кто готовит для вас',
+        title: 'Не один повар — три поколения',
+        sub: 'Кухня здесь всегда была семейным делом. Вот руки, которые за ней стоят.',
+        r1title: 'Мангал', r1text: 'Угли разгораются с полудня, переворачиваются вручную и никогда не остаются без присмотра.',
+        r2title: 'Казаны', r2text: 'Хорешт и горме сабзи на огне настолько тихом, что о нём забываешь — пока не напомнит запах.',
+        r3title: 'Зал', r3text: 'Тот, кто сегодня усадит вас за стол, скорее всего, уже кормил и ваших соседей.'
+      },
+      quote: { text: 'Гость — это дар от Бога.', source: 'Персидская пословица — правило этого дома' },
+      cta: {
+        kicker: 'Приходите и увидьте сами',
+        title: 'Лучшее объяснение — это стол',
+        text: 'Слова могут рассказать не всё. Приходите попробовать шафран сами — мы согреем для вас стол.',
+        ctaReserve: 'Забронировать стол', ctaMenu: 'Смотреть меню'
+      }
+    },
 
     gallery: {
       kicker: '03 — За столом', title: 'Как здесь выглядит',
@@ -347,10 +482,12 @@ const ui = {
       homeTitle: '1001 Nights — სპარსული რესტორანი თბილისში',
       homeDesc: 'სპარსული სამზარეულო თბილისის ძველ ქალაქში: ნახშირზე შემწვარი ქაბაბი, ხორეშთი, ზაფრანიანი ბრინჯი და ჩაი სამოვრიდან. კოტე აფხაზი 9.',
       menuTitle: 'მენიუ — 1001 Nights, სპარსული რესტორანი თბილისში',
-      menuDesc: 'რესტორან 1001 Nights-ის მენიუ თბილისში: წასახემსებელი, ნახშირზე შემწვარი ქაბაბი, სპარსული ხორეშთი, ბრინჯის კერძები, თევზი და ტკბილეული — ყოველი კერძი ფოტოთი.'
+      menuDesc: 'რესტორან 1001 Nights-ის მენიუ თბილისში: წასახემსებელი, ნახშირზე შემწვარი ქაბაბი, სპარსული ხორეშთი, ბრინჯის კერძები, თევზი და ტკბილეული — ყოველი კერძი ფოტოთი.',
+      aboutTitle: 'ჩვენ შესახებ — 1001 Nights, სპარსული რესტორანი თბილისში',
+      aboutDesc: 'ისტორია, სამზარეულო და რასაც 1001 Nights-ში ვერთგულებთ: სპარსული სტუმართმოყვარეობა თბილისის ძველ ქალაქში, 2012 წლიდან.'
     },
 
-    nav: { menu: 'მენიუ', restaurant: 'რესტორანი', experience: 'ღონისძიებები', visit: 'მისამართი', homeLabel: 'მთავარი',
+    nav: { menu: 'მენიუ', restaurant: 'რესტორანი', experience: 'ღონისძიებები', visit: 'მისამართი', homeLabel: 'მთავარი', about: 'ჩვენ შესახებ',
            reserve: 'დაჯავშნა', reserveLong: 'მაგიდის დაჯავშნა', openMenu: 'მენიუს გახსნა', main: 'მთავარი ნავიგაცია', home: '1001 Nights — მთავარი' },
 
     hero: {
@@ -380,6 +517,49 @@ const ui = {
     },
 
     quote: { text: 'მითხარი, რას ჭამ, და გეტყვი, საიდან ხარ.', source: 'სპარსული ანდაზა' },
+
+    about: {
+      hero: {
+        kicker: 'ჩვენ შესახებ',
+        title: 'სახლი, რომელსაც საკუთარი დრო აქვს',
+        lead: 'კოტე აფხაზის ქუჩა 9-ს 2012 წლიდან ნახშირისა და ზაფრანის სუნი დაჰყვება. ეს არის სამზარეულოს ისტორია მის მიღმა — საიდან მოვიდა, რას სჯერა და ვინ ინახავს ცეცხლს.'
+      },
+      story: {
+        kicker: '01 — საიდან დაიწყო',
+        titleA: 'ისპაჰანიდან', titleB: 'ძველ ქალაქამდე',
+        lead: 'რეცეპტები ჩვენზე ადრე ჩამოვიდა: ბებიის ხორეშთი, მამის ხელი შამფურზე, მთელი ოჯახის შეგრძნება, როდის არის ბრინჯი მზად და როდის — არა. 1001 Nights 2012 წელს ერთი იდეით გაიხსნა — ისე მოვამზადოთ, როგორც გვასწავლეს, და თბილისი შემოვუშვათ.',
+        body: 'ქალაქმაც რაღაც დაგვიბრუნა. ქართული პური თონედან ჩვენს მაგიდებზე მოვიდა; ლევანტის სუმახმა სპარსულ ხორეშთში გზა გაიკვლია; ძველი ქალაქის ნელი საღამოები გვასწავლიდა, ჩაი არ ავჩქაროთ. ამან ვერაფერი შეცვალა სამზარეულოს რწმენაში — რომ კერძს ყველაფერზე მეტად დრო სჭირდება.',
+        extra: 'ათი წლის შემდეგ მაყალი დღემდე შუადღიდან იწვის და ქვაბები დილიდან დუღს. დარბაზი ისევე ივსება, როგორც ყოველთვის: ჯერ ოჯახი, მერე მეგობრები, მერე ყველა, ვინც გვერდით გაივლის და სუნს გაჰყვება შიგნით.',
+        stat1: 'წელი თბილისში', stat2: 'კერძი მენიუში', stat3: 'საათი ერთი მაჰიჩესთვის',
+        badgeSince: 'დან', badgeCity: 'თბილისი'
+      },
+      values: {
+        kicker: '02 — რასაც ვერთგულებთ',
+        title: 'სამი რამ, რაც არ იცვლება',
+        sub: 'ძველ ქალაქში მოდა მოდის და მიდის. ეს სამი — არა.',
+        v1title: 'არაფერი აჩქარებით',
+        v1text: 'ხორეშთი დილიდან ნელ ცეცხლზე დგას. ქაბაბს ნახშირიდან მხოლოდ მაშინ იღებენ, როცა მზადაა — და არა მაშინ, როცა შეკვეთა ჩქარობს.',
+        v2title: 'ერთი სანელებელი ერთდროულად',
+        v2text: 'ზაფრანა, სუმახი, ხმელი ლაიმი, ვარდის წყალი — თითოეულს თავისი წუთი აქვს. ჩვენი სამზარეულო ერთ ხმას უტოვებს ადგილს, არა ხმაურს.',
+        v3title: 'სუფრა — ოჯახია',
+        v3text: 'საიდანაც არ უნდა მოხვიდეთ, აქ ისე ჯდებით, როგორც სახლში — და მეტს წაიღებთ, ვიდრე შეუკვეთეთ.'
+      },
+      team: {
+        kicker: '03 — ვინ გიმზადებთ',
+        title: 'ერთი მზარეული კი არა — სამი თაობა',
+        sub: 'სამზარეულო ყოველთვის ოჯახის საქმე იყო. ესენი არიან ხელები მის უკან.',
+        r1title: 'მაყალი', r1text: 'ნახშირი შუადღიდან იწვის, ხელით ბრუნავს და არასდროს რჩება მიუხედავად.',
+        r2title: 'ქვაბები', r2text: 'ხორეშთი და ღორმე საბზი ისე ნელ ცეცხლზეა, რომ ავიწყდებათ — სანამ სუნი არ შეგახსენებთ.',
+        r3title: 'დარბაზი', r3text: 'ვინც შენ დაგსვამს ამაღამ, დიდი ალბათობით შენი მეზობელიც აჭამა.'
+      },
+      quote: { text: 'სტუმარი ღვთის საჩუქარია.', source: 'სპარსული ანდაზა — ამ სახლის წესი' },
+      cta: {
+        kicker: 'თავად მოდით და ნახეთ',
+        title: 'საუკეთესო ახსნა — მაგიდაა',
+        text: 'სიტყვები მხოლოდ გარკვეულ დონემდე მიდის. მოდით, თავად გასინჯეთ ზაფრანა — მაგიდას გავათბობთ თქვენთვის.',
+        ctaReserve: 'მაგიდის დაჯავშნა', ctaMenu: 'მენიუს ნახვა'
+      }
+    },
 
     gallery: {
       kicker: '03 — სუფრასთან', title: 'ასე გამოიყურება აქ',

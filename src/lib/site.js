@@ -27,10 +27,15 @@ export const lang = code => {
 /* Startseite und Speisekarte einer Sprache — '/', '/fa/', '/menu.html', … */
 export const homeUrl = code => `${BASE}${lang(code).path}`;
 export const menuUrl = code => `${homeUrl(code)}menu.html`;
-export const pageUrl = (code, page) => (page === 'home' ? homeUrl(code) : menuUrl(code));
+export const aboutUrl = code => `${homeUrl(code)}about.html`;
+export const pageUrl = (code, page) => {
+  if (page === 'menu') return menuUrl(code);
+  if (page === 'about') return aboutUrl(code);
+  return homeUrl(code);
+};
 
-/* Anker: auf der Startseite bleibt er relativ, von der Karte aus springt er
-   zurück auf die Startseite derselben Sprache. */
+/* Anker: auf der Startseite bleibt er relativ, von den Unterseiten aus springt
+   er zurück auf die Startseite derselben Sprache. */
 export const anchorUrl = (code, page, hash) => (page === 'home' ? hash : homeUrl(code) + hash);
 
 /* Bilder liegen unter public/media in drei Größen: sm 480, md 900, / 1280 */

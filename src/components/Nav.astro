@@ -1,18 +1,19 @@
 ---
 /* Kopfleiste und Schublade. Beide zeigen dieselben zwei Ziele (Home, Menü) —
    die Schublade erscheint erst unter 900 px, das Stylesheet entscheidet das. */
-import { ui, contact, homeUrl, menuUrl } from '../lib/site.js';
+import { ui, contact, homeUrl, menuUrl, aboutUrl } from '../lib/site.js';
 import LangSwitch from './LangSwitch.astro';
 
 import type { LangCode } from '../lib/types';
 
-interface Props { code: LangCode; page: 'home' | 'menu'; }
+interface Props { code: LangCode; page: 'home' | 'menu' | 'about'; }
 const { code, page } = Astro.props;
 
 const t = ui[code];
 
 const links = [
   { href: homeUrl(code), label: t.nav.homeLabel, current: page === 'home' },
+  { href: aboutUrl(code), label: t.nav.about, current: page === 'about' },
   { href: menuUrl(code), label: t.nav.menu, current: page === 'menu' }
 ];
 ---
