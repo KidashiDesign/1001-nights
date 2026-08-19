@@ -99,8 +99,20 @@
     window.addEventListener('resize', function () { if (window.innerWidth > 900) closeDrawer(); });
   }
 
+  /* ── 3b. Hero-Video: nur abspielen, wenn Bewegung nicht reduziert sein soll ── */
+  var heroVideo = document.querySelector('[data-hero-video]');
+  if (heroVideo) {
+    if (reduced) {
+      heroVideo.removeAttribute('preload');
+    } else {
+      var playHeroVideo = function () { heroVideo.play().catch(function () {}); };
+      if (heroVideo.readyState >= 2) playHeroVideo();
+      else heroVideo.addEventListener('loadeddata', playHeroVideo, { once: true });
+    }
+  }
+
   /* ── 4. Parallax im Hero (nur Desktop, rAF-gedrosselt) ───────────────── */
-  var heroMedia = document.querySelector('.hero-media img');
+  var heroMedia = document.querySelector('.hero-media img, .hero-media video');
   if (heroMedia && !reduced && window.matchMedia('(min-width: 900px)').matches) {
     var pTicking = false;
     window.addEventListener('scroll', function () {
