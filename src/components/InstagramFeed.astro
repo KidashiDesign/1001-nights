@@ -1,0 +1,29 @@
+---
+/* Instagram-Feed direkt über dem Fuß, auf derselben dunklen Fläche wie der
+   Footer — deshalb .on-ink statt einer eigenen Sektion. Die Kacheln selbst
+   liefert das Elfsight-Widget (InstaShow) client-seitig; wir binden hier nur
+   Rahmen, Überschrift und den Link zum Profil ein. */
+import { ui, contact } from '../lib/site.js';
+
+import type { LangCode } from '../lib/types';
+
+interface Props { code: LangCode; }
+const { code } = Astro.props;
+const t = ui[code];
+
+const ELFSIGHT_WIDGET_ID = 'e6132903-1772-4b57-a071-779ef093698a';
+---
+<section class="section on-ink instagram-band" id="instagram">
+  <div class="wrap">
+    <div class="section-head" data-reveal="up">
+      <h6>{t.instagram.kicker}</h6>
+      <h2>{t.instagram.title}</h2>
+      <p class="text-muted">{t.instagram.sub}</p>
+    </div>
+
+    <script src="https://elfsightcdn.com/platform.js" async></script>
+    <div class={`elfsight-app-${ELFSIGHT_WIDGET_ID}`} data-elfsight-app-lazy></div>
+
+    <a class="btn btn-primary instagram-cta" href={contact.instagramUrl} target="_blank" rel="noopener">{t.instagram.cta}</a>
+  </div>
+</section>
