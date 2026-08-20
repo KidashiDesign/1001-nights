@@ -1,0 +1,70 @@
+---
+/* Courses — ein kleines Journal über die drei Gänge eines persischen Tisches.
+   Aufbau wie events.astro: Kopf, dann ein Karten-Raster aus dem Baukasten.
+   Jede Karte verweist auf ihr Kapitel in der Speisekarte (#cat-…). */
+import { LANGS, ui, media, menuUrl } from '../../lib/site.js';
+import type { LangCode } from '../../lib/types';
+import Base from '../../layouts/Base.astro';
+import Icon from '../../components/Icon.astro';
+
+export function getStaticPaths() {
+  return LANGS.map(L => ({
+    params: { lang: L.path ? L.path.replace(/\/$/, '') : undefined },
+    props: { code: L.code as LangCode }
+  }));
+}
+
+const { code } = Astro.props;
+const t = ui[code];
+const p = t.coursesPage;
+const c = t.courses;
+
+const courses = [
+  { catId: 'starters', img: 'Kashk-e_Bademjan.webp', tag: c.c1tag, title: c.c1title, text: c.c1text, meta: c.c1meta },
+  { catId: 'kabab', img: 'Bakhtiari_Kebab.webp', tag: c.c2tag, title: c.c2title, text: c.c2text, meta: c.c2meta },
+  { catId: 'sweets', img: 'Tea_and_baklava.webp', tag: c.c3tag, title: c.c3title, text: c.c3text, meta: c.c3meta }
+];
+---
+<Base code={code} page="courses">
+
+  <section class="menu-hero">
+    <div class="wrap">
+      <p class="menu-kicker" data-enter="fade">{p.kicker}</p>
+      <h1 data-enter="up" data-delay="90">{p.title}</h1>
+      <p class="lead text-muted" style="max-width:60ch" data-enter="up" data-delay="200">
+        {p.lead}
+      </p>
+    </div>
+  </section>
+
+  <section class="section" id="courses">
+    <div class="wrap">
+      <div class="section-head" data-reveal="up">
+        <h6>{p.sectionKicker}</h6>
+        <h2>{p.sectionTitle}</h2>
+        <p class="text-muted">{p.sub}</p>
+      </div>
+
+      <div class="event-cards" data-stagger="90">
+        {courses.map(course => (
+          <a class="event-card" href={`${menuUrl(code)}#cat-${course.catId}`} data-reveal="up" aria-label={course.title}>
+            <div class="event-card-media">
+              <span class="tag tag-accent event-card-badge">{course.tag}</span>
+              <figure class="plate plate-3x2">
+                <img
+                  src={media('sm', course.img)}
+                  srcset={`${media('sm', course.img)} 480w, ${media('md', course.img)} 900w`}
+                  sizes="(max-width: 820px) 92vw, 480px" alt={course.title} loading="lazy" decoding="async" />
+              </figure>
+            </div>
+            <h6>{course.meta}</h6>
+            <h3 class="card-title">{course.title}</h3>
+            <p class="text-muted">{course.text}</p>
+            <span class="event-card-link">{p.cta} <Icon name="arrow" /></span>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+</Base>
