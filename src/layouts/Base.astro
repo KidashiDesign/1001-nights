@@ -26,14 +26,14 @@ import vazirmatn from '../assets/fonts/vazirmatn-400-arabic.woff2?url';
 
 import type { LangCode } from '../lib/types';
 
-interface Props { code: LangCode; page: 'home' | 'menu' | 'about' | 'events' | 'courses'; }
+interface Props { code: LangCode; page: 'home' | 'menu' | 'about' | 'events' | 'courses' | 'contact'; }
 const { code, page } = Astro.props;
 
 const L = lang(code);
 const t = ui[code];
 
-const title = { home: t.meta.homeTitle, menu: t.meta.menuTitle, about: t.meta.aboutTitle, events: t.meta.eventsTitle, courses: t.meta.coursesTitle }[page];
-const description = { home: t.meta.homeDesc, menu: t.meta.menuDesc, about: t.meta.aboutDesc, events: t.meta.eventsDesc, courses: t.meta.coursesDesc }[page];
+const title = { home: t.meta.homeTitle, menu: t.meta.menuTitle, about: t.meta.aboutTitle, events: t.meta.eventsTitle, courses: t.meta.coursesTitle, contact: t.meta.contactTitle }[page];
+const description = { home: t.meta.homeDesc, menu: t.meta.menuDesc, about: t.meta.aboutDesc, events: t.meta.eventsDesc, courses: t.meta.coursesDesc, contact: t.meta.contactDesc }[page];
 
 const canonical = new URL(pageUrl(code, page), Astro.site);
 const cover = new URL(media('', '1001_Shab_Cover.webp'), Astro.site);

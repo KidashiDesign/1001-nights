@@ -223,3 +223,38 @@
     });
   });
 })();
+
+/* ── Kontaktformular: ohne JS ein ganz normales POST ans Formular-Backend
+   (Erfolg zeigt sich über #form-success:target im Stylesheet). Mit JS wird
+   per fetch() abgeschickt, damit Erfolg/Fehler ohne Seitenwechsel als
+   eigener Absatz erscheinen. ─────────────────────────────────────────── */
+(function () {
+  'use strict';
+  var form = document.querySelector('[data-contact-form]');
+  if (!form) return;
+
+  var success = document.getElementById('form-success');
+  var error = document.getElementById('form-error');
+
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+    if (success) success.classList.remove('is-visible');
+    if (error) error.classList.remove('is-visible');
+
+    fetch(form.action, {
+      method: 'POST',
+      body: new FormData(form),
+      headers: { Accept: 'application/json' }
+    })
+      .then(function (r) { return r.json(); })
+      .then(function (data) {
+        if (data && data.success) {
+          form.reset();
+          if (success) success.classList.add('is-visible');
+        } else if (error) {
+          error.classList.add('is-visible');
+        }
+      })
+      .catch(function () { if (error) error.classList.add('is-visible'); });
+  });
+})();

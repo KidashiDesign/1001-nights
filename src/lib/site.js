@@ -30,11 +30,13 @@ export const menuUrl = code => `${homeUrl(code)}menu.html`;
 export const aboutUrl = code => `${homeUrl(code)}about.html`;
 export const eventsUrl = code => `${homeUrl(code)}events.html`;
 export const coursesUrl = code => `${homeUrl(code)}courses.html`;
+export const contactUrl = code => `${homeUrl(code)}contact.html`;
 export const pageUrl = (code, page) => {
   if (page === 'menu') return menuUrl(code);
   if (page === 'about') return aboutUrl(code);
   if (page === 'events') return eventsUrl(code);
   if (page === 'courses') return coursesUrl(code);
+  if (page === 'contact') return contactUrl(code);
   return homeUrl(code);
 };
 
