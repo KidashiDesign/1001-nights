@@ -897,3 +897,73 @@ section { position: relative; }
 .price-notice { font-size: 13px; margin-top: var(--space-4);
   padding-inline-start: var(--space-3);
   border-inline-start: 2px solid var(--color-accent-2-600); }
+
+/* ══════════════════════════════════════════════════════════════════════
+   Kontaktformular
+   ═════════════════════════════════════════════════════════════════════ */
+.form { max-width: 640px; }
+.form-row { display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-4); }
+.field { display: flex; flex-direction: column; gap: var(--space-2); margin-top: var(--space-4); }
+.form > .field:first-child, .form-row .field { margin-top: 0; }
+.field label { font-family: var(--font-heading); font-size: 12px; letter-spacing: var(--track-kicker);
+  text-transform: uppercase; color: var(--color-accent-2-400); }
+
+.input, .select, .textarea {
+  width: 100%; padding: 12px 14px; font: inherit; font-size: 15px; color: var(--color-text);
+  background: color-mix(in srgb, var(--color-text) 6%, transparent);
+  border: 1px solid var(--color-divider); border-radius: var(--radius-md);
+  transition: border-color var(--dur-fast) var(--ease-soft), background-color var(--dur-fast) var(--ease-soft);
+}
+.input::placeholder, .textarea::placeholder { color: color-mix(in srgb, var(--color-text) 45%, transparent); }
+.input:hover, .select:hover, .textarea:hover { border-color: var(--color-accent-300); }
+.input:focus, .select:focus, .textarea:focus {
+  border-color: var(--color-accent); background: color-mix(in srgb, var(--color-text) 9%, transparent);
+}
+.textarea { resize: vertical; min-height: 150px; }
+.select {
+  appearance: none; cursor: pointer; color-scheme: dark;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23F3F1E4' stroke-width='1.5'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E");
+  background-repeat: no-repeat; background-position: right 12px center; background-size: 15px;
+  padding-inline-end: 38px;
+}
+.select:invalid { color: color-mix(in srgb, var(--color-text) 55%, transparent); }
+[dir="rtl"] .select { background-position: left 12px center; padding-inline-start: 38px; padding-inline-end: 14px; }
+
+.form-actions { margin-top: var(--space-6); }
+
+.form-status {
+  display: none; margin-top: var(--space-6); padding: var(--space-4);
+  border: 1px solid var(--color-divider); border-radius: var(--radius-md); font-size: 14px;
+}
+.form-status.is-visible { display: block; }
+.form-success { border-color: var(--color-accent-300); background: color-mix(in srgb, var(--color-accent) 12%, transparent); }
+.form-error { border-color: color-mix(in srgb, #B5533F 40%, var(--color-divider)); background: color-mix(in srgb, #B5533F 14%, transparent); }
+/* Ohne JavaScript: Web3Forms leitet nach erfolgreichem Absenden auf
+   #form-success um — :target zeigt die Erfolgsmeldung dann auch ganz ohne
+   Skript, genau wie der <details>-Sprachumschalter ohne JS auskommt. */
+#form-success:target { display: block; }
+
+@media (max-width: 640px) { .form-row { grid-template-columns: 1fr; } }
+
+/* ══════════════════════════════════════════════════════════════════════
+   FAQ — <details>/<summary> wie im Sprachumschalter: barrierefrei und
+   funktioniert ohne JavaScript.
+   ═════════════════════════════════════════════════════════════════════ */
+.faq-list { display: flex; flex-direction: column; }
+.faq-item { border-bottom: 1px solid var(--color-divider); }
+.faq-item:first-child { border-top: 1px solid var(--color-divider); }
+.faq-item > summary {
+  display: flex; align-items: center; justify-content: space-between; gap: var(--space-4);
+  padding: var(--space-4) 0; cursor: pointer; list-style: none;
+  font-family: var(--font-heading); font-weight: 600; font-size: 18px;
+}
+.faq-item > summary::-webkit-details-marker { display: none; }
+.faq-item > summary::marker { content: ""; }
+.faq-item > summary::after {
+  content: ""; flex: none; width: 9px; height: 9px;
+  border-right: 1px solid currentColor; border-bottom: 1px solid currentColor;
+  transform: rotate(45deg); transition: transform var(--dur-fast) var(--ease-out);
+}
+.faq-item[open] > summary::after { transform: rotate(-135deg); }
+.faq-answer { max-width: 68ch; padding-bottom: var(--space-4); }
+.faq-answer p { margin: 0; }

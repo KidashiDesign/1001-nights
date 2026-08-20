@@ -35,10 +35,12 @@ const ui = {
       eventsTitle: 'Events — 1001 Nights, Persian Restaurant in Tbilisi',
       eventsDesc: 'Live music nights, the Charshanbe Souri fire festival and the evenings that turn our dining room into something else — see what’s coming up at 1001 Nights.',
       coursesTitle: 'Courses — 1001 Nights, Persian Restaurant in Tbilisi',
-      coursesDesc: 'Notes from the kitchen on the three courses of a Persian table — starters, the fire, and the sweet finish — and what to order when you sit down at 1001 Nights.'
+      coursesDesc: 'Notes from the kitchen on the three courses of a Persian table — starters, the fire, and the sweet finish — and what to order when you sit down at 1001 Nights.',
+      contactTitle: 'Contact — 1001 Nights, Persian Restaurant in Tbilisi',
+      contactDesc: 'Reach 1001 Nights in Tbilisi: send a message for a reservation or a question, or call us directly. Address, hours and answers to common questions.'
     },
 
-    nav: { menu: 'Menu', restaurant: 'Restaurant', experience: 'Experience', visit: 'Visit', homeLabel: 'Home', about: 'About', events: 'Events', courses: 'Courses',
+    nav: { menu: 'Menu', restaurant: 'Restaurant', experience: 'Experience', visit: 'Visit', homeLabel: 'Home', about: 'About', events: 'Events', courses: 'Courses', contact: 'Contact',
            reserve: 'Reserve', reserveLong: 'Book a table', openMenu: 'Open menu', main: 'Main navigation', home: '1001 Nights — home' },
 
     hero: {
@@ -109,6 +111,38 @@ const ui = {
         title: 'The best explanation is a table',
         text: 'Descriptions only go so far. Come taste the saffron yourself — we’ll keep a table warm for you.',
         ctaReserve: 'Book a table', ctaMenu: 'See the menu'
+      }
+    },
+
+    /* Inhaltlich noch gegenzuprüfen: FAQ-Texte sind plausible Platzhalter,
+       kein endgültiger, freigegebener Text. */
+    contact: {
+      hero: {
+        kicker: 'Contact & reservations',
+        title: 'Talk to us, or book a table',
+        lead: 'For a table, a question about the menu, or a private event — write to us here, or call the number on the right. We read every message.'
+      },
+      form: {
+        sectionKicker: 'Send a message', sectionTitle: 'Get in touch',
+        sectionSub: 'Tell us the date, the size of your party, or whatever is on your mind — we usually answer within a day.',
+        fields: { name: 'Name', email: 'Email', phone: 'Phone', topic: 'What is this about?', message: 'Message' },
+        placeholders: { name: 'Your name', email: 'you@example.com', phone: '+995 …', message: 'How can we help?' },
+        options: { choose: 'Please choose', enquiry: 'General enquiry', reservation: 'Reservation', other: 'Other' },
+        emailSubject: 'New message from the 1001 Nights contact form',
+        submit: 'Send message',
+        success: 'Thank you — your message has reached us. We usually reply within a day; for a same-day reservation it’s best to also call.',
+        error: 'Something went wrong and the message didn’t send. Please try again, or call us directly — the number is on the right.'
+      },
+      faq: {
+        kicker: 'Before you write', title: 'Frequently asked questions',
+        items: [
+          { q: 'What are your opening hours?', a: 'We are open every day: 11:00–23:00 Monday to Thursday and on Sunday, 11:00–24:00 on Friday and Saturday.' },
+          { q: 'Do you take reservations, and for how many people?', a: 'Yes — through this form, by phone or on WhatsApp. For groups larger than eight, a quick call helps us prepare the right table and menu.' },
+          { q: 'Is the kitchen halal, and can you handle allergies or diets?', a: 'Yes, our kitchen is halal. Tell us about allergies or dietary needs in your message or when you book, and the kitchen will work around them.' },
+          { q: 'Do you offer delivery or takeaway?', a: 'Takeaway is available — call ahead and we’ll have it ready. For delivery within Tbilisi, ask us on the phone about current partners and areas.' },
+          { q: 'Where exactly are you, and is there parking?', a: 'Kote Apkhazi St. 9, two minutes from the Metekhi bridge in the old town. Street parking nearby is limited — on busy evenings a taxi or a short walk is easiest.' },
+          { q: 'Are children welcome?', a: 'Very much — we are a family restaurant. Ask for a high chair when you book and we will have one ready.' }
+        ]
       }
     },
 
@@ -215,10 +249,12 @@ const ui = {
       eventsTitle: 'رویدادها — رستوران ایرانی هزار و یک شب، تفلیس',
       eventsDesc: 'شب‌های موسیقی زنده، جشن آتش چهارشنبه‌سوری و شب‌هایی که سالن ما را به چیز دیگری تبدیل می‌کنند — ببینید در هزار و یک شب چه در راه است.',
       coursesTitle: 'مراحل سفره — رستوران ایرانی هزار و یک شب، تفلیس',
-      coursesDesc: 'یادداشت‌هایی از آشپزخانه درباره سه مرحله سفره ایرانی — پیش‌غذا، آتش و پایان شیرین — و اینکه در هزار و یک شب چه سفارش دهید.'
+      coursesDesc: 'یادداشت‌هایی از آشپزخانه درباره سه مرحله سفره ایرانی — پیش‌غذا، آتش و پایان شیرین — و اینکه در هزار و یک شب چه سفارش دهید.',
+      contactTitle: 'تماس — رستوران ایرانی هزار و یک شب، تفلیس',
+      contactDesc: 'راه‌های تماس با هزار و یک شب در تفلیس: برای رزرو یا سوال پیام بفرستید یا مستقیم تماس بگیرید. نشانی، ساعت کار و پاسخ پرسش‌های پرتکرار.'
     },
 
-    nav: { menu: 'منو', restaurant: 'رستوران', experience: 'برنامه‌ها', visit: 'نشانی', homeLabel: 'خانه', about: 'درباره ما', events: 'رویدادها', courses: 'مراحل سفره',
+    nav: { menu: 'منو', restaurant: 'رستوران', experience: 'برنامه‌ها', visit: 'نشانی', homeLabel: 'خانه', about: 'درباره ما', events: 'رویدادها', courses: 'مراحل سفره', contact: 'تماس',
            reserve: 'رزرو', reserveLong: 'رزرو میز', openMenu: 'باز کردن منو', main: 'ناوبری اصلی', home: 'هزار و یک شب — صفحه اصلی' },
 
     hero: {
@@ -289,6 +325,38 @@ const ui = {
         title: 'بهترین توضیح، یک میز است',
         text: 'توضیح تا جایی پیش می‌رود. بیایید خودتان طعم زعفران را بچشید — یک میز برایتان گرم نگه می‌داریم.',
         ctaReserve: 'رزرو میز', ctaMenu: 'دیدن منو'
+      }
+    },
+
+    /* Inhaltlich noch gegenzuprüfen: FAQ-Texte sind plausible Platzhalter,
+       kein endgültiger, freigegebener Text. */
+    contact: {
+      hero: {
+        kicker: 'تماس و رزرو',
+        title: 'با ما حرف بزنید، یا میز رزرو کنید',
+        lead: 'برای رزرو میز، سوالی درباره منو یا یک جشن خصوصی — همین‌جا برایمان بنویسید، یا با شماره کنار صفحه تماس بگیرید. هر پیامی را می‌خوانیم.'
+      },
+      form: {
+        sectionKicker: 'پیام بفرستید', sectionTitle: 'در تماس باشید',
+        sectionSub: 'تاریخ، تعداد نفرات یا هر چیزی که در ذهن دارید را بنویسید — معمولاً ظرف یک روز پاسخ می‌دهیم.',
+        fields: { name: 'نام', email: 'ایمیل', phone: 'تلفن', topic: 'موضوع پیام', message: 'پیام' },
+        placeholders: { name: 'نام شما', email: 'you@example.com', phone: '+995 …', message: 'چطور می‌توانیم کمک کنیم؟' },
+        options: { choose: 'انتخاب کنید', enquiry: 'سوال عمومی', reservation: 'رزرو میز', other: 'موضوع دیگر' },
+        emailSubject: 'پیام جدید از فرم تماس هزار و یک شب',
+        submit: 'ارسال پیام',
+        success: 'سپاسگزاریم — پیام شما به دست ما رسید. معمولاً ظرف یک روز پاسخ می‌دهیم؛ برای رزرو همان روز بهتر است تماس بگیرید.',
+        error: 'مشکلی پیش آمد و پیام ارسال نشد. لطفاً دوباره امتحان کنید یا مستقیم با ما تماس بگیرید — شماره کنار صفحه است.'
+      },
+      faq: {
+        kicker: 'پیش از نوشتن', title: 'پرسش‌های پرتکرار',
+        items: [
+          { q: 'ساعت کاری‌تان چیست؟', a: 'هر روز باز هستیم: دوشنبه تا پنجشنبه و یکشنبه از ۱۱ تا ۲۳، جمعه و شنبه از ۱۱ تا ۲۴.' },
+          { q: 'رزرو می‌گیرید؟ برای چند نفر؟', a: 'بله — از همین فرم، تلفن یا واتس‌اپ. برای گروه‌های بیش از هشت نفر، یک تماس کوتاه کمک می‌کند میز و منوی مناسب را آماده کنیم.' },
+          { q: 'آشپزخانه حلال است؟ حساسیت غذایی را در نظر می‌گیرید؟', a: 'بله، آشپزخانه ما حلال است. حساسیت یا رژیم غذایی خود را در پیام یا هنگام رزرو بگویید تا آشپزخانه هماهنگ کند.' },
+          { q: 'ارسال یا بیرون‌بر دارید؟', a: 'بیرون‌بر داریم — از قبل تماس بگیرید تا آماده باشد. برای ارسال در تفلیس، درباره مناطق و همکاران فعلی تلفنی بپرسید.' },
+          { q: 'دقیقاً کجا هستید؟ پارکینگ دارید؟', a: 'خیابان کوته آپخازی ۹، دو دقیقه تا پل متخی در بافت قدیم. پارکینگ خیابانی محدود است — شب‌های شلوغ، تاکسی یا پیاده‌روی کوتاه راحت‌تر است.' },
+          { q: 'همراه بچه می‌شود آمد؟', a: 'با کمال میل — رستورانی خانوادگی هستیم. هنگام رزرو صندلی کودک بخواهید تا برایتان آماده کنیم.' }
+        ]
       }
     },
 
@@ -395,10 +463,12 @@ const ui = {
       eventsTitle: 'События — 1001 Nights, персидский ресторан в Тбилиси',
       eventsDesc: 'Вечера живой музыки, праздник огня Джашн-е Чаршанбе Сури и вечера, когда наш зал становится чем-то другим — смотрите, что уже готовится в 1001 Nights.',
       coursesTitle: 'Перемены блюд — 1001 Nights, персидский ресторан в Тбилиси',
-      coursesDesc: 'Заметки из кухни о трёх переменах персидского стола — закусках, огне и сладком финале — и что заказать, когда сядете за стол в 1001 Nights.'
+      coursesDesc: 'Заметки из кухни о трёх переменах персидского стола — закусках, огне и сладком финале — и что заказать, когда сядете за стол в 1001 Nights.',
+      contactTitle: 'Контакты — 1001 Nights, персидский ресторан в Тбилиси',
+      contactDesc: 'Как связаться с 1001 Nights в Тбилиси: напишите для брони или вопроса, или позвоните напрямую. Адрес, часы работы и ответы на частые вопросы.'
     },
 
-    nav: { menu: 'Меню', restaurant: 'Ресторан', experience: 'Атмосфера', visit: 'Как найти', homeLabel: 'Главная', about: 'О нас', events: 'События', courses: 'Перемены блюд',
+    nav: { menu: 'Меню', restaurant: 'Ресторан', experience: 'Атмосфера', visit: 'Как найти', homeLabel: 'Главная', about: 'О нас', events: 'События', courses: 'Перемены блюд', contact: 'Контакты',
            reserve: 'Бронь', reserveLong: 'Забронировать стол', openMenu: 'Открыть меню', main: 'Основная навигация', home: '1001 Nights — главная' },
 
     hero: {
@@ -469,6 +539,38 @@ const ui = {
         title: 'Лучшее объяснение — это стол',
         text: 'Слова могут рассказать не всё. Приходите попробовать шафран сами — мы согреем для вас стол.',
         ctaReserve: 'Забронировать стол', ctaMenu: 'Смотреть меню'
+      }
+    },
+
+    /* Inhaltlich noch gegenzuprüfen: FAQ-Texte sind plausible Platzhalter,
+       kein endgültiger, freigegebener Text. */
+    contact: {
+      hero: {
+        kicker: 'Контакты и бронирование',
+        title: 'Напишите нам — или сразу забронируйте стол',
+        lead: 'Для брони, вопроса о меню или частного праздника — напишите здесь или позвоните по номеру справа. Мы читаем каждое сообщение.'
+      },
+      form: {
+        sectionKicker: 'Отправить сообщение', sectionTitle: 'Связаться с нами',
+        sectionSub: 'Укажите дату, число гостей или просто напишите, что у вас на уме — обычно отвечаем в течение дня.',
+        fields: { name: 'Имя', email: 'Email', phone: 'Телефон', topic: 'Тема сообщения', message: 'Сообщение' },
+        placeholders: { name: 'Ваше имя', email: 'you@example.com', phone: '+995 …', message: 'Чем можем помочь?' },
+        options: { choose: 'Выберите тему', enquiry: 'Общий вопрос', reservation: 'Бронирование', other: 'Другое' },
+        emailSubject: 'Новое сообщение с формы 1001 Nights',
+        submit: 'Отправить',
+        success: 'Спасибо — сообщение получено. Обычно отвечаем в течение дня; для брони на сегодня лучше позвонить.',
+        error: 'Что-то пошло не так, сообщение не отправилось. Попробуйте ещё раз или позвоните нам напрямую — номер справа.'
+      },
+      faq: {
+        kicker: 'Прежде чем написать', title: 'Частые вопросы',
+        items: [
+          { q: 'Какие у вас часы работы?', a: 'Открыты каждый день: с понедельника по четверг и в воскресенье с 11:00 до 23:00, в пятницу и субботу — с 11:00 до 24:00.' },
+          { q: 'Принимаете бронь? На сколько человек?', a: 'Да — через эту форму, по телефону или в WhatsApp. Для групп больше восьми человек лучше коротко позвонить: так проще подобрать стол и меню.' },
+          { q: 'Кухня халяльная? Учитываете аллергии?', a: 'Да, наша кухня халяльная. Напишите об аллергии или диете в сообщении или при бронировании — кухня подстроится.' },
+          { q: 'Есть доставка или еда на вынос?', a: 'На вынос — да, позвоните заранее, и всё будет готово к вашему приходу. По доставке в Тбилиси уточните по телефону текущих партнёров и районы.' },
+          { q: 'Где вы находитесь и есть ли парковка?', a: 'Улица Коте Апхази 9, две минуты от Метехского моста в старом городе. Парковка на улице ограничена — в оживлённые вечера проще взять такси или пройтись пешком.' },
+          { q: 'Можно с детьми?', a: 'Конечно — мы семейный ресторан. Попросите детский стул при бронировании, и мы его подготовим.' }
+        ]
       }
     },
 
@@ -575,10 +677,12 @@ const ui = {
       eventsTitle: 'ღონისძიებები — 1001 Nights, სპარსული რესტორანი თბილისში',
       eventsDesc: 'ცოცხალი მუსიკის საღამოები, ჯაშნ-ე ჩარშანბე სურის ცეცხლის დღესასწაული და საღამოები, როცა ჩვენი დარბაზი სხვა რამედ იქცევა — ნახეთ, რა გველოდება 1001 Nights-ში.',
       coursesTitle: 'სუფრის ეტაპები — 1001 Nights, სპარსული რესტორანი თბილისში',
-      coursesDesc: 'ჩანაწერები სამზარეულოდან სპარსული სუფრის სამ ეტაპზე — წასახემსებელი, ცეცხლი და ტკბილი დასასრული — და რა შევუკვეთოთ, როცა 1001 Nights-ში ჩამოვსხდებით.'
+      coursesDesc: 'ჩანაწერები სამზარეულოდან სპარსული სუფრის სამ ეტაპზე — წასახემსებელი, ცეცხლი და ტკბილი დასასრული — და რა შევუკვეთოთ, როცა 1001 Nights-ში ჩამოვსხდებით.',
+      contactTitle: 'კონტაქტი — 1001 Nights, სპარსული რესტორანი თბილისში',
+      contactDesc: 'როგორ დაგვიკავშირდეთ 1001 Nights-ს თბილისში: მოგვწერეთ დასაჯავშნად ან შეკითხვისთვის, ან პირდაპირ დაგვირეკეთ. მისამართი, სამუშაო საათები და პასუხები ხშირ კითხვებზე.'
     },
 
-    nav: { menu: 'მენიუ', restaurant: 'რესტორანი', experience: 'ატმოსფერო', visit: 'მისამართი', homeLabel: 'მთავარი', about: 'ჩვენ შესახებ', events: 'ღონისძიებები', courses: 'სუფრის ეტაპები',
+    nav: { menu: 'მენიუ', restaurant: 'რესტორანი', experience: 'ატმოსფერო', visit: 'მისამართი', homeLabel: 'მთავარი', about: 'ჩვენ შესახებ', events: 'ღონისძიებები', courses: 'სუფრის ეტაპები', contact: 'კონტაქტი',
            reserve: 'დაჯავშნა', reserveLong: 'მაგიდის დაჯავშნა', openMenu: 'მენიუს გახსნა', main: 'მთავარი ნავიგაცია', home: '1001 Nights — მთავარი' },
 
     hero: {
@@ -649,6 +753,38 @@ const ui = {
         title: 'საუკეთესო ახსნა — მაგიდაა',
         text: 'სიტყვები მხოლოდ გარკვეულ დონემდე მიდის. მოდით, თავად გასინჯეთ ზაფრანა — მაგიდას გავათბობთ თქვენთვის.',
         ctaReserve: 'მაგიდის დაჯავშნა', ctaMenu: 'მენიუს ნახვა'
+      }
+    },
+
+    /* Inhaltlich noch gegenzuprüfen: FAQ-Texte sind plausible Platzhalter,
+       kein endgültiger, freigegebener Text. */
+    contact: {
+      hero: {
+        kicker: 'კონტაქტი და დაჯავშნა',
+        title: 'დაგვიკავშირდით — ან პირდაპირ დაჯავშნეთ მაგიდა',
+        lead: 'მაგიდის დასაჯავშნად, მენიუზე შეკითხვისთვის ან კერძო ღონისძიებისთვის — მოგვწერეთ აქ, ან დარეკეთ მარჯვნივ მითითებულ ნომერზე. ყველა შეტყობინებას ვკითხულობთ.'
+      },
+      form: {
+        sectionKicker: 'შეტყობინების გაგზავნა', sectionTitle: 'დაგვიკავშირდით',
+        sectionSub: 'მიუთითეთ თარიღი, სტუმრების რაოდენობა ან უბრალოდ დაწერეთ, რაც გაინტერესებთ — ჩვეულებრივ ერთი დღის განმავლობაში ვპასუხობთ.',
+        fields: { name: 'სახელი', email: 'ელფოსტა', phone: 'ტელეფონი', topic: 'თემა', message: 'შეტყობინება' },
+        placeholders: { name: 'თქვენი სახელი', email: 'you@example.com', phone: '+995 …', message: 'რით შეგვიძლია დაგეხმაროთ?' },
+        options: { choose: 'აირჩიეთ თემა', enquiry: 'ზოგადი შეკითხვა', reservation: 'დაჯავშნა', other: 'სხვა' },
+        emailSubject: 'ახალი შეტყობინება 1001 Nights-ის საკონტაქტო ფორმიდან',
+        submit: 'გაგზავნა',
+        success: 'გმადლობთ — შეტყობინება მიღებულია. ჩვეულებრივ ერთი დღის განმავლობაში ვპასუხობთ; დღევანდელი დაჯავშნისთვის სჯობს დაგვირეკოთ.',
+        error: 'რაღაც ვერ გამოვიდა და შეტყობინება ვერ გაიგზავნა. სცადეთ ხელახლა ან პირდაპირ დაგვირეკეთ — ნომერი მარჯვნივაა.'
+      },
+      faq: {
+        kicker: 'სანამ მოგვწერთ', title: 'ხშირად დასმული კითხვები',
+        items: [
+          { q: 'რა სამუშაო საათები გაქვთ?', a: 'ღიები ვართ ყოველდღე: ორშაბათიდან ხუთშაბათამდე და კვირას 11:00-დან 23:00-მდე, პარასკევ-შაბათს — 11:00-დან 24:00-მდე.' },
+          { q: 'ჯავშნავთ მაგიდას? რამდენი კაცისთვის?', a: 'დიახ — ამ ფორმით, ტელეფონით ან WhatsApp-ით. რვაზე მეტი კაცის ჯგუფისთვის სჯობს მოკლედ დაგვირეკოთ — ასე უფრო ადვილია შესაფერისი მაგიდისა და მენიუს მომზადება.' },
+          { q: 'სამზარეულო ჰალალია? ალერგიებს ითვალისწინებთ?', a: 'დიახ, ჩვენი სამზარეულო ჰალალია. მოგვწერეთ ალერგიის ან დიეტის შესახებ შეტყობინებაში ან დაჯავშნისას — სამზარეულო მოერგება.' },
+          { q: 'გაქვთ მიტანა ან თან წაღება?', a: 'თან წაღება შესაძლებელია — დაგვირეკეთ წინასწარ და მზად გექნებათ. თბილისში მიტანასთან დაკავშირებით ტელეფონით გვკითხეთ მიმდინარე პარტნიორებისა და უბნების შესახებ.' },
+          { q: 'ზუსტად სად მდებარეობთ და არის პარკინგი?', a: 'კოტე აფხაზის ქუჩა 9, ორი წუთი მეტეხის ხიდიდან, ძველ ქალაქში. ქუჩის პარკინგი შეზღუდულია — დატვირთულ საღამოებში უფრო მარტივია ტაქსი ან მოკლე გასეირნება.' },
+          { q: 'ბავშვებთან ერთად შეიძლება მოსვლა?', a: 'რა თქმა უნდა — ოჯახური რესტორანი ვართ. დაჯავშნისას მოითხოვეთ საბავშვო სკამი და მოგამზადებთ.' }
+        ]
       }
     },
 
@@ -751,7 +887,20 @@ const contact = {
   hours: { row1: '11:00 – 23:00', row2: '11:00 – 24:00', row3: '11:00 – 23:00' },
   since: '2014',
   yearsInTbilisi: 13,
-  hoursForMahiche: 4
+  hoursForMahiche: 4,
+
+  /* Offener Punkt — noch zu klären, bevor das Kontaktformular live geht:
+     Web3Forms (https://web3forms.com) wurde als Formular-Backend-Dienst
+     vorgeschlagen (siehe letzte Besprechung) — das Formular postet direkt
+     vom <form> aus dorthin, ganz ohne eigenes Backend, und funktioniert
+     dadurch auch ohne JavaScript. Der Access-Key wird kostenlos auf
+     web3forms.com erzeugt und dort an eine Ziel-Mailadresse gebunden —
+     sinnvollerweise `email` oben. Das ist hier nur ein Platzhalter und muss
+     durch den echten Schlüssel ersetzt werden.
+     Alternativ ließe sich derselbe Formular-Markup auch an Formspree o. Ä.
+     posten — dann genügt es, `action` in contact.astro und diesen Schlüssel
+     entsprechend anzupassen. */
+  web3formsAccessKey: 'REPLACE_WITH_WEB3FORMS_ACCESS_KEY'
 };
 
 export { LANGS, ui, contact };

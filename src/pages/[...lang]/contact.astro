@@ -1,0 +1,134 @@
+---
+/* Kontakt — Formular plus FAQ. Aufbau wie about.astro/events.astro: Kopf,
+   dann Formular-Abschnitt mit Kurzinfos daneben, dann Aufklapper-FAQ.
+
+   Versand: POST direkt vom <form> an Web3Forms (siehe Kommentar bei
+   contact.web3formsAccessKey in ui.js) — funktioniert dadurch auch ganz
+   ohne JavaScript, mit site.js nur als Fortschreibung (fetch statt
+   Seitenwechsel, siehe Kontaktformular-Block dort). */
+import { LANGS, ui, contact, contactUrl } from '../../lib/site.js';
+import type { LangCode } from '../../lib/types';
+import Base from '../../layouts/Base.astro';
+import Icon from '../../components/Icon.astro';
+
+export function getStaticPaths() {
+  return LANGS.map(L => ({
+    params: { lang: L.path ? L.path.replace(/\/$/, '') : undefined },
+    props: { code: L.code as LangCode }
+  }));
+}
+
+const { code } = Astro.props;
+const t = ui[code];
+const c = t.contact;
+const f = c.form;
+
+const successUrl = `${contactUrl(code)}#form-success`;
+---
+<Base code={code} page="contact">
+
+  <section class="menu-hero">
+    <div class="wrap">
+      <p class="menu-kicker" data-enter="fade">{c.hero.kicker}</p>
+      <h1 data-enter="up" data-delay="90">{c.hero.title}</h1>
+      <p class="lead text-muted" style="max-width:60ch" data-enter="up" data-delay="200">
+        {c.hero.lead}
+      </p>
+    </div>
+  </section>
+
+  <section class="section" id="contact-form">
+    <div class="wrap split" style="align-items:start">
+      <div data-reveal="up">
+        <h6>{f.sectionKicker}</h6>
+        <h2>{f.sectionTitle}</h2>
+        <p class="text-muted" style="max-width:52ch">{f.sectionSub}</p>
+
+        <form class="form" action="https://api.web3forms.com/submit" method="POST" data-contact-form>
+          <input type="hidden" name="access_key" value={contact.web3formsAccessKey} />
+          <input type="hidden" name="subject" value={f.emailSubject} />
+          <input type="hidden" name="redirect" value={successUrl} />
+
+          <div class="form-row">
+            <div class="field">
+              <label for="cf-name">{f.fields.name}</label>
+              <input class="input" type="text" id="cf-name" name="name" placeholder={f.placeholders.name} autocomplete="name" required />
+            </div>
+            <div class="field">
+              <label for="cf-email">{f.fields.email}</label>
+              <input class="input" type="email" id="cf-email" name="email" placeholder={f.placeholders.email} autocomplete="email" required />
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="field">
+              <label for="cf-phone">{f.fields.phone}</label>
+              <input class="input" type="tel" id="cf-phone" name="phone" placeholder={f.placeholders.phone} autocomplete="tel" dir="ltr" required />
+            </div>
+            <div class="field">
+              <label for="cf-topic">{f.fields.topic}</label>
+              <select class="select" id="cf-topic" name="topic" required>
+                <option value="" disabled selected>{f.options.choose}</option>
+                <option value={f.options.enquiry}>{f.options.enquiry}</option>
+                <option value={f.options.reservation}>{f.options.reservation}</option>
+                <option value={f.options.other}>{f.options.other}</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="field">
+            <label for="cf-message">{f.fields.message}</label>
+            <textarea class="textarea" id="cf-message" name="message" placeholder={f.placeholders.message} required></textarea>
+          </div>
+
+          <div class="form-actions">
+            <button class="btn btn-primary" type="submit">{f.submit}</button>
+          </div>
+
+          <p class="form-status form-success" id="form-success" role="status" aria-live="polite">{f.success}</p>
+          <p class="form-status form-error" id="form-error" role="alert" aria-live="assertive">{f.error}</p>
+        </form>
+      </div>
+
+      <aside class="card" data-reveal="right" style="align-self:start">
+        <h6>{t.visit.contact}</h6>
+        <p class="card-body">
+          <a href={`tel:${contact.phoneHref}`} dir="ltr">{contact.phoneText}</a><br />
+          <a href={`mailto:${contact.email}`} dir="ltr">{contact.email}</a>
+        </p>
+
+        <h6 style="margin-top:var(--space-6)">{t.visit.address}</h6>
+        <p class="card-body">{t.visit.street}<br />{t.visit.city}</p>
+        <a class="link-underline" href={contact.mapUrl} target="_blank" rel="noopener">{t.visit.map} <Icon name="arrow" /></a>
+
+        <h6 style="margin-top:var(--space-6)">{t.visit.hours}</h6>
+        <table class="hours">
+          <tbody>
+            <tr><th scope="row">{t.visit.row1}</th><td dir="ltr">{contact.hours.row1}</td></tr>
+            <tr><th scope="row">{t.visit.row2}</th><td dir="ltr">{contact.hours.row2}</td></tr>
+            <tr><th scope="row">{t.visit.row3}</th><td dir="ltr">{contact.hours.row3}</td></tr>
+          </tbody>
+        </table>
+      </aside>
+    </div>
+  </section>
+
+  <section class="section on-dark" id="faq">
+    <div class="wrap wrap-narrow">
+      <div class="section-head" data-reveal="up">
+        <h6>{c.faq.kicker}</h6>
+        <h2>{c.faq.title}</h2>
+      </div>
+
+      <div class="faq-list" data-stagger="70">
+        {c.faq.items.map(item => (
+          <details class="faq-item" data-reveal="up">
+            <summary>{item.q}</summary>
+            <div class="faq-answer"><p class="text-muted">{item.a}</p></div>
+          </details>
+        ))}
+      </div>
+    </div>
+  </section>
+
+</Base>
