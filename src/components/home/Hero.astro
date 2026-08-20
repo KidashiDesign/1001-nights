@@ -11,6 +11,7 @@ const { code } = Astro.props;
 const t = ui[code];
 const hero = '1001_Shab_Cover.webp';
 const heroVideo = 'hero-animation-1001-nights.mp4';
+const logo = 'logo.png'; // Add your specific logo filename here
 ---
 <section class="hero">
   <div class="hero-media">
@@ -32,7 +33,9 @@ const heroVideo = 'hero-animation-1001-nights.mp4';
   <div class="wrap">
     <p class="hero-kicker" data-enter="fade" data-delay="0">{t.hero.kicker}</p>
     <h1 class="hero-title" data-enter="up" data-delay="120">
-      <span class="wordmark">1001 Nights</span>
+      <span class="wordmark">
+        <img src={media('', logo)} alt="1001 Nights" class="logo-image" />
+      </span>
       <em>{t.hero.tagline}</em>
     </h1>
     <p class="hero-sub" data-enter="up" data-delay="260">{t.hero.sub}</p>
