@@ -32,7 +32,7 @@ const categories = [
     },
     items: [
       {
-        id: 'kashk-e-bademjan', img: 'Kashk-e_Bademjan.webp', price: null, tags: ['veg', 'chef'],
+        id: 'kashk-e-bademjan', img: 'Kashk-e_Bademjan.webp', price: 22, tags: ['veg', 'chef'],
         name: { en: 'Kashk-e Bademjān', fa: 'کشک بادمجان', ru: 'Кашк-е бадемджан', ka: 'ქაშქ-ე ბადემჯანი' },
         desc: {
           en: 'Aubergines charred over open flame and crushed to a cream, with fermented whey, mint oil, garlic and fried onions.',
@@ -43,7 +43,7 @@ const categories = [
         kw: { en: 'aubergine eggplant dip starter mezze whey', fa: 'بادمجان پیش غذا کشک', ru: 'баклажан закуска мезе кашк', ka: 'ბადრიჯანი წასახემსებელი მეზე' }
       },
       {
-        id: 'bademjan-rolls', img: 'Eggplant_Rolls_with_Nuts.webp', price: null, tags: ['veg'],
+        id: 'bademjan-rolls', img: 'Eggplant_Rolls_with_Nuts.webp', price: 17, tags: ['veg'],
         name: { en: 'Aubergine Rolls with Walnut', fa: 'رول بادمجان با گردو', ru: 'Баклажанные рулетики с грецким орехом', ka: 'ბადრიჯნის რულეტი ნიგვზით' },
         desc: {
           en: 'Thin slices of aubergine rolled around a walnut and garlic cream, finished with pomegranate seeds and herbs.',
@@ -54,7 +54,7 @@ const categories = [
         kw: { en: 'aubergine eggplant walnut rolls pomegranate starter', fa: 'بادمجان گردو انار رول', ru: 'баклажан орех рулет гранат закуска', ka: 'ბადრიჯანი ნიგოზი ბროწეული რულეტი' }
       },
       {
-        id: 'lentil-soup', img: 'Lentil_Soup.webp', price: null, tags: ['vegan'],
+        id: 'lentil-soup', img: 'Lentil_Soup.webp', price: 13, tags: ['vegan'],
         name: { en: 'Lentil Soup', fa: 'سوپ عدس', ru: 'Чечевичный суп', ka: 'ოსპის სუპი' },
         desc: {
           en: 'Smooth red lentils with turmeric, cumin and a generous squeeze of lemon. Served hot, with flatbread.',
@@ -65,7 +65,7 @@ const categories = [
         kw: { en: 'soup lentil warm vegan', fa: 'سوپ عدس گرم', ru: 'суп чечевица горячее веган', ka: 'სუპი ოსპი ცხელი' }
       },
       {
-        id: 'shirazi', img: 'Shirazi_Salad.webp', price: null, tags: ['vegan', 'gf'],
+        id: 'shirazi', img: 'Shirazi_Salad.webp', price: 10, tags: ['vegan', 'gf'],
         name: { en: 'Salād-e Shirāzi', fa: 'سالاد شیرازی', ru: 'Салат Ширази', ka: 'შირაზული სალათი' },
         desc: {
           en: 'Cucumber, tomato and onion in a fine dice, dressed with lime juice, olive oil and dried mint.',
@@ -76,7 +76,7 @@ const categories = [
         kw: { en: 'salad cucumber tomato fresh shirazi', fa: 'سالاد خیار گوجه شیرازی', ru: 'салат огурец помидор свежий', ka: 'სალათი კიტრი პომიდორი' }
       },
       {
-        id: 'fattoush', img: 'Fattoush_Salad.webp', price: null, tags: ['veg'],
+        id: 'fattoush', img: 'Fattoush_Salad.webp', price: 20, tags: ['veg'],
         name: { en: 'Fattoush', fa: 'فتوش', ru: 'Фаттуш', ka: 'ფატუში' },
         desc: {
           en: 'A crisp Levantine salad with sumac, pomegranate molasses and toasted flatbread.',
@@ -87,7 +87,7 @@ const categories = [
         kw: { en: 'salad sumac bread levant crisp', fa: 'سالاد سماق نان', ru: 'салат сумах хлеб', ka: 'სალათი სუმახი პური' }
       },
       {
-        id: 'greek-salad', img: 'Greek_salad.webp', price: null, tags: ['veg', 'gf'],
+        id: 'greek-salad', img: 'Greek_salad.webp', price: 16, tags: ['veg', 'gf'],
         name: { en: 'Greek Salad', fa: 'سالاد یونانی', ru: 'Греческий салат', ka: 'ბერძნული სალათი' },
         desc: {
           en: 'Tomato, cucumber, pepper and olives with feta, oregano and cold-pressed olive oil.',
@@ -98,7 +98,7 @@ const categories = [
         kw: { en: 'salad feta olives greek', fa: 'سالاد پنیر زیتون یونانی', ru: 'салат фета оливки греческий', ka: 'სალათი ფეტა ზეთისხილი' }
       },
       {
-        id: 'caesar-salad', img: 'Caesar_Salad.webp', price: null, tags: [],
+        id: 'caesar-salad', img: 'Caesar_Salad.webp', price: 25, tags: [],
         name: { en: 'Caesar Salad', fa: 'سالاد سزار', ru: 'Салат Цезарь', ka: 'ცეზარის სალათი' },
         desc: {
           en: 'Crisp romaine, shaved parmesan and garlic croutons in a classic Caesar dressing.',
@@ -109,7 +109,7 @@ const categories = [
         kw: { en: 'salad caesar romaine parmesan croutons', fa: 'سالاد سزار کاهو پارمزان', ru: 'салат цезарь романо пармезан', ka: 'სალათი ცეზარი პარმეზანი' }
       },
       {
-        id: 'season-salad', img: 'Season_Salad.webp', price: null, tags: ['vegan', 'gf'],
+        id: 'season-salad', img: 'Season_Salad.webp', price: 16, tags: ['vegan', 'gf'],
         name: { en: 'Season Salad', fa: 'سالاد فصل', ru: 'Сезонный салат', ka: 'სეზონური სალათი' },
         desc: {
           en: 'Whatever the market brought in today, cut simply and dressed with olive oil and lemon.',
@@ -120,7 +120,7 @@ const categories = [
         kw: { en: 'salad season fresh vegetables market', fa: 'سالاد فصل تازه', ru: 'салат сезонный свежий', ka: 'სალათი სეზონური' }
       },
       {
-        id: 'hummus', img: 'Hummus.webp', price: null, tags: ['vegan'],
+        id: 'hummus', img: 'Hummus.webp', price: 17, tags: ['vegan'],
         name: { en: 'Hummus', fa: 'حمص', ru: 'Хумус', ka: 'ჰუმუსი' },
         desc: {
           en: 'Chickpeas blended smooth with tahini, lemon and garlic, finished with olive oil.',
@@ -131,7 +131,7 @@ const categories = [
         kw: { en: 'hummus chickpea dip tahini levant', fa: 'حمص نخود طحینی', ru: 'хумус нут тахини', ka: 'ჰუმუსი ნაღდი' }
       },
       {
-        id: 'mutabal', img: 'Mutabal.webp', price: null, tags: ['veg'],
+        id: 'mutabal', img: 'Mutabal.webp', price: 17, tags: ['veg'],
         name: { en: 'Mutabal', fa: 'متبل', ru: 'Мутабаль', ka: 'მუთაბალი' },
         desc: {
           en: 'Smoky grilled aubergine mashed with tahini, yoghurt, garlic and lemon.',
@@ -142,7 +142,7 @@ const categories = [
         kw: { en: 'mutabal baba ganoush eggplant tahini smoky', fa: 'متبل بادمجان طحینی', ru: 'мутабаль баклажан тахини', ka: 'მუთაბალი ბადრიჯანი' }
       },
       {
-        id: 'black-olives', img: 'Black_Olives.webp', price: null, tags: ['vegan', 'gf'],
+        id: 'black-olives', img: 'Black_Olives.webp', price: 10, tags: ['vegan', 'gf'],
         name: { en: 'Black Olives', fa: 'زیتون سیاه', ru: 'Чёрные оливки', ka: 'შავი ზეთისხილი' },
         desc: {
           en: 'Cured black olives, marinated in herbs and olive oil.',
@@ -153,7 +153,7 @@ const categories = [
         kw: { en: 'olives black side condiment', fa: 'زیتون سیاه', ru: 'оливки чёрные', ka: 'ზეთისხილი შავი' }
       },
       {
-        id: 'green-olives', img: 'Green_Olives.webp', price: null, tags: ['vegan', 'gf'],
+        id: 'green-olives', img: 'Green_Olives.webp', price: 10, tags: ['vegan', 'gf'],
         name: { en: 'Green Olives', fa: 'زیتون سبز', ru: 'Зелёные оливки', ka: 'მწვანე ზეთისხილი' },
         desc: {
           en: 'Green olives cured with garlic, chili flakes and herb oil.',
@@ -164,7 +164,7 @@ const categories = [
         kw: { en: 'olives green side condiment', fa: 'زیتون سبز', ru: 'оливки зелёные', ka: 'ზეთისხილი მწვანე' }
       },
       {
-        id: 'pickled-vegetables', img: 'Pickled_Vegetables.webp', price: null, tags: ['vegan', 'gf'],
+        id: 'pickled-vegetables', img: 'Pickled_Vegetables.webp', price: 9, tags: ['vegan', 'gf'],
         name: { en: 'Pickled Greens', fa: 'ترشی سبزیجات', ru: 'Маринованная зелень', ka: 'დამარინადებული მწვანილი' },
         desc: {
           en: 'A house plate of pickled cucumber, chili and herbs, sharp and crunchy.',
@@ -175,7 +175,7 @@ const categories = [
         kw: { en: 'pickles pickled greens sour crunchy side', fa: 'ترشی سبزی', ru: 'соленья маринад зелень', ka: 'დამარინადებული მწვანილი' }
       },
       {
-        id: 'mixed-pickles', img: 'Mixed_Pickles.webp', price: null, tags: ['vegan', 'gf'],
+        id: 'mixed-pickles', img: 'Mixed_Pickles.webp', price: 9, tags: ['vegan', 'gf'],
         name: { en: 'Mixed Pickles (Torshi)', fa: 'ترشی مخلوط', ru: 'Ассорти солений (Торши)', ka: 'შერეული დამარინადებული (თორში)' },
         desc: {
           en: 'The Persian pickle jar: cauliflower, carrot and aubergine in sharp vinegar and herbs.',
@@ -186,7 +186,7 @@ const categories = [
         kw: { en: 'torshi mixed pickles jar sour', fa: 'ترشی مخلوط شور', ru: 'торши ассорти солений', ka: 'თორში დამარინადებული' }
       },
       {
-        id: 'vegetables-platter', img: 'Vegetables_Platter.webp', price: null, tags: ['vegan', 'gf'],
+        id: 'vegetables-platter', img: 'Vegetables_Platter.webp', price: 13, tags: ['vegan', 'gf'],
         name: { en: 'Vegetables Platter', fa: 'بشقاب سبزیجات', ru: 'Овощная тарелка', ka: 'ბოსტნეულის თეფში' },
         desc: {
           en: 'Fresh radish, cucumber, herbs and spring onion — the table opener, on the house.',
@@ -197,7 +197,7 @@ const categories = [
         kw: { en: 'vegetables platter fresh herbs radish sabzi khordan', fa: 'سبزی خوردن تربچه', ru: 'овощи свежая тарелка редис', ka: 'ბოსტნეული ბოლოკი' }
       },
       {
-        id: 'cheese-plate', img: 'Cheese_Plate.webp', price: null, tags: ['veg'],
+        id: 'cheese-plate', img: 'Cheese_Plate.webp', price: 11, tags: ['veg'],
         name: { en: 'Cheese Plate', fa: 'بشقاب پنیر', ru: 'Сырная тарелка', ka: 'ყველის თეფში' },
         desc: {
           en: 'Feta and local white cheese, with walnuts, herbs and warm bread.',
@@ -208,7 +208,7 @@ const categories = [
         kw: { en: 'cheese feta local walnuts bread starter', fa: 'پنیر فتا گردو نان', ru: 'сыр фета грецкий орех хлеб', ka: 'ყველი ფეტა ნიგოზი' }
       },
       {
-        id: 'iranian-bread', img: 'Iranian_Bread.webp', price: null, tags: ['vegan'],
+        id: 'iranian-bread', img: 'Iranian_Bread.webp', price: 3.5, tags: ['vegan'],
         name: { en: 'Iranian Bread', fa: 'نان ایرانی', ru: 'Иранский хлеб', ka: 'ირანული პური' },
         desc: {
           en: 'Flatbread baked to order in the stone oven, sesame-crusted and still warm.',
@@ -219,7 +219,7 @@ const categories = [
         kw: { en: 'bread flatbread stone oven sesame warm', fa: 'نان تنوری کنجد', ru: 'хлеб лепёшка тандыр кунжут', ka: 'პური ლავაში' }
       },
       {
-        id: 'french-fries', img: 'French_Fries.webp', price: null, tags: ['vegan'],
+        id: 'french-fries', img: 'French_Fries.webp', price: 15, tags: ['vegan'],
         name: { en: 'French Fries', fa: 'سیب‌زمینی سرخ‌کرده', ru: 'Картофель фри', ka: 'ფრი კარტოფილი' },
         desc: {
           en: 'Golden and crisp, salted and served straight from the fryer.',
@@ -230,7 +230,7 @@ const categories = [
         kw: { en: 'fries potato crispy side', fa: 'سیب زمینی سرخ کرده', ru: 'картофель фри', ka: 'ფრი კარტოფილი' }
       },
       {
-        id: 'mexican-potato', img: 'Mexican_Potato.webp', price: null, tags: ['veg', 'spicy'],
+        id: 'mexican-potato', img: 'Mexican_Potato.webp', price: 17, tags: ['veg', 'spicy'],
         name: { en: 'Mexican Potato', fa: 'سیب‌زمینی مکزیکی', ru: 'Мексиканский картофель', ka: 'მექსიკური კარტოფილი' },
         desc: {
           en: 'Spiced potato wedges baked with peppers, cheese and a smoky chili sauce.',
@@ -241,7 +241,7 @@ const categories = [
         kw: { en: 'potato mexican spicy cheese chili wedges', fa: 'سیب زمینی مکزیکی تند', ru: 'картофель мексиканский острый сыр', ka: 'კარტოფილი მექსიკური' }
       },
       {
-        id: 'yogurt-cucumber', img: 'Yogurt_and_Cucumber.webp', price: null, tags: ['veg', 'gf'],
+        id: 'yogurt-cucumber', img: 'Yogurt_and_Cucumber.webp', price: 9, tags: ['veg', 'gf'],
         name: { en: 'Yoghurt & Cucumber (Māst-o Khiār)', fa: 'ماست و خیار', ru: 'Йогурт с огурцом (Маст-о Хияр)', ka: 'იოგურტი და კიტრი (მასთ-ო ხიარ)' },
         desc: {
           en: 'Thick yoghurt with diced cucumber, dried mint and a handful of walnuts.',
@@ -252,7 +252,7 @@ const categories = [
         kw: { en: 'yoghurt cucumber mast khiar mint side', fa: 'ماست خیار نعنا', ru: 'йогурт огурец мята', ka: 'იოგურტი კიტრი' }
       },
       {
-        id: 'yogurt-shallot', img: 'Yogurt_and_Shallot.webp', price: null, tags: ['veg', 'gf'],
+        id: 'yogurt-shallot', img: 'Yogurt_and_Shallot.webp', price: 9, tags: ['veg', 'gf'],
         name: { en: 'Yoghurt & Shallot (Māst-o Moosir)', fa: 'ماست و موسیر', ru: 'Йогурт с горным луком (Маст-о Мусир)', ka: 'იოგურტი და მთის ხახვი (მასთ-ო მუსირ)' },
         desc: {
           en: 'Thick yoghurt folded with dried wild shallot — sharp, earthy, unmistakably Persian.',
@@ -263,7 +263,7 @@ const categories = [
         kw: { en: 'yoghurt shallot mast moosir wild garlic side', fa: 'ماست موسیر', ru: 'йогурт мусир лук', ka: 'იოგურტი მუსირი' }
       },
       {
-        id: 'yogurt-spinach', img: 'Yogurt_and_Spinach.webp', price: null, tags: ['veg', 'gf'],
+        id: 'yogurt-spinach', img: 'Yogurt_and_Spinach.webp', price: 9, tags: ['veg', 'gf'],
         name: { en: 'Yoghurt & Spinach (Māst-o Esfenāj)', fa: 'ماست و اسفناج', ru: 'Йогурт со шпинатом (Маст-о Эсфенадж)', ka: 'იოგურტი და ისპანახი (მასთ-ო ეშფენაჯ)' },
         desc: {
           en: 'Thick yoghurt folded with sautéed spinach, garlic and a touch of dried mint.',
@@ -274,7 +274,7 @@ const categories = [
         kw: { en: 'yoghurt spinach mast esfenaj garlic side', fa: 'ماست اسفناج', ru: 'йогурт шпинат', ka: 'იოგურტი ისპანახი' }
       },
       {
-        id: 'plain-yogurt', img: 'Plain_Yogurt.webp', price: null, tags: ['veg', 'gf'],
+        id: 'plain-yogurt', img: 'Plain_Yogurt.webp', price: 8, tags: ['veg', 'gf'],
         name: { en: 'Plain Yoghurt', fa: 'ماست ساده', ru: 'Йогурт натуральный', ka: 'უბრალო იოგურტი' },
         desc: {
           en: 'Thick house-made yoghurt, unsweetened — the cooling counterpart to every spiced dish.',
@@ -300,7 +300,7 @@ const categories = [
     },
     items: [
       {
-        id: 'kabab-barg', img: 'Kabab_Barg.webp', price: null, tags: ['chef', 'gf'],
+        id: 'kabab-barg', img: 'Kabab_Barg.webp', price: 34, tags: ['chef', 'gf'],
         name: { en: 'Kabāb-e Barg', fa: 'کباب برگ', ru: 'Кебаб Барг', ka: 'ქაბაბ ბარგი' },
         desc: {
           en: 'Beef fillet in thin leaves, marinated overnight in onion juice and saffron, brushed with saffron butter.',
@@ -311,7 +311,7 @@ const categories = [
         kw: { en: 'kebab kebap beef fillet grill skewer barg', fa: 'کباب برگ گوشت فیله سیخ', ru: 'кебаб шашлык говядина вырезка шампур барг', ka: 'ქაბაბი მწვადი საქონელი ფილე შამფური' }
       },
       {
-        id: 'kabab-soltani', img: 'Soltani_Kebab.webp', price: null, tags: ['chef'],
+        id: 'kabab-soltani', img: 'Soltani_Kebab.webp', price: 44, tags: ['chef'],
         name: { en: 'Kabāb-e Soltāni', fa: 'کباب سلطانی', ru: 'Кебаб Солтани', ka: 'ქაბაბ სოლთანი' },
         desc: {
           en: 'The sultan of skewers: one Barg and one Koobideh side by side, on a bed of saffron rice.',
@@ -322,7 +322,7 @@ const categories = [
         kw: { en: 'kebab kebap soltani sultani barg koobideh mixed platter', fa: 'کباب سلطانی برگ کوبیده', ru: 'кебаб солтани султани смешанный ассорти', ka: 'ქაბაბი სოლთანი ასორტი' }
       },
       {
-        id: 'koobideh', img: 'Koobideh_Kebab.webp', price: null, tags: [],
+        id: 'koobideh', img: 'Koobideh_Kebab.webp', price: 25, tags: [],
         name: { en: 'Kabāb-e Koobideh', fa: 'کباب کوبیده', ru: 'Кебаб Кубиде', ka: 'ქაბაბ ქუბიდე' },
         desc: {
           en: 'Lamb and beef twice minced with onion and sumac, pressed onto the flat skewer by hand.',
@@ -333,7 +333,7 @@ const categories = [
         kw: { en: 'kebab kebap koobideh kubideh minced lamb beef skewer', fa: 'کباب کوبیده گوشت چرخ کرده', ru: 'кебаб кубиде фарш баранина шампур', ka: 'ქაბაბი ქუბიდე ფარში ცხვარი' }
       },
       {
-        id: 'bakhtiari', img: 'Bakhtiari_Kebab.webp', price: null, tags: [],
+        id: 'bakhtiari', img: 'Bakhtiari_Kebab.webp', price: 30, tags: [],
         name: { en: 'Kabāb-e Bakhtiāri', fa: 'کباب بختیاری', ru: 'Кебаб Бахтияри', ka: 'ქაბაბ ბახთიარი' },
         desc: {
           en: 'The skewer of the mountain nomads: saffron-marinated chicken and fillet alternating down the spit.',
@@ -344,7 +344,7 @@ const categories = [
         kw: { en: 'kebab kebap bakhtiari chicken fillet mixed skewer', fa: 'کباب بختیاری جوجه فیله', ru: 'кебаб бахтияри курица вырезка шампур', ka: 'ქაბაბი ბახთიარი ქათამი ფილე' }
       },
       {
-        id: 'shishlik', img: 'Shishlik.webp', price: null, tags: ['chef', 'gf'],
+        id: 'shishlik', img: 'Shishlik.webp', price: 49, tags: ['chef', 'gf'],
         name: { en: 'Shashlik', fa: 'شیشلیک', ru: 'Шашлык', ka: 'შაშლიკი' },
         desc: {
           en: 'Lamb chops in the Shandiz manner, marinated for twenty-four hours and grilled exactly to the point.',
@@ -355,7 +355,7 @@ const categories = [
         kw: { en: 'kebab kebap shishlik shashlik lamb chops grill', fa: 'شیشلیک راسته گوسفند', ru: 'шишлик шашлык баранина котлеты', ka: 'შაშლიკი ცხვარი ნეკნები' }
       },
       {
-        id: 'kabab-fillet', img: 'Fillet_Kebab.webp', price: null, tags: ['gf'],
+        id: 'kabab-fillet', img: 'Fillet_Kebab.webp', price: 38, tags: ['gf'],
         name: { en: 'Kabāb-e Filet', fa: 'کباب فیله', ru: 'Кебаб из вырезки', ka: 'ქაბაბი ფილედან' },
         desc: {
           en: 'Pure fillet cubes on the skewer — salt, saffron and butter, and nothing else.',
@@ -366,7 +366,7 @@ const categories = [
         kw: { en: 'kebab kebap fillet filet beef skewer', fa: 'کباب فیله گوشت سیخ', ru: 'кебаб вырезка филе шампур', ka: 'ქაბაბი ფილე შამფური' }
       },
       {
-        id: 'chicken-kebab', img: 'Chicken_Kebab.webp', price: null, tags: ['gf'],
+        id: 'chicken-kebab', img: 'Chicken_Kebab.webp', price: 25, tags: ['gf'],
         name: { en: 'Chicken Kabāb', fa: 'کباب جوجه', ru: 'Куриный кебаб', ka: 'ქათმის ქაბაბი' },
         desc: {
           en: 'Boneless chicken cubes marinated in saffron and lime, grilled tender on the skewer.',
@@ -377,7 +377,7 @@ const categories = [
         kw: { en: 'chicken kebab kebap skewer saffron lime boneless', fa: 'کباب مرغ زعفران لیمو', ru: 'кебаб курица шафран лайм', ka: 'ქაბაბი ქათამი ზაფრანა' }
       },
       {
-        id: 'joojeh-bone', img: 'Chicken_Kebab_with_bones.webp', price: null, tags: ['gf'],
+        id: 'joojeh-bone', img: 'Chicken_Kebab_with_bones.webp', price: 30, tags: ['gf'],
         name: { en: 'Joojeh Kabāb on the Bone', fa: 'جوجه کباب با استخوان', ru: 'Джудже-кебаб на кости', ka: 'ჯუჯე ქაბაბი ძვალზე' },
         desc: {
           en: 'Chicken on the bone marinated in saffron, yoghurt and lime — crisp outside, still juicy within.',
@@ -399,7 +399,7 @@ const categories = [
         kw: { en: 'chicken half grilled poultry', fa: 'مرغ کبابی نیم', ru: 'курица цыплёнок гриль', ka: 'ქათამი წიწილა გრილი' }
       },
       {
-        id: 'vaziri-kebab', img: 'Vaziri_Kebab.webp', price: null, tags: ['chef'],
+        id: 'vaziri-kebab', img: 'Vaziri_Kebab.webp', price: 36, tags: ['chef'],
         name: { en: 'Kabāb-e Vaziri', fa: 'کباب وزیری', ru: 'Кебаб Вазири', ka: 'ქაბაბ ვაზირი' },
         desc: {
           en: 'Marinated lamb and chicken pieces threaded together, grilled with peppers and onion.',
@@ -410,7 +410,7 @@ const categories = [
         kw: { en: 'kebab kebap vaziri lamb chicken mixed skewer pepper', fa: 'کباب وزیری گوشت مرغ', ru: 'кебаб вазири баранина курица', ka: 'ქაბაბი ვაზირი' }
       },
       {
-        id: 'loghmeh-kebab', img: 'Loghmeh_Kebab.webp', price: null, tags: [],
+        id: 'loghmeh-kebab', img: 'Loghmeh_Kebab.webp', price: 24, tags: [],
         name: { en: 'Loghmeh Kabāb', fa: 'کباب لقمه', ru: 'Кебаб Локме', ka: 'ქაბაბ ლოღმე' },
         desc: {
           en: 'Bite-sized minced meat parcels, seasoned and grilled quickly over hot coals.',
@@ -436,7 +436,7 @@ const categories = [
     },
     items: [
       {
-        id: 'ghormeh-sabzi', img: 'Ghorme_Sabzi_Stew.webp', price: null, tags: ['chef'],
+        id: 'ghormeh-sabzi', img: 'Ghorme_Sabzi_Stew.webp', price: 28, tags: ['chef'],
         name: { en: 'Ghormeh Sabzi', fa: 'قورمه‌سبزی', ru: 'Гормэ сабзи', ka: 'ღორმე საბზი' },
         desc: {
           en: 'The national dish: seven herbs, kidney beans and lamb, sharpened with dried lime.',
@@ -447,7 +447,7 @@ const categories = [
         kw: { en: 'stew khoresht herbs beans lamb rice ghormeh', fa: 'خورش قورمه سبزی لوبیا گوشت', ru: 'рагу хорешт зелень фасоль баранина рис', ka: 'ხორეშთი მწვანილი ლობიო ცხვარი' }
       },
       {
-        id: 'gheimeh', img: 'Gheimeh_Stew.webp', price: null, tags: [],
+        id: 'gheimeh', img: 'Gheimeh_Stew.webp', price: 28, tags: [],
         name: { en: 'Gheimeh', fa: 'قیمه', ru: 'Гейме', ka: 'ღეიმე' },
         desc: {
           en: 'Yellow split peas and lamb in tomato and Limu Omani, crowned with a nest of fried potato straw.',
@@ -458,7 +458,7 @@ const categories = [
         kw: { en: 'stew khoresht split peas lamb potato tomato gheimeh', fa: 'خورش قیمه لپه گوشت سیب زمینی', ru: 'рагу хорешт горох баранина картофель', ka: 'ხორეშთი ბარდა ცხვარი კარტოფილი' }
       },
       {
-        id: 'mahiche', img: 'Mahiche.webp', price: null, tags: ['chef', 'gf'],
+        id: 'mahiche', img: 'Mahiche.webp', price: 43, tags: ['chef', 'gf'],
         name: { en: 'Māhiche', fa: 'ماهیچه', ru: 'Махиче', ka: 'მაჰიჩე' },
         desc: {
           en: 'Lamb shank braised four hours in saffron and onion, until it slides off the bone.',
@@ -480,7 +480,7 @@ const categories = [
         kw: { en: 'stew khoresht selection sharing platter two tasting', fa: 'خورش بشقاب دو نفره', ru: 'рагу ассорти на двоих дегустация', ka: 'ხორეშთი ასორტი ორისთვის' }
       },
       {
-        id: 'beans-meat-stew', img: 'Beans_and_Meat_Stew.webp', price: null, tags: [],
+        id: 'beans-meat-stew', img: 'Beans_and_Meat_Stew.webp', price: 25, tags: [],
         name: { en: 'Beans & Meat Stew', fa: 'خورش لوبیا و گوشت', ru: 'Рагу из фасоли с мясом', ka: 'ლობიოსა და ხორცის საშუშხავი' },
         desc: {
           en: 'White beans and beef simmered slowly with tomato and garden herbs, served with rice.',
@@ -491,7 +491,7 @@ const categories = [
         kw: { en: 'stew beans meat beef rice tomato', fa: 'خورش لوبیا گوشت', ru: 'рагу фасоль мясо', ka: 'საშუშხავი ლობიო ხორცი' }
       },
       {
-        id: 'chicken-curry-stew', img: 'Chicken_Curry_Stew.webp', price: null, tags: ['spicy'],
+        id: 'chicken-curry-stew', img: 'Chicken_Curry_Stew.webp', price: 32, tags: ['spicy'],
         name: { en: 'Chicken Curry Stew with Rice', fa: 'خورش کاری مرغ با برنج', ru: 'Куриное карри с рисом', ka: 'ქათმის კარი საშუშხავი ბრინჯით' },
         desc: {
           en: 'Chicken simmered in a spiced curry sauce with coconut milk, served over steamed rice.',
@@ -502,7 +502,7 @@ const categories = [
         kw: { en: 'chicken curry stew rice coconut spicy', fa: 'خورش کاری مرغ نارگیل', ru: 'карри курица рис кокос', ka: 'კარი ქათამი ბრინჯი' }
       },
       {
-        id: 'okra-stew', img: 'Okra_Stew.webp', price: null, tags: ['gf'],
+        id: 'okra-stew', img: 'Okra_Stew.webp', price: 32, tags: ['gf'],
         name: { en: 'Okra Stew with Rice', fa: 'خورش بامیه با برنج', ru: 'Рагу из бамии с рисом', ka: 'ბამიის საშუშხავი ბრინჯით' },
         desc: {
           en: 'Okra and lamb braised in a tangy tomato sauce, served over steamed rice.',
@@ -528,7 +528,7 @@ const categories = [
     },
     items: [
       {
-        id: 'biryani-chicken', img: 'Biryani_Chicken.webp', price: null, tags: [],
+        id: 'biryani-chicken', img: 'Biryani_Chicken.webp', price: 40, tags: [],
         name: { en: 'Chicken Biryāni', fa: 'بریانی مرغ', ru: 'Бирьяни с курицей', ka: 'ქათმის ბირიანი' },
         desc: {
           en: 'Layered spiced rice with saffron, cardamom and cinnamon, finished in the pot with marinated chicken.',
@@ -539,7 +539,7 @@ const categories = [
         kw: { en: 'rice biryani beryani chicken saffron', fa: 'بریانی برنج مرغ زعفران', ru: 'рис бирьяни курица шафран', ka: 'ბრინჯი ბირიანი ქათამი' }
       },
       {
-        id: 'biryani-rice', img: 'Biryani_Rice.webp', price: null, tags: ['veg'],
+        id: 'biryani-rice', img: 'Biryani_Rice.webp', price: 16, tags: ['veg'],
         name: { en: 'Biryāni Rice', fa: 'برنج بریانی', ru: 'Рис бирьяни', ka: 'ბირიანის ბრინჯი' },
         desc: {
           en: 'Layered spiced rice on its own, saffron, cardamom, cinnamon and fried onion.',
@@ -550,7 +550,7 @@ const categories = [
         kw: { en: 'rice biryani plain saffron cardamom side', fa: 'برنج بریانی زعفران', ru: 'рис бирьяни шафран', ka: 'ბრინჯი ბირიანი' }
       },
       {
-        id: 'saffron-rice', img: 'Saffron_Rice.webp', price: null, tags: ['vegan', 'gf'],
+        id: 'saffron-rice', img: 'Saffron_Rice.webp', price: 10, tags: ['vegan', 'gf'],
         name: { en: 'Saffron Rice (Chelo)', fa: 'چلو زعفرانی', ru: 'Шафрановый рис (Чело)', ka: 'ზაფრანიანი ბრინჯი (ჩელო)' },
         desc: {
           en: 'Steamed long-grain rice, finished under a veil of saffron and butter, with a crisp tahdig crust.',
@@ -561,7 +561,7 @@ const categories = [
         kw: { en: 'rice saffron chelo tahdig plain side', fa: 'چلو زعفران ته دیگ', ru: 'рис шафран чело тахдиг', ka: 'ბრინჯი ზაფრანა ჩელო' }
       },
       {
-        id: 'zereshk-polo', img: 'Zereshk_Polo.webp', price: null, tags: ['vegan', 'gf'],
+        id: 'zereshk-polo', img: 'Zereshk_Polo.webp', price: 13, tags: ['vegan', 'gf'],
         name: { en: 'Zereshk Polo', fa: 'زرشک پلو', ru: 'Зерешк поло', ka: 'ზერეშქ ფოლო' },
         desc: {
           en: 'Saffron rice studded with tart barberries and slivered pistachio.',
@@ -572,7 +572,7 @@ const categories = [
         kw: { en: 'rice zereshk barberry pistachio saffron', fa: 'زرشک پلو زعفران پسته', ru: 'зерешк поло барбарис фисташка', ka: 'ზერეშქ ფოლო ბარბარისი' }
       },
       {
-        id: 'zereshk-polo-chicken', img: 'Zereshk_Polo_Chicken.webp', price: null, tags: [],
+        id: 'zereshk-polo-chicken', img: 'Zereshk_Polo_Chicken.webp', price: 30, tags: [],
         name: { en: 'Zereshk Polo with Chicken', fa: 'زرشک پلو با مرغ', ru: 'Зерешк поло с курицей', ka: 'ზერეშქ ფოლო ქათმით' },
         desc: {
           en: 'Barberry saffron rice with a joint of saffron-braised chicken.',
@@ -583,7 +583,7 @@ const categories = [
         kw: { en: 'rice zereshk barberry chicken saffron', fa: 'زرشک پلو مرغ', ru: 'зерешк поло курица', ka: 'ზერეშქ ფოლო ქათამი' }
       },
       {
-        id: 'mazbi-chicken', img: 'Chicken_Mazbi.webp', price: null, tags: ['spicy'],
+        id: 'mazbi-chicken', img: 'Chicken_Mazbi.webp', price: 40, tags: ['spicy'],
         name: { en: 'Mazbi Chicken', fa: 'مرغ مظبی', ru: 'Курица мазби', ka: 'ქათამი მაზბი' },
         desc: {
           en: 'Chicken cooked over wood on spiced rice, in the manner of the Arabian peninsula — with tomato sauce and sumac.',
@@ -594,7 +594,7 @@ const categories = [
         kw: { en: 'rice mazbi madfoon chicken arabic oven spicy', fa: 'مظبی مرغ برنج عربی', ru: 'рис мазби курица арабский острое', ka: 'ბრინჯი მაზბი ქათამი' }
       },
       {
-        id: 'chicken-kabsa', img: 'Chicken_Kabsa.webp', price: null, tags: ['spicy'],
+        id: 'chicken-kabsa', img: 'Chicken_Kabsa.webp', price: 40, tags: ['spicy'],
         name: { en: 'Chicken Kabsa', fa: 'کبسه مرغ', ru: 'Курица кабса', ka: 'ქათმის ქაბსა' },
         desc: {
           en: 'The Gulf classic: chicken over spiced rice with tomato, dried lime and toasted nuts.',
@@ -605,7 +605,7 @@ const categories = [
         kw: { en: 'kabsa chicken rice gulf spiced arabic', fa: 'کبسه مرغ برنج عربی', ru: 'кабса курица рис', ka: 'ქაბსა ქათამი' }
       },
       {
-        id: 'lamb-kabsa', img: 'Lamb_Kabsa.webp', price: null, tags: ['spicy', 'chef'],
+        id: 'lamb-kabsa', img: 'Lamb_Kabsa.webp', price: 48, tags: ['spicy', 'chef'],
         name: { en: 'Lamb Kabsa', fa: 'کبسه گوشت', ru: 'Баранина кабса', ka: 'ცხვრის ქაბსა' },
         desc: {
           en: 'Slow-braised lamb over baharat-spiced rice, with tomato, dried lime and roasted almonds.',
@@ -616,7 +616,7 @@ const categories = [
         kw: { en: 'kabsa lamb rice gulf spiced arabic baharat', fa: 'کبسه گوشت گوسفند بهارات', ru: 'кабса баранина рис', ka: 'ქაბსა ცხვარი' }
       },
       {
-        id: 'machboos', img: 'Majboos.webp', price: null, tags: [],
+        id: 'machboos', img: 'Majboos.webp', price: 50, tags: [],
         name: { en: 'Machboos', fa: 'مجبوس', ru: 'Мачбус', ka: 'მაჩბუსი' },
         desc: {
           en: 'Long-grain rice with baharat, loomi and braised meat — the Gulf classic, meant for the middle of the table.',
@@ -627,7 +627,7 @@ const categories = [
         kw: { en: 'rice machboos majboos kabsa baharat gulf meat sharing', fa: 'مجبوس برنج بهارات گوشت', ru: 'рис мачбус кабса бахарат мясо', ka: 'ბრინჯი მაჩბუსი ხორცი' }
       },
       {
-        id: 'mandi-rice', img: 'Mandi_Rice.webp', price: null, tags: ['vegan'],
+        id: 'mandi-rice', img: 'Mandi_Rice.webp', price: 13, tags: ['vegan'],
         name: { en: 'Mandi Rice', fa: 'برنج مندی', ru: 'Рис манди', ka: 'მანდის ბრინჯი' },
         desc: {
           en: 'Smoked spiced rice, cooked in the traditional Yemeni pit style, served plain or as a base.',
@@ -638,7 +638,7 @@ const categories = [
         kw: { en: 'mandi rice smoked yemeni spiced', fa: 'برنج مندی دودی', ru: 'манди рис копчёный', ka: 'მანდი ბრინჯი' }
       },
       {
-        id: 'mutton-mandi', img: 'Mutton_Mandi.webp', price: null, tags: ['chef'],
+        id: 'mutton-mandi', img: 'Mutton_Mandi.webp', price: 48, tags: ['chef'],
         name: { en: 'Mutton Mandi', fa: 'مندی گوشت', ru: 'Манди из баранины', ka: 'ცხვრის მანდი' },
         desc: {
           en: 'Mutton slow-smoked in an underground pit over smoked mandi rice, the signature of the Yemeni table.',
@@ -649,7 +649,7 @@ const categories = [
         kw: { en: 'mandi mutton lamb smoked pit rice yemeni', fa: 'مندی گوشت گوسفند دودی', ru: 'манди баранина копчёная', ka: 'მანდი ცხვარი' }
       },
       {
-        id: 'mansaf', img: 'Mansaf.webp', price: null, tags: ['chef'],
+        id: 'mansaf', img: 'Mansaf.webp', price: 50, tags: ['chef'],
         name: { en: 'Mansaf', fa: 'منسف', ru: 'Мансаф', ka: 'მანსაფი' },
         desc: {
           en: 'Tender lamb in a tangy fermented dried-yoghurt (jameed) sauce, over saffron rice and flatbread.',
@@ -675,7 +675,7 @@ const categories = [
     },
     items: [
       {
-        id: 'dorado', img: 'Dorado_Fish.webp', price: null, tags: ['chef', 'gf'],
+        id: 'dorado', img: 'Dorado_Fish.webp', price: 43, tags: ['chef', 'gf'],
         name: { en: 'Grilled Dorado', fa: 'ماهی دورادو کبابی', ru: 'Дорадо на гриле', ka: 'დორადო გრილზე' },
         desc: {
           en: 'A whole dorado over charcoal, stuffed with herbs and garlic, with grilled lemon and saffron rice.',
@@ -686,7 +686,7 @@ const categories = [
         kw: { en: 'fish dorado dorada seabream grill lemon', fa: 'ماهی دورادو کباب لیمو', ru: 'рыба дорадо гриль лимон', ka: 'თევზი დორადო გრილი ლიმონი' }
       },
       {
-        id: 'grilled-trout', img: 'Grilled_Trout.webp', price: null, tags: ['gf'],
+        id: 'grilled-trout', img: 'Grilled_Trout.webp', price: 34, tags: ['gf'],
         name: { en: 'Grilled Trout', fa: 'ماهی قزل‌آلا کبابی', ru: 'Форель на гриле', ka: 'კალმახი გრილზე' },
         desc: {
           en: 'A whole river trout, grilled over charcoal with herbs, garlic and a squeeze of lemon.',
@@ -723,7 +723,7 @@ const categories = [
     },
     items: [
       {
-        id: 'khachapuri', img: 'Khachapuri.webp', price: null, tags: ['veg', 'chef'],
+        id: 'khachapuri', img: 'Khachapuri.webp', price: 25, tags: ['veg', 'chef'],
         name: { en: 'Khachapuri', fa: 'خاچاپوری', ru: 'Хачапури', ka: 'ხაჭაპური' },
         desc: {
           en: 'Boat-shaped bread filled with melted cheese, topped with a runny egg and a knob of butter.',
@@ -734,7 +734,7 @@ const categories = [
         kw: { en: 'khachapuri cheese bread egg georgian', fa: 'خاچاپوری پنیر تخم مرغ', ru: 'хачапури сыр хлеб яйцо', ka: 'ხაჭაპური ყველი კვერცხი' }
       },
       {
-        id: 'khinkali', img: 'Khinkali.webp', price: null, tags: ['chef'],
+        id: 'khinkali', img: 'Khinkali.webp', price: 2.9, tags: ['chef'],
         name: { en: 'Khinkali (per piece)', fa: 'خینکالی (هر عدد)', ru: 'Хинкали (за штуку)', ka: 'ხინკალი (ცალი)' },
         desc: {
           en: 'Hand-pleated dumplings filled with spiced minced meat and broth, twisted at the top and eaten by hand.',
@@ -745,7 +745,7 @@ const categories = [
         kw: { en: 'khinkali dumplings meat broth georgian handmade', fa: 'خینکالی خمیرچه گوشت', ru: 'хинкали пельмени бульон', ka: 'ხინკალი ხორცი' }
       },
       {
-        id: 'chkmeruli', img: 'Chkmeruli.webp', price: null, tags: ['gf'],
+        id: 'chkmeruli', img: 'Chkmeruli.webp', price: 30, tags: ['gf'],
         name: { en: 'Chkmeruli', fa: 'چکمرولی', ru: 'Чкмерули', ka: 'ჩქმერული' },
         desc: {
           en: 'Flattened, pan-fried chicken drowned in a rich garlic and milk sauce.',
@@ -756,7 +756,7 @@ const categories = [
         kw: { en: 'chkmeruli chicken garlic milk sauce georgian', fa: 'چکمرولی مرغ سیر شیر', ru: 'чкмерули курица чеснок молоко', ka: 'ჩქმერული ქათამი ნიორი' }
       },
       {
-        id: 'chashushuli', img: 'Chashushuli.webp', price: null, tags: ['spicy', 'gf'],
+        id: 'chashushuli', img: 'Chashushuli.webp', price: 25, tags: ['spicy', 'gf'],
         name: { en: 'Chashushuli', fa: 'چاشوشولی', ru: 'Чашушули', ka: 'ჩაშუშული' },
         desc: {
           en: 'Beef stewed in a spicy tomato and herb sauce, sharp with garlic and coriander.',
@@ -767,7 +767,7 @@ const categories = [
         kw: { en: 'chashushuli beef tomato spicy stew georgian', fa: 'چاشوشولی گوشت تند', ru: 'чашушули говядина острое', ka: 'ჩაშუშული საქონელი' }
       },
       {
-        id: 'ojakhuri-meat', img: 'Ojakhuri_Meat.webp', price: null, tags: ['chef'],
+        id: 'ojakhuri-meat', img: 'Ojakhuri_Meat.webp', price: 30, tags: ['chef'],
         name: { en: 'Ojakhuri with Meat', fa: 'اوجاخوری با گوشت', ru: 'Оджахури с мясом', ka: 'ოჯახური ხორცით' },
         desc: {
           en: 'Fried potato and pork chunks in a clay pan, with onion, garlic and fresh herbs.',
@@ -778,7 +778,7 @@ const categories = [
         kw: { en: 'ojakhuri potato meat pork skillet georgian', fa: 'اوجاخوری سیب زمینی گوشت', ru: 'оджахури картофель мясо', ka: 'ოჯახური ხორცი' }
       },
       {
-        id: 'ojakhuri-mushroom', img: 'Ojakhuri_Mushroom.webp', price: null, tags: ['veg'],
+        id: 'ojakhuri-mushroom', img: 'Ojakhuri_Mushroom.webp', price: 25, tags: ['veg'],
         name: { en: 'Ojakhuri with Mushroom', fa: 'اوجاخوری با قارچ', ru: 'Оджахури с грибами', ka: 'ოჯახური სოკოთი' },
         desc: {
           en: 'The vegetarian version: fried potato and mushroom in a clay pan, with onion and herbs.',
@@ -789,7 +789,7 @@ const categories = [
         kw: { en: 'ojakhuri potato mushroom skillet vegetarian georgian', fa: 'اوجاخوری سیب زمینی قارچ', ru: 'оджахури картофель грибы', ka: 'ოჯახური სოკო' }
       },
       {
-        id: 'lobio', img: 'Lobio.webp', price: null, tags: ['vegan', 'gf'],
+        id: 'lobio', img: 'Lobio.webp', price: 18, tags: ['vegan', 'gf'],
         name: { en: 'Lobio', fa: 'لوبیو', ru: 'Лобио', ka: 'ლობიო' },
         desc: {
           en: 'Red beans simmered with walnut, coriander and dried marigold, served in a clay pot.',
@@ -800,7 +800,7 @@ const categories = [
         kw: { en: 'lobio beans walnut clay pot georgian vegan', fa: 'لوبیو لوبیا گردو', ru: 'лобио фасоль орех', ka: 'ლობიო ნიგოზი' }
       },
       {
-        id: 'ostri', img: 'Ostri.webp', price: null, tags: ['spicy'],
+        id: 'ostri', img: 'Ostri.webp', price: 27, tags: ['spicy'],
         name: { en: 'Ostri', fa: 'استری', ru: 'Остри', ka: 'ოსტრი' },
         desc: {
           en: 'Veal simmered in a spicy tomato sauce with garlic and green chili — a fiery Tbilisi favourite.',
@@ -811,7 +811,7 @@ const categories = [
         kw: { en: 'ostri veal spicy tomato stew georgian', fa: 'استری گوساله تند', ru: 'остри телятина острое', ka: 'ოსტრი ხბო' }
       },
       {
-        id: 'kharcho', img: 'Kharcho_Soup.webp', price: null, tags: ['spicy'],
+        id: 'kharcho', img: 'Kharcho_Soup.webp', price: 15, tags: ['spicy'],
         name: { en: 'Kharcho Soup', fa: 'سوپ خارچو', ru: 'Суп харчо', ka: 'ხარჩოს სუპი' },
         desc: {
           en: 'A thick beef and rice soup, soured with tklapi plum leather and warmed with spices.',
@@ -822,7 +822,7 @@ const categories = [
         kw: { en: 'kharcho soup beef rice sour plum georgian', fa: 'خارچو سوپ گوشت گاو', ru: 'харчо суп говядина рис', ka: 'ხარჩო სუპი' }
       },
       {
-        id: 'georgian-salad', img: 'Georgian_Salad.webp', price: null, tags: ['veg', 'gf'],
+        id: 'georgian-salad', img: 'Georgian_Salad.webp', price: 17, tags: ['veg', 'gf'],
         name: { en: 'Georgian Salad with Walnut', fa: 'سالاد گرجی با گردو', ru: 'Грузинский салат с орехом', ka: 'ქართული სალათი ნიგვზით' },
         desc: {
           en: 'Tomato, cucumber and herbs, dressed with a walnut and garlic sauce.',
@@ -833,7 +833,7 @@ const categories = [
         kw: { en: 'georgian salad walnut tomato cucumber sauce', fa: 'سالاد گرجی گردو', ru: 'салат грузинский орех', ka: 'სალათი ქართული ნიგოზი' }
       },
       {
-        id: 'lula-kebab-georgian', img: 'Lula_Kebab_Georgian.webp', price: null, tags: [],
+        id: 'lula-kebab-georgian', img: 'Lula_Kebab_Georgian.webp', price: 25, tags: [],
         name: { en: 'Lula Kebab, Georgian Style', fa: 'کباب لولا به سبک گرجی', ru: 'Люля-кебаб по-грузински', ka: 'ლულა ქაბაბი ქართულად' },
         desc: {
           en: 'Minced beef and lamb skewers seasoned with Georgian herbs and grilled over charcoal.',
