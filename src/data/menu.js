@@ -903,6 +903,109 @@ const categories = [
         kw: { en: 'drink sharbat sherbet berry syrup cold mint lemonade', fa: 'شربت نوشیدنی خنک نعنا', ru: 'напиток шербет ягоды холодный мята', ka: 'სასმელი შარბათი კენკრა პიტნა' }
       }
     ]
+  },
+
+  {
+    id: 'beverages', num: '08',
+    name: { en: 'Beverages', fa: 'نوشیدنی‌ها', ru: 'Напитки', ka: 'სასმელები' },
+    short: { en: 'Beverages', fa: 'نوشیدنی', ru: 'Напитки', ka: 'სასმელები' },
+    script: { en: 'Nushidani', fa: 'نوشیدنی', ru: 'Напитки', ka: 'სასმელები' },
+    intro: {
+      en: 'Cold, still or sparkling — something to hold in your hand between courses.',
+      fa: 'خنک، ساده یا گازدار — چیزی برای دست گرفتن میان غذاها.',
+      ru: 'Холодные, негазированные или с газом — что-то в руке между блюдами.',
+      ka: 'ცივი, გაზიანი ან უგაზო — რაღაც ხელში დასაჭერი კერძებს შორის.'
+    },
+    items: [
+      {
+        id: 'mineral-water', img: 'Mineral_Water.webp', price: 3, tags: ['vegan', 'gf'],
+        name: { en: 'Mineral Water', fa: 'آب معدنی', ru: 'Минеральная вода', ka: 'მინერალური წყალი' },
+        desc: {
+          en: 'Still mineral water, chilled.',
+          fa: 'آب معدنی ساده و خنک.',
+          ru: 'Негазированная минеральная вода, охлаждённая.',
+          ka: 'უგაზო მინერალური წყალი, გაცივებული.'
+        },
+        kw: { en: 'water still mineral drink', fa: 'آب معدنی', ru: 'вода минеральная негазированная', ka: 'წყალი მინერალური' }
+      },
+      {
+        id: 'sparkling-water', img: 'Sparkling_Water.webp', price: 4, tags: ['vegan', 'gf'],
+        name: { en: 'Sparkling Water', fa: 'آب گازدار', ru: 'Газированная вода', ka: 'გაზიანი წყალი' },
+        desc: {
+          en: 'Mineral water with fine bubbles, chilled.',
+          fa: 'آب معدنی گازدار و خنک.',
+          ru: 'Минеральная вода с мелкими пузырьками, охлаждённая.',
+          ka: 'წვრილბუშტუკოვანი მინერალური წყალი, გაცივებული.'
+        },
+        kw: { en: 'water sparkling soda mineral drink', fa: 'آب گازدار معدنی', ru: 'вода газированная минеральная', ka: 'წყალი გაზიანი' }
+      },
+      {
+        id: 'coca-cola', img: 'Coca_Cola.webp', price: 4, tags: ['vegan'],
+        name: { en: 'Coca-Cola', fa: 'کوکاکولا', ru: 'Кока-Кола', ka: 'კოკა-კოლა' },
+        desc: {
+          en: 'Classic Coca-Cola, served ice cold.',
+          fa: 'کوکاکولای کلاسیک، یخ‌زده.',
+          ru: 'Классическая Кока-Кола, ледяная.',
+          ka: 'კლასიკური კოკა-კოლა, ყინულივით ცივი.'
+        },
+        kw: { en: 'coca cola soda soft drink', fa: 'کوکاکولا نوشابه', ru: 'кока кола газировка', ka: 'კოკა კოლა გაზიანი' }
+      },
+      {
+        id: 'fanta', img: 'Fanta.webp', price: 4, tags: ['vegan'],
+        name: { en: 'Fanta', fa: 'فانتا', ru: 'Фанта', ka: 'ფანტა' },
+        desc: {
+          en: 'Orange Fanta, served ice cold.',
+          fa: 'فانتای پرتقالی، یخ‌زده.',
+          ru: 'Апельсиновая Фанта, ледяная.',
+          ka: 'ფორთოხლის ფანტა, ყინულივით ცივი.'
+        },
+        kw: { en: 'fanta orange soda soft drink', fa: 'فانتا پرتقال نوشابه', ru: 'фанта апельсин газировка', ka: 'ფანტა ფორთოხალი' }
+      },
+      {
+        id: 'sprite', img: 'Sprite.webp', price: 4, tags: ['vegan'],
+        name: { en: 'Sprite', fa: 'اسپرایت', ru: 'Спрайт', ka: 'სპრაიტი' },
+        desc: {
+          en: 'Lemon-lime Sprite, served ice cold.',
+          fa: 'اسپرایت با طعم لیمو، یخ‌زده.',
+          ru: 'Лимонно-лаймовый Спрайт, ледяной.',
+          ka: 'ლიმონ-ლაიმის სპრაიტი, ყინულივით ცივი.'
+        },
+        kw: { en: 'sprite lemon lime soda soft drink', fa: 'اسپرایت لیمو نوشابه', ru: 'спрайт лимон лайм газировка', ka: 'სპრაიტი ლიმონი' }
+      },
+      {
+        id: 'airan', img: 'Airan.webp', price: 7.5, tags: ['veg', 'gf'],
+        name: { en: 'Airan', fa: 'آیران', ru: 'Айран', ka: 'აირანი' },
+        desc: {
+          en: 'A salted, sparkling yoghurt drink — cooling and traditional.',
+          fa: 'نوشیدنی ماست نمکی و گازدار — خنک و سنتی.',
+          ru: 'Солёный газированный йогуртовый напиток — освежающий и традиционный.',
+          ka: 'მარილიანი, გაზიანი იოგურტის სასმელი — გამაგრილებელი და ტრადიციული.'
+        },
+        kw: { en: 'airan ayran yoghurt drink salted sparkling', fa: 'آیران ماست نوشیدنی', ru: 'айран йогурт напиток солёный', ka: 'აირანი იოგურტი' }
+      },
+      {
+        id: 'lemonade', img: 'Lemonade.webp', price: 5, tags: ['vegan', 'gf'],
+        name: { en: 'Lemonade', fa: 'لیموناد', ru: 'Лимонад', ka: 'ლიმონათი' },
+        desc: {
+          en: 'House-made lemonade, fresh and lightly sweet.',
+          fa: 'لیموناد خانگی، تازه و کمی شیرین.',
+          ru: 'Домашний лимонад, свежий и слегка сладкий.',
+          ka: 'სახლში დამზადებული ლიმონათი, ახალი და ოდნავ ტკბილი.'
+        },
+        kw: { en: 'lemonade lemon fresh homemade drink', fa: 'لیموناد لیمو خانگی', ru: 'лимонад домашний', ka: 'ლიმონათი ლიმონი' }
+      },
+      {
+        id: 'energy-drink', img: 'Energy_Drink.webp', price: 10, tags: ['vegan'],
+        name: { en: 'Energy Drink', fa: 'نوشیدنی انرژی‌زا', ru: 'Энергетический напиток', ka: 'ენერგეტიკული სასმელი' },
+        desc: {
+          en: 'A classic energy drink, served ice cold.',
+          fa: 'نوشیدنی انرژی‌زای کلاسیک، یخ‌زده.',
+          ru: 'Классический энергетик, ледяной.',
+          ka: 'კლასიკური ენერგეტიკული სასმელი, ყინულივით ცივი.'
+        },
+        kw: { en: 'energy drink can cold', fa: 'انرژی زا قوطی', ru: 'энергетик банка', ka: 'ენერგეტიკული სასმელი' }
+      }
+    ]
   }
 ];
 
