@@ -32,11 +32,11 @@ const ui = {
       menuDesc: 'The menu of 1001 Nights in Tbilisi: starters, charcoal kebab, Persian stews, rice dishes, fish and sweets — every dish with a photo.',
       aboutTitle: 'About us — 1001 Nights, Persian Restaurant in Tbilisi',
       aboutDesc: 'The story, the kitchen and what we hold to at 1001 Nights: Persian hospitality in the old town of Tbilisi, since 2012.',
-      blogTitle: 'Blog — 1001 Nights, Persian Restaurant in Tbilisi',
-      blogDesc: 'Stories from the kitchen and the dining room at 1001 Nights: festivals, live music and the small rituals that fill the old town with the smell of saffron.'
+      eventsTitle: 'Events — 1001 Nights, Persian Restaurant in Tbilisi',
+      eventsDesc: 'Live music nights, the Charshanbe Souri fire festival and the evenings that turn our dining room into something else — see what’s coming up at 1001 Nights.'
     },
 
-    nav: { menu: 'Menu', restaurant: 'Restaurant', experience: 'Experience', visit: 'Visit', homeLabel: 'Home', about: 'About', blog: 'Blog',
+    nav: { menu: 'Menu', restaurant: 'Restaurant', experience: 'Experience', visit: 'Visit', homeLabel: 'Home', about: 'About', events: 'Events',
            reserve: 'Reserve', reserveLong: 'Book a table', openMenu: 'Open menu', main: 'Main navigation', home: '1001 Nights — home' },
 
     hero: {
@@ -110,25 +110,10 @@ const ui = {
       }
     },
 
-    blogPage: {
-      kicker: 'News', title: 'Our Blog',
-      lead: 'Stories from the kitchen, the dining room and the old town outside our door — festivals, music nights and everything we cook them with.',
-      sectionKicker: 'Latest news', sectionTitle: 'Resources & Articles',
-      by: 'by', readMore: 'Read more', soon: 'More stories, soon',
-      posts: [
-        {
-          badge: 'Traditions',
-          title: 'Jashn-e Charshanbe Souri: the fire festival before Nowruz',
-          excerpt: 'On the last Tuesday before the Persian new year, small fires burn along Kote Apkhazi and we jump over them the old way — “my sickly yellow to you, your fiery red to me.” Here is why we still keep the ritual, and what lands on the table once the flames die down.',
-          author: 'Nasrin Karimi'
-        },
-        {
-          badge: 'Behind the scenes',
-          title: 'Three musicians, one long Nowruz night',
-          excerpt: 'Every Nowruz, our dining room turns into something between a concert hall and a family gathering. We asked the trio who play here each year why Persian classics sound different over a plate of saffron rice.',
-          author: 'Aram Sultani'
-        }
-      ]
+    eventsPage: {
+      kicker: 'Moments', title: 'Our Events',
+      lead: 'A few nights a year, the dining room becomes something else — a concert hall, a circle around the fire. Here is what’s on the calendar.',
+      sectionKicker: 'On the calendar', sectionTitle: 'Make a memory'
     },
 
     gallery: {
@@ -206,11 +191,11 @@ const ui = {
       menuDesc: 'منوی رستوران هزار و یک شب تفلیس: پیش‌غذا، کباب، خورش، پلو، ماهی و شیرینی — با عکس هر غذا.',
       aboutTitle: 'درباره ما — رستوران ایرانی هزار و یک شب، تفلیس',
       aboutDesc: 'داستان، آشپزخانه و آنچه در هزار و یک شب به آن پایبندیم: مهمان‌نوازی ایرانی در بافت قدیم تفلیس، از سال ۲۰۱۲.',
-      blogTitle: 'وبلاگ — رستوران ایرانی هزار و یک شب، تفلیس',
-      blogDesc: 'داستان‌هایی از آشپزخانه و سالن هزار و یک شب: جشن‌ها، موسیقی زنده و آیین‌های کوچکی که بوی زعفران را در بافت قدیم می‌پراکنند.'
+      eventsTitle: 'رویدادها — رستوران ایرانی هزار و یک شب، تفلیس',
+      eventsDesc: 'شب‌های موسیقی زنده، جشن آتش چهارشنبه‌سوری و شب‌هایی که سالن ما را به چیز دیگری تبدیل می‌کنند — ببینید در هزار و یک شب چه در راه است.'
     },
 
-    nav: { menu: 'منو', restaurant: 'رستوران', experience: 'برنامه‌ها', visit: 'نشانی', homeLabel: 'خانه', about: 'درباره ما', blog: 'وبلاگ',
+    nav: { menu: 'منو', restaurant: 'رستوران', experience: 'برنامه‌ها', visit: 'نشانی', homeLabel: 'خانه', about: 'درباره ما', events: 'رویدادها',
            reserve: 'رزرو', reserveLong: 'رزرو میز', openMenu: 'باز کردن منو', main: 'ناوبری اصلی', home: 'هزار و یک شب — صفحه اصلی' },
 
     hero: {
@@ -284,25 +269,10 @@ const ui = {
       }
     },
 
-    blogPage: {
-      kicker: 'اخبار', title: 'وبلاگ ما',
-      lead: 'داستان‌هایی از آشپزخانه، سالن و بافت قدیمی که بیرون در ماست — جشن‌ها، شب‌های موسیقی و هر چه با آن‌ها می‌پزیم.',
-      sectionKicker: 'تازه‌ترین خبرها', sectionTitle: 'مقاله‌ها و یادداشت‌ها',
-      by: 'نویسنده:', readMore: 'ادامه مطلب', soon: 'داستان‌های بیشتر، به‌زودی',
-      posts: [
-        {
-          badge: 'آیین‌ها',
-          title: 'جشن چهارشنبه‌سوری: جشن آتش پیش از نوروز',
-          excerpt: 'آخرین سه‌شنبه سال، آتش‌های کوچکی در طول خیابان کوته آپخازی روشن می‌شود و ما به شیوه قدیم از رویش می‌پریم — «زردی من از تو، سرخی تو از من». اینجا می‌گوییم چرا هنوز این آیین را نگه می‌داریم، و بعد از خاموش شدن آتش چه چیزی روی سفره می‌آید.',
-          author: 'نسرین کریمی'
-        },
-        {
-          badge: 'پشت صحنه',
-          title: 'سه نوازنده، یک شب بلند نوروزی',
-          excerpt: 'هر نوروز، سالن ما چیزی بین سالن کنسرت و دورهمی خانوادگی می‌شود. از سه‌نوازنده‌ای که هر سال اینجا می‌نوازند پرسیدیم چرا کلاسیک‌های ایرانی روی بشقاب چلو زعفرانی صدای دیگری دارد.',
-          author: 'آرام سلطانی'
-        }
-      ]
+    eventsPage: {
+      kicker: 'لحظه‌ها', title: 'رویدادهای ما',
+      lead: 'چند شب در سال، سالن ما به چیز دیگری تبدیل می‌شود — سالن کنسرت، یا حلقه‌ای دور آتش. این‌هاست آنچه در تقویم داریم.',
+      sectionKicker: 'در تقویم', sectionTitle: 'یک خاطره بسازید'
     },
 
     gallery: {
@@ -380,11 +350,11 @@ const ui = {
       menuDesc: 'Меню ресторана 1001 Nights в Тбилиси: закуски, кебаб на углях, персидские рагу, блюда из риса, рыба и сладости — каждое блюдо с фотографией.',
       aboutTitle: 'О нас — 1001 Nights, персидский ресторан в Тбилиси',
       aboutDesc: 'История, кухня и то, чему мы верны в 1001 Nights: персидское гостеприимство в старом Тбилиси, с 2012 года.',
-      blogTitle: 'Блог — 1001 Nights, персидский ресторан в Тбилиси',
-      blogDesc: 'Истории с кухни и из зала 1001 Nights: праздники, живая музыка и маленькие ритуалы, которыми пахнет шафран в старом городе.'
+      eventsTitle: 'События — 1001 Nights, персидский ресторан в Тбилиси',
+      eventsDesc: 'Вечера живой музыки, праздник огня Джашн-е Чаршанбе Сури и вечера, когда наш зал становится чем-то другим — смотрите, что уже готовится в 1001 Nights.'
     },
 
-    nav: { menu: 'Меню', restaurant: 'Ресторан', experience: 'События', visit: 'Как найти', homeLabel: 'Главная', about: 'О нас', blog: 'Блог',
+    nav: { menu: 'Меню', restaurant: 'Ресторан', experience: 'Атмосфера', visit: 'Как найти', homeLabel: 'Главная', about: 'О нас', events: 'События',
            reserve: 'Бронь', reserveLong: 'Забронировать стол', openMenu: 'Открыть меню', main: 'Основная навигация', home: '1001 Nights — главная' },
 
     hero: {
@@ -458,25 +428,10 @@ const ui = {
       }
     },
 
-    blogPage: {
-      kicker: 'Новости', title: 'Наш блог',
-      lead: 'Истории с кухни, из зала и со старого города за нашей дверью — праздники, музыкальные вечера и всё, с чем мы их готовим.',
-      sectionKicker: 'Последние новости', sectionTitle: 'Статьи и материалы',
-      by: 'автор', readMore: 'Читать далее', soon: 'Скоро — новые истории',
-      posts: [
-        {
-          badge: 'Традиции',
-          title: 'Джашн-е Чаршанбе Сури: праздник огня перед Наврузом',
-          excerpt: 'В последний вторник перед персидским новым годом вдоль Коте Апхази горят маленькие костры, и мы по старинке перепрыгиваем через них: «моя болезненная желтизна — тебе, твой огненный жар — мне». Рассказываем, почему мы всё ещё храним этот обычай — и что оказывается на столе, когда огонь гаснет.',
-          author: 'Насрин Карими'
-        },
-        {
-          badge: 'Закулисье',
-          title: 'Три музыканта, один долгий новрузский вечер',
-          excerpt: 'Каждый Навруз наш зал становится чем-то средним между концертным залом и семейным застольем. Мы спросили трио, которое играет у нас каждый год, почему персидская классика звучит иначе над тарелкой шафранового риса.',
-          author: 'Арам Султани'
-        }
-      ]
+    eventsPage: {
+      kicker: 'Моменты', title: 'Наши события',
+      lead: 'В несколько вечеров в году наш зал становится чем-то другим — концертным залом или кругом у огня. Вот что уже в календаре.',
+      sectionKicker: 'В календаре', sectionTitle: 'Создайте воспоминание'
     },
 
     gallery: {
@@ -554,11 +509,11 @@ const ui = {
       menuDesc: 'რესტორან 1001 Nights-ის მენიუ თბილისში: წასახემსებელი, ნახშირზე შემწვარი ქაბაბი, სპარსული ხორეშთი, ბრინჯის კერძები, თევზი და ტკბილეული — ყოველი კერძი ფოტოთი.',
       aboutTitle: 'ჩვენ შესახებ — 1001 Nights, სპარსული რესტორანი თბილისში',
       aboutDesc: 'ისტორია, სამზარეულო და რასაც 1001 Nights-ში ვერთგულებთ: სპარსული სტუმართმოყვარეობა თბილისის ძველ ქალაქში, 2012 წლიდან.',
-      blogTitle: 'ბლოგი — 1001 Nights, სპარსული რესტორანი თბილისში',
-      blogDesc: 'ისტორიები 1001 Nights-ის სამზარეულოდან და დარბაზიდან: დღესასწაულები, ცოცხალი მუსიკა და პატარა რიტუალები, რომლებიც ძველ ქალაქს ზაფრანის სუნით ავსებს.'
+      eventsTitle: 'ღონისძიებები — 1001 Nights, სპარსული რესტორანი თბილისში',
+      eventsDesc: 'ცოცხალი მუსიკის საღამოები, ჯაშნ-ე ჩარშანბე სურის ცეცხლის დღესასწაული და საღამოები, როცა ჩვენი დარბაზი სხვა რამედ იქცევა — ნახეთ, რა გველოდება 1001 Nights-ში.'
     },
 
-    nav: { menu: 'მენიუ', restaurant: 'რესტორანი', experience: 'ღონისძიებები', visit: 'მისამართი', homeLabel: 'მთავარი', about: 'ჩვენ შესახებ', blog: 'ბლოგი',
+    nav: { menu: 'მენიუ', restaurant: 'რესტორანი', experience: 'ატმოსფერო', visit: 'მისამართი', homeLabel: 'მთავარი', about: 'ჩვენ შესახებ', events: 'ღონისძიებები',
            reserve: 'დაჯავშნა', reserveLong: 'მაგიდის დაჯავშნა', openMenu: 'მენიუს გახსნა', main: 'მთავარი ნავიგაცია', home: '1001 Nights — მთავარი' },
 
     hero: {
@@ -632,25 +587,10 @@ const ui = {
       }
     },
 
-    blogPage: {
-      kicker: 'სიახლეები', title: 'ჩვენი ბლოგი',
-      lead: 'ისტორიები სამზარეულოდან, დარბაზიდან და ძველი ქალაქიდან ჩვენი კართან — დღესასწაულები, მუსიკალური საღამოები და ყველაფერი, რასაც მათთან ერთად ვამზადებთ.',
-      sectionKicker: 'უახლესი სიახლეები', sectionTitle: 'სტატიები და მასალები',
-      by: 'ავტორი', readMore: 'სრულად კითხვა', soon: 'მალე — მეტი ისტორია',
-      posts: [
-        {
-          badge: 'ტრადიციები',
-          title: 'ჯაშნ-ე ჩარშანბე სური: ცეცხლის დღესასწაული ნოვრუზამდე',
-          excerpt: 'წლის ბოლო სამშაბათს, ნოვრუზამდე, კოტე აფხაზის გასწვრივ პატარა ცეცხლები გვინთია და ძველებურად გადავხტებით მათ — „ჩემი სნეული ყვითელი შენ, შენი ცეცხლოვანი წითელი მე“. აქ ვყვებით, რატომ ვინახავთ ჯერ კიდევ ამ რიტუალს და რა ხვდება სუფრაზე, როცა ცეცხლი ჩაქრება.',
-          author: 'ნასრინ ქარიმი'
-        },
-        {
-          badge: 'კულისებს მიღმა',
-          title: 'სამი მუსიკოსი, ერთი გრძელი ნოვრუზის საღამო',
-          excerpt: 'ყოველ ნოვრუზზე ჩვენი დარბაზი კონცერტდარბაზსა და ოჯახურ შეკრებას შორის რაღაცად იქცევა. ვკითხეთ ტრიოს, რომელიც ყოველწლიურად აქ უკრავს, რატომ ჟღერს სპარსული კლასიკა სხვანაირად ზაფრანიანი ბრინჯის თეფშთან.',
-          author: 'არამ სულთანი'
-        }
-      ]
+    eventsPage: {
+      kicker: 'წამები', title: 'ჩვენი ღონისძიებები',
+      lead: 'წელიწადში რამდენიმე საღამო ჩვენი დარბაზი სხვა რამედ იქცევა — საკონცერტო დარბაზად ან ცეცხლის წრედ. აი, რა გვაქვს კალენდარში.',
+      sectionKicker: 'კალენდარში', sectionTitle: 'შექმენით მოგონება'
     },
 
     gallery: {

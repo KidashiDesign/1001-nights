@@ -1,0 +1,78 @@
+---
+/* Events — die zwei Abende aus dem Baukasten der Startseite (home/Events.astro),
+   hier als eigene Seite mit Bildkarten. Aufbau wie about.astro: Kopf,
+   dann ein Abschnitt aus dem Baukasten der Startseite. */
+import { LANGS, ui, contact, media, menuUrl } from '../../lib/site.js';
+import type { LangCode } from '../../lib/types';
+import Base from '../../layouts/Base.astro';
+import Icon from '../../components/Icon.astro';
+
+export function getStaticPaths() {
+  return LANGS.map(L => ({
+    params: { lang: L.path ? L.path.replace(/\/$/, '') : undefined },
+    props: { code: L.code as LangCode }
+  }));
+}
+
+const { code } = Astro.props;
+const t = ui[code];
+const p = t.eventsPage;
+
+const events = [
+  { file: 'Post2_Live_Concert.webp', date: t.events.e1date, title: t.events.e1title, text: t.events.e1text },
+  { file: 'Post1_Jashn_CharshanbeSouri.webp', date: t.events.e2date, title: t.events.e2title, text: t.events.e2text }
+];
+---
+<Base code={code} page="events">
+
+  <section class="menu-hero">
+    <div class="wrap">
+      <p class="menu-kicker" data-enter="fade">{p.kicker}</p>
+      <h1 data-enter="up" data-delay="90">{p.title}</h1>
+      <p class="lead text-muted" style="max-width:60ch" data-enter="up" data-delay="200">
+        {p.lead}
+      </p>
+    </div>
+  </section>
+
+  <section class="section" id="events">
+    <div class="wrap">
+      <div class="section-head" data-reveal="up">
+        <h6>{p.sectionKicker}</h6>
+        <h2>{p.sectionTitle}</h2>
+        <p class="text-muted">{t.events.sub}</p>
+      </div>
+
+      <div class="event-cards" data-stagger="90">
+        {events.map(e => (
+          <a class="event-card" href={`tel:${contact.phoneHref}`} data-reveal="up" aria-label={e.title}>
+            <div class="event-card-media">
+              <span class="tag tag-accent event-card-badge">{e.date}</span>
+              <figure class="plate plate-3x2">
+                <img
+                  src={media('sm', e.file)}
+                  srcset={`${media('sm', e.file)} 480w, ${media('md', e.file)} 900w`}
+                  sizes="(max-width: 820px) 92vw, 480px" alt={e.title} loading="lazy" decoding="async" />
+              </figure>
+            </div>
+            <h3 class="card-title">{e.title}</h3>
+            <p class="text-muted">{e.text}</p>
+            <span class="event-card-link">{t.events.cta} <Icon name="arrow" /></span>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="section" style="text-align:center">
+    <div class="wrap wrap-narrow">
+      <h2 class="display" data-reveal="up">{t.about.cta.title}</h2>
+      <p class="text-muted" data-reveal="up" data-delay="80">{t.about.cta.text}</p>
+      <div class="hero-actions" style="justify-content:center" data-reveal="up" data-delay="140">
+        <a class="btn btn-primary" href={`tel:${contact.phoneHref}`}>{t.about.cta.ctaReserve}</a>
+        <a class="btn btn-secondary" href={menuUrl(code)}>{t.about.cta.ctaMenu}</a>
+      </div>
+    </div>
+  </section>
+
+</Base>

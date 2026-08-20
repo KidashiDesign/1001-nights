@@ -28,11 +28,11 @@ export const lang = code => {
 export const homeUrl = code => `${BASE}${lang(code).path}`;
 export const menuUrl = code => `${homeUrl(code)}menu.html`;
 export const aboutUrl = code => `${homeUrl(code)}about.html`;
-export const blogUrl = code => `${homeUrl(code)}blog.html`;
+export const eventsUrl = code => `${homeUrl(code)}events.html`;
 export const pageUrl = (code, page) => {
   if (page === 'menu') return menuUrl(code);
   if (page === 'about') return aboutUrl(code);
-  if (page === 'blog') return blogUrl(code);
+  if (page === 'events') return eventsUrl(code);
   return homeUrl(code);
 };
 
