@@ -1,11 +1,11 @@
 ---
 /* Fuß auf dunkler Fläche. Telefonnummer und E-Mail stehen in dir="ltr"-Inseln,
    damit sie auch im persischen Satz zum Wählen und Kopieren taugen. */
-import { ui, contact, YEAR, menuUrl, aboutUrl, eventsUrl, anchorUrl, fill } from '../lib/site.js';
+import { ui, contact, YEAR, menuUrl, aboutUrl, eventsUrl, coursesUrl, anchorUrl, fill } from '../lib/site.js';
 
 import type { LangCode } from '../lib/types';
 
-interface Props { code: LangCode; page: 'home' | 'menu' | 'about' | 'events'; }
+interface Props { code: LangCode; page: 'home' | 'menu' | 'about' | 'events' | 'courses'; }
 const { code, page } = Astro.props;
 
 const t = ui[code];
@@ -26,6 +26,7 @@ const city = code === 'en' ? 'Tbilisi' : t.visit.city.replace(/^\S+\s/, '');
           <li><a href={menuUrl(code)}>{t.nav.menu}</a></li>
           <li><a href={aboutUrl(code)}>{t.nav.about}</a></li>
           <li><a href={eventsUrl(code)}>{t.nav.events}</a></li>
+          <li><a href={coursesUrl(code)}>{t.nav.courses}</a></li>
           <li><a href={anchorUrl(code, page, '#restaurant')}>{t.nav.restaurant}</a></li>
           <li><a href={anchorUrl(code, page, '#gallery')}>{t.footer.gallery}</a></li>
         </ul>

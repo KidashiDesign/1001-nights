@@ -11,7 +11,7 @@ import Icon from './Icon.astro';
 
 import type { LangCode } from '../lib/types';
 
-interface Props { code: LangCode; page: 'home' | 'menu' | 'about' | 'events'; variant: 'nav' | 'drawer'; }
+interface Props { code: LangCode; page: 'home' | 'menu' | 'about' | 'events' | 'courses'; variant: 'nav' | 'drawer'; }
 const { code, page, variant } = Astro.props;
 
 const L = lang(code);

@@ -33,10 +33,12 @@ const ui = {
       aboutTitle: 'About us — 1001 Nights, Persian Restaurant in Tbilisi',
       aboutDesc: 'The story, the kitchen and what we hold to at 1001 Nights: Persian hospitality in the old town of Tbilisi, since 2012.',
       eventsTitle: 'Events — 1001 Nights, Persian Restaurant in Tbilisi',
-      eventsDesc: 'Live music nights, the Charshanbe Souri fire festival and the evenings that turn our dining room into something else — see what’s coming up at 1001 Nights.'
+      eventsDesc: 'Live music nights, the Charshanbe Souri fire festival and the evenings that turn our dining room into something else — see what’s coming up at 1001 Nights.',
+      coursesTitle: 'Courses — 1001 Nights, Persian Restaurant in Tbilisi',
+      coursesDesc: 'Notes from the kitchen on the three courses of a Persian table — starters, the fire, and the sweet finish — and what to order when you sit down at 1001 Nights.'
     },
 
-    nav: { menu: 'Menu', restaurant: 'Restaurant', experience: 'Experience', visit: 'Visit', homeLabel: 'Home', about: 'About', events: 'Events',
+    nav: { menu: 'Menu', restaurant: 'Restaurant', experience: 'Experience', visit: 'Visit', homeLabel: 'Home', about: 'About', events: 'Events', courses: 'Courses',
            reserve: 'Reserve', reserveLong: 'Book a table', openMenu: 'Open menu', main: 'Main navigation', home: '1001 Nights — home' },
 
     hero: {
@@ -116,6 +118,25 @@ const ui = {
       sectionKicker: 'On the calendar', sectionTitle: 'Make a memory'
     },
 
+    coursesPage: {
+      kicker: 'From the kitchen, in words', title: 'Courses',
+      lead: 'A Persian table doesn’t rush — it arrives in courses. Three short reads on what comes first, what comes off the coals, and what closes the evening.',
+      sectionKicker: 'The journal', sectionTitle: 'Three courses, three stories', sub: 'Each one ends where the dish begins — on the menu.',
+      cta: 'Read the course'
+    },
+
+    courses: {
+      c1tag: 'Starters', c1title: 'What comes to the table first',
+      c1text: 'Before the kebab, before the rice — a spread of small plates finds its way to the table: kashk-e bademjan still warm from the pan, bright herbs, bread from the tonoor. This is where a Persian meal begins to slow down.',
+      c1meta: 'Chapter 01 · Mezze & small plates',
+      c2tag: 'Kebab', c2title: 'What the fire is for',
+      c2text: 'Bakhtiari, koobideh, barg — the coals decide nothing on their own; the hand turning the skewer does. Marination, timing and the last minute over open charcoal are what separate a good kebab from ours.',
+      c2meta: 'Chapter 02 · Off the charcoal',
+      c3tag: 'Dessert & tea', c3title: 'How an evening ends here',
+      c3text: 'No course rushes to a close. Black tea from the samovar, baklava with pistachio, a last unhurried half hour at the table — the part of the meal nobody orders and everybody remembers.',
+      c3meta: 'Chapter 03 · Sweet & samovar'
+    },
+
     gallery: {
       kicker: '03 — At the table', title: 'What it looks like here',
       c1: 'Lamb chops in the Shandiz manner, marinated 24 hours.',
@@ -192,10 +213,12 @@ const ui = {
       aboutTitle: 'درباره ما — رستوران ایرانی هزار و یک شب، تفلیس',
       aboutDesc: 'داستان، آشپزخانه و آنچه در هزار و یک شب به آن پایبندیم: مهمان‌نوازی ایرانی در بافت قدیم تفلیس، از سال ۲۰۱۲.',
       eventsTitle: 'رویدادها — رستوران ایرانی هزار و یک شب، تفلیس',
-      eventsDesc: 'شب‌های موسیقی زنده، جشن آتش چهارشنبه‌سوری و شب‌هایی که سالن ما را به چیز دیگری تبدیل می‌کنند — ببینید در هزار و یک شب چه در راه است.'
+      eventsDesc: 'شب‌های موسیقی زنده، جشن آتش چهارشنبه‌سوری و شب‌هایی که سالن ما را به چیز دیگری تبدیل می‌کنند — ببینید در هزار و یک شب چه در راه است.',
+      coursesTitle: 'مراحل سفره — رستوران ایرانی هزار و یک شب، تفلیس',
+      coursesDesc: 'یادداشت‌هایی از آشپزخانه درباره سه مرحله سفره ایرانی — پیش‌غذا، آتش و پایان شیرین — و اینکه در هزار و یک شب چه سفارش دهید.'
     },
 
-    nav: { menu: 'منو', restaurant: 'رستوران', experience: 'برنامه‌ها', visit: 'نشانی', homeLabel: 'خانه', about: 'درباره ما', events: 'رویدادها',
+    nav: { menu: 'منو', restaurant: 'رستوران', experience: 'برنامه‌ها', visit: 'نشانی', homeLabel: 'خانه', about: 'درباره ما', events: 'رویدادها', courses: 'مراحل سفره',
            reserve: 'رزرو', reserveLong: 'رزرو میز', openMenu: 'باز کردن منو', main: 'ناوبری اصلی', home: 'هزار و یک شب — صفحه اصلی' },
 
     hero: {
@@ -275,6 +298,25 @@ const ui = {
       sectionKicker: 'در تقویم', sectionTitle: 'یک خاطره بسازید'
     },
 
+    coursesPage: {
+      kicker: 'از آشپزخانه، به قلم', title: 'مراحل سفره',
+      lead: 'سفره ایرانی عجله ندارد — مرحله به مرحله می‌آید. سه یادداشت کوتاه درباره آنچه اول می‌آید، آنچه از آتش برمی‌خیزد، و آنچه شب را می‌بندد.',
+      sectionKicker: 'یادداشت‌ها', sectionTitle: 'سه مرحله، سه قصه', sub: 'هر یادداشت همان‌جا تمام می‌شود که غذا در منو شروع می‌شود.',
+      cta: 'خواندن یادداشت'
+    },
+
+    courses: {
+      c1tag: 'پیش‌غذا', c1title: 'آنچه اول به سفره می‌رسد',
+      c1text: 'پیش از کباب، پیش از برنج — چند بشقاب کوچک راهشان را به سفره باز می‌کنند: کشک بادمجان هنوز گرم از تابه، سبزی‌های تازه، نان از تنور. اینجاست که غذای ایرانی آرام آرام شروع می‌شود.',
+      c1meta: 'فصل ۰۱ · مزه و پیش‌غذا',
+      c2tag: 'کباب', c2title: 'آتش برای چیست',
+      c2text: 'بختیاری، کوبیده، برگ — زغال به تنهایی چیزی تصمیم نمی‌گیرد؛ دستی که سیخ را می‌چرخاند تصمیم می‌گیرد. مزه‌دار کردن، زمان‌بندی و آن یک دقیقه آخر روی زغال باز، کباب خوب را از کباب ما جدا می‌کند.',
+      c2meta: 'فصل ۰۲ · از روی زغال',
+      c3tag: 'دسر و چای', c3title: 'اینجا شب چطور تمام می‌شود',
+      c3text: 'هیچ مرحله‌ای با عجله تمام نمی‌شود. چای سیاه از سماور، باقلوای پسته، نیم‌ساعت آخر بی‌عجله سر میز — بخشی از غذا که کسی سفارش نمی‌دهد اما همه به یاد می‌آورند.',
+      c3meta: 'فصل ۰۳ · شیرینی و سماور'
+    },
+
     gallery: {
       kicker: '۰۳ — سر سفره', title: 'اینجا این شکلی است',
       c1: 'راسته گوسفند به سبک شاندیز، ۲۴ ساعت مزه‌دار شده.',
@@ -351,10 +393,12 @@ const ui = {
       aboutTitle: 'О нас — 1001 Nights, персидский ресторан в Тбилиси',
       aboutDesc: 'История, кухня и то, чему мы верны в 1001 Nights: персидское гостеприимство в старом Тбилиси, с 2012 года.',
       eventsTitle: 'События — 1001 Nights, персидский ресторан в Тбилиси',
-      eventsDesc: 'Вечера живой музыки, праздник огня Джашн-е Чаршанбе Сури и вечера, когда наш зал становится чем-то другим — смотрите, что уже готовится в 1001 Nights.'
+      eventsDesc: 'Вечера живой музыки, праздник огня Джашн-е Чаршанбе Сури и вечера, когда наш зал становится чем-то другим — смотрите, что уже готовится в 1001 Nights.',
+      coursesTitle: 'Перемены блюд — 1001 Nights, персидский ресторан в Тбилиси',
+      coursesDesc: 'Заметки из кухни о трёх переменах персидского стола — закусках, огне и сладком финале — и что заказать, когда сядете за стол в 1001 Nights.'
     },
 
-    nav: { menu: 'Меню', restaurant: 'Ресторан', experience: 'Атмосфера', visit: 'Как найти', homeLabel: 'Главная', about: 'О нас', events: 'События',
+    nav: { menu: 'Меню', restaurant: 'Ресторан', experience: 'Атмосфера', visit: 'Как найти', homeLabel: 'Главная', about: 'О нас', events: 'События', courses: 'Перемены блюд',
            reserve: 'Бронь', reserveLong: 'Забронировать стол', openMenu: 'Открыть меню', main: 'Основная навигация', home: '1001 Nights — главная' },
 
     hero: {
@@ -434,6 +478,25 @@ const ui = {
       sectionKicker: 'В календаре', sectionTitle: 'Создайте воспоминание'
     },
 
+    coursesPage: {
+      kicker: 'Заметки из кухни', title: 'Перемены блюд',
+      lead: 'Персидский стол не спешит — он приходит переменами. Три коротких заметки о том, что подают первым, что снимают с углей, и чем заканчивается вечер.',
+      sectionKicker: 'Из дневника', sectionTitle: 'Три перемены, три истории', sub: 'Каждая заметка заканчивается там, где начинается блюдо — в меню.',
+      cta: 'Читать заметку'
+    },
+
+    courses: {
+      c1tag: 'Закуски', c1title: 'Что приходит на стол первым',
+      c1text: 'До кебаба, до риса — на стол попадает несколько маленьких тарелок: кашк-е бадемджан ещё тёплый со сковороды, свежая зелень, хлеб из тонэ. Именно здесь персидская трапеза начинает замедляться.',
+      c1meta: 'Глава 01 · Мезе и закуски',
+      c2tag: 'Кебаб', c2title: 'Для чего нужен огонь',
+      c2text: 'Бахтиари, кубиде, барг — угли сами по себе ничего не решают, решает рука, которая поворачивает шампур. Маринад, время и последняя минута над открытыми углями отличают хороший кебаб от нашего.',
+      c2meta: 'Глава 02 · С углей',
+      c3tag: 'Десерт и чай', c3title: 'Как здесь заканчивается вечер',
+      c3text: 'Ни одна перемена здесь не спешит закончиться. Чёрный чай из самовара, пахлава с фисташкой, последние неторопливые полчаса за столом — часть трапезы, которую никто не заказывает, но все запоминают.',
+      c3meta: 'Глава 03 · Сладкое и самовар'
+    },
+
     gallery: {
       kicker: '03 — За столом', title: 'Как здесь выглядит',
       c1: 'Бараньи котлеты по-шандизски, сутки в маринаде.',
@@ -510,10 +573,12 @@ const ui = {
       aboutTitle: 'ჩვენ შესახებ — 1001 Nights, სპარსული რესტორანი თბილისში',
       aboutDesc: 'ისტორია, სამზარეულო და რასაც 1001 Nights-ში ვერთგულებთ: სპარსული სტუმართმოყვარეობა თბილისის ძველ ქალაქში, 2012 წლიდან.',
       eventsTitle: 'ღონისძიებები — 1001 Nights, სპარსული რესტორანი თბილისში',
-      eventsDesc: 'ცოცხალი მუსიკის საღამოები, ჯაშნ-ე ჩარშანბე სურის ცეცხლის დღესასწაული და საღამოები, როცა ჩვენი დარბაზი სხვა რამედ იქცევა — ნახეთ, რა გველოდება 1001 Nights-ში.'
+      eventsDesc: 'ცოცხალი მუსიკის საღამოები, ჯაშნ-ე ჩარშანბე სურის ცეცხლის დღესასწაული და საღამოები, როცა ჩვენი დარბაზი სხვა რამედ იქცევა — ნახეთ, რა გველოდება 1001 Nights-ში.',
+      coursesTitle: 'სუფრის ეტაპები — 1001 Nights, სპარსული რესტორანი თბილისში',
+      coursesDesc: 'ჩანაწერები სამზარეულოდან სპარსული სუფრის სამ ეტაპზე — წასახემსებელი, ცეცხლი და ტკბილი დასასრული — და რა შევუკვეთოთ, როცა 1001 Nights-ში ჩამოვსხდებით.'
     },
 
-    nav: { menu: 'მენიუ', restaurant: 'რესტორანი', experience: 'ატმოსფერო', visit: 'მისამართი', homeLabel: 'მთავარი', about: 'ჩვენ შესახებ', events: 'ღონისძიებები',
+    nav: { menu: 'მენიუ', restaurant: 'რესტორანი', experience: 'ატმოსფერო', visit: 'მისამართი', homeLabel: 'მთავარი', about: 'ჩვენ შესახებ', events: 'ღონისძიებები', courses: 'სუფრის ეტაპები',
            reserve: 'დაჯავშნა', reserveLong: 'მაგიდის დაჯავშნა', openMenu: 'მენიუს გახსნა', main: 'მთავარი ნავიგაცია', home: '1001 Nights — მთავარი' },
 
     hero: {
@@ -591,6 +656,25 @@ const ui = {
       kicker: 'წამები', title: 'ჩვენი ღონისძიებები',
       lead: 'წელიწადში რამდენიმე საღამო ჩვენი დარბაზი სხვა რამედ იქცევა — საკონცერტო დარბაზად ან ცეცხლის წრედ. აი, რა გვაქვს კალენდარში.',
       sectionKicker: 'კალენდარში', sectionTitle: 'შექმენით მოგონება'
+    },
+
+    coursesPage: {
+      kicker: 'ჩანაწერები სამზარეულოდან', title: 'სუფრის ეტაპები',
+      lead: 'სპარსული სუფრა არ ჩქარობს — ის ეტაპებად მოდის. სამი მოკლე ჩანაწერი იმაზე, რა მოდის პირველი, რა მოდის ნახშირიდან და რით სრულდება საღამო.',
+      sectionKicker: 'დღიურიდან', sectionTitle: 'სამი ეტაპი, სამი ამბავი', sub: 'ყოველი ჩანაწერი იქ სრულდება, სადაც კერძი მენიუში იწყება.',
+      cta: 'ჩანაწერის წაკითხვა'
+    },
+
+    courses: {
+      c1tag: 'წასახემსებელი', c1title: 'რა მოდის სუფრაზე პირველი',
+      c1text: 'ქაბაბამდე, ბრინჯამდე — სუფრაზე რამდენიმე პატარა თეფშია: ქაშქე ბადემჯანი ჯერ კიდევ თბილი ტაფიდან, ახალი მწვანილი, პური თონედან. აქ იწყებს სპარსული სუფრა შენელებას.',
+      c1meta: 'თავი 01 · მეზე და წასახემსებელი',
+      c2tag: 'ქაბაბი', c2title: 'რისთვის არის ცეცხლი',
+      c2text: 'ბახტიარი, ქუბიდე, ბარგი — ნახშირი მარტო არაფერს წყვეტს, წყვეტს ხელი, რომელიც შამფურს ატრიალებს. მარინადი, დრო და ბოლო წუთი ღია ნახშირზე განასხვავებს კარგ ქაბაბს ჩვენგან.',
+      c2meta: 'თავი 02 · ნახშირიდან',
+      c3tag: 'დესერტი და ჩაი', c3title: 'როგორ სრულდება აქ საღამო',
+      c3text: 'არცერთი ეტაპი აქ არ ჩქარობს დასრულებას. შავი ჩაი სამოვრიდან, ფახლავა ფისტით, ბოლო დაუსწრებელი ნახევარი საათი მაგიდასთან — სუფრის ის ნაწილი, რომელსაც არავინ უკვეთავს, მაგრამ ყველა ახსოვს.',
+      c3meta: 'თავი 03 · ტკბილი და სამოვარი'
     },
 
     gallery: {
