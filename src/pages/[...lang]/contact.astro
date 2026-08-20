@@ -99,6 +99,13 @@ const successUrl = `${contactUrl(code)}#form-success`;
 
         <h6 style="margin-top:var(--space-6)">{t.visit.address}</h6>
         <p class="card-body">{t.visit.street}<br />{t.visit.city}</p>
+        <div class="map-embed">
+          <iframe
+            src={contact.mapEmbedUrl}
+            width="100%" height="220" style="border:0" loading="lazy"
+            allowfullscreen referrerpolicy="no-referrer-when-downgrade"
+            title={t.visit.map}></iframe>
+        </div>
         <a class="link-underline" href={contact.mapUrl} target="_blank" rel="noopener">{t.visit.map} <Icon name="arrow" /></a>
 
         <h6 style="margin-top:var(--space-6)">{t.visit.hours}</h6>
