@@ -580,17 +580,16 @@ section { position: relative; }
 }
 
 /* ══════════════════════════════════════════════════════════════════════
-   Blog
+   Event cards — die volle Events-Seite, Poster mit Badge oben
    ═════════════════════════════════════════════════════════════════════ */
-.blog-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: clamp(28px, 4vw, 56px); }
-.blog-card { display: block; text-decoration: none; color: inherit; }
-.blog-card .plate { margin: 0 0 var(--space-4); }
-.blog-card-media { position: relative; }
-.blog-card-badge { position: absolute; top: var(--space-3); left: var(--space-3); z-index: 1; }
-.blog-card-meta { display: flex; align-items: baseline; gap: 6px; font-size: 13px; margin: 0 0 var(--space-2); }
-.blog-card h3 { margin-bottom: var(--space-2); }
-.blog-card p { font-size: 14px; }
-.blog-card-link { display: inline-flex; align-items: center; gap: 6px;
+.event-cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: clamp(28px, 4vw, 56px); }
+.event-card { display: block; text-decoration: none; color: inherit; }
+.event-card .plate { margin: 0 0 var(--space-4); }
+.event-card-media { position: relative; }
+.event-card-badge { position: absolute; top: var(--space-3); left: var(--space-3); z-index: 1; }
+.event-card h3 { margin-bottom: var(--space-2); }
+.event-card p { font-size: 14px; }
+.event-card-link { display: inline-flex; align-items: center; gap: 6px;
   font-family: var(--font-heading); font-weight: 600; font-size: 13px;
   letter-spacing: var(--track-caps); text-transform: uppercase; margin-top: var(--space-3); }
 

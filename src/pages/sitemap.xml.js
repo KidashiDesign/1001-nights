@@ -4,7 +4,7 @@
    ═════════════════════════════════════════════════════════════════════════ */
 import { LANGS, pageUrl } from '../lib/site.js';
 
-const PAGES = ['home', 'menu', 'about', 'blog'];
+const PAGES = ['home', 'menu', 'about', 'events'];
 
 export function GET({ site }) {
   const abs = (code, page) => new URL(pageUrl(code, page), site).href;
