@@ -1,23 +1,43 @@
 ---
 /* Fuß auf dunkler Fläche. Telefonnummer und E-Mail stehen in dir="ltr"-Inseln,
    damit sie auch im persischen Satz zum Wählen und Kopieren taugen. */
-import { ui, contact, YEAR, menuUrl, aboutUrl, eventsUrl, coursesUrl, contactUrl, anchorUrl, fill } from '../lib/site.js';
+import { 
+  ui, 
+  contact, 
+  YEAR, 
+  menuUrl, 
+  aboutUrl, 
+  eventsUrl, 
+  coursesUrl, 
+  contactUrl, 
+  anchorUrl, 
+  fill,
+  media 
+} from '../lib/site.js';
 
 import type { LangCode } from '../lib/types';
 
-interface Props { code: LangCode; page: 'home' | 'menu' | 'about' | 'events' | 'courses' | 'contact'; }
+interface Props { 
+  code: LangCode; 
+  page: 'home' | 'menu' | 'about' | 'events' | 'courses' | 'contact'; 
+}
 const { code, page } = Astro.props;
 
 const t = ui[code];
+const logo = 'logo.png'; // Add your specific logo filename here
+
 /* Auf der englischen Fassung steht die Stadt englisch, sonst ohne die
    vorangestellte Straßenangabe aus `visit.city`. */
-const city = code === 'en' ? 'Tbilisi' : t.visit.city.replace(/^\S+\s/, '');
+const city = code === 'en' ? 'Tbilisi' : (t.visit?.city || '').replace(/^\S+\s/, '');
 ---
+
 <footer class="footer on-ink">
   <div class="wrap">
     <div class="footer-grid">
       <div class="footer-brand">
-        <span class="mark">1001 Nights</span>
+        <span class="wordmark">
+          <img src={media('', logo)} alt="1001 Nights" class="logo-image" />
+        </span>
         <p class="text-muted">{t.footer.tagline}</p>
       </div>
       <div>
