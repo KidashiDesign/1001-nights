@@ -102,9 +102,10 @@ html { -webkit-text-size-adjust: 100%; scroll-behavior: smooth; }
   max-height: 300px;
   width: auto;
 }
-.wordmark .logo-image-nav {
-  max-height: 50px;
+.wordmark-nav .logo-image-nav {
+  max-height: 70px;
   width: auto;
+    margin-top: 0.5rem;
 }
 
 body {
