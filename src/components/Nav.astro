@@ -1,7 +1,7 @@
 ---
 /* Kopfleiste und Schublade. Beide zeigen dieselben zwei Ziele (Home, Menü) —
    die Schublade erscheint erst unter 900 px, das Stylesheet entscheidet das. */
-import { ui, contact, homeUrl, menuUrl, aboutUrl, eventsUrl, coursesUrl, contactUrl } from '../lib/site.js';
+import { ui, contact, homeUrl, menuUrl, aboutUrl, eventsUrl, coursesUrl, contactUrl, media } from '../lib/site.js'; // <-- Added "media" here
 import LangSwitch from './LangSwitch.astro';
 
 import type { LangCode } from '../lib/types';
@@ -10,7 +10,7 @@ interface Props { code: LangCode; page: 'home' | 'menu' | 'about' | 'events' | '
 const { code, page } = Astro.props;
 
 const t = ui[code];
-
+const logo = 'logo.png'; // Add your specific logo filename here
 const links = [
   { href: homeUrl(code), label: t.nav.homeLabel, current: page === 'home' },
   { href: aboutUrl(code), label: t.nav.about, current: page === 'about' },
@@ -23,7 +23,9 @@ const links = [
 <header class="nav">
   <div class="wrap nav-inner">
     <a class="nav-brand" href={homeUrl(code)} aria-label={t.nav.home}>
-      <span class="mark">1001 Nights</span>
+      <span class="wordmark">
+        <img src={media('', logo)} alt="1001 Nights" class="logo-image" />
+      </span>
       <span class="sub">{t.brandSub}</span>
     </a>
     <nav class="nav-links" aria-label={t.nav.main}>
