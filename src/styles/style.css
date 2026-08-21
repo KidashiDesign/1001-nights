@@ -222,6 +222,13 @@ section { position: relative; }
 .link-underline svg { transition: transform var(--dur-mid) var(--ease-out); }
 .link-underline:hover svg { transform: translateX(4px); }
 
+/* Eingebettete Google-Maps-Ansicht */
+.map-embed {
+  overflow: hidden; border-radius: var(--radius-sm);
+  border: 1px solid var(--color-divider); margin: var(--space-3) 0;
+}
+.map-embed iframe { display: block; }
+
 /* ── Tags ─────────────────────────────────────────────────────────────── */
 .tag {
   display: inline-flex; align-items: center; gap: 5px;

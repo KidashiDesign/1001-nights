@@ -883,6 +883,7 @@ const contact = {
   phoneText: '+995 585 89 11 00',
   email: 'info@1001nights.ge',
   mapUrl: 'https://www.google.com/maps/search/?api=1&query=1001+Nights+Restaurant+Kote+Apkhazi+9+Tbilisi',
+  mapEmbedUrl: 'https://www.google.com/maps?q=1001+Nights+Restaurant+Kote+Apkhazi+9+Tbilisi&output=embed',
   instagramUrl: 'https://www.instagram.com/1001nights.ge/',
   hours: { row1: '11:00 – 23:00', row2: '11:00 – 24:00', row3: '11:00 – 23:00' },
   since: '2014',
