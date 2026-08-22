@@ -163,11 +163,12 @@ const ui = {
       c1tag: 'Starters', c1title: 'What comes to the table first',
       c1text: 'Before the kebab, before the rice — a spread of small plates finds its way to the table: kashk-e bademjan still warm from the pan, bright herbs, bread from the tonoor. This is where a Persian meal begins to slow down.',
       c1meta: 'Chapter 01 · Mezze & small plates',
-      c2tag: 'Kebab', c2title: 'What the fire is for',
-      c2text: 'Bakhtiari, koobideh, barg — the coals decide nothing on their own; the hand turning the skewer does. Marination, timing and the last minute over open charcoal are what separate a good kebab from ours.',
-      c2meta: 'Chapter 02 · Off the charcoal',
-      c3tag: 'Dessert & tea', c3title: 'How an evening ends here',
-      c3text: 'No course rushes to a close. Black tea from the samovar, baklava with pistachio, a last unhurried half hour at the table — the part of the meal nobody orders and everybody remembers.',
+      c2tag: 'Fish & Seafood', c2title: 'What the fire is for',
+      c2text: 'Wild bass, octopus, Gulf prawns — the coals decide nothing on their own; the hand tending the grate does. Citrus marinade, delicate embers, and a final moment over open charcoal are what separate ordinary fish from ours.',
+      c2meta: 'Chapter 02 · From the catch & charcoal',
+      c3tag: 'Sweets & digestifs',
+      c3title: 'How an evening ends here',
+      c3text: 'No course rushes to a close. Chilled mastic liqueur, warm semolina halva with lemon zest, a last unhurried half hour at the table — the part of the meal nobody orders and everybody remembers.',
       c3meta: 'Chapter 03 · Sweet & samovar'
     },
 
